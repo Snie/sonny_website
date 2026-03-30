@@ -26,6 +26,8 @@ That said, welcome to my website project and have a good reading here.
 
 ## Prequisites
 
+- [bun](https://bun.com/) a modern 4 in 1 all-in-one js toolkit. It contains a package manager, js runtime,
+ test runner, and bundler
 - `markdownlint-cli2` for linting markdown
 - GitHub account with dependabot and codereview enabled
 
@@ -38,6 +40,14 @@ The project can, and is developed manually. However, install the following to us
   However, `Claude Code` is advised since the configuration may have Claude specific config. and rules
 - [GitHub Spec Kit](https://github.com/github/spec-kit) used for SDD
   - `uv` uv is used to install GH Spec Kit
+
+## Quick start
+
+To launch the dev server:
+
+```shell
+bun dev
+```
 
 ## Contributing and Development
 
