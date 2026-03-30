@@ -4,6 +4,7 @@
     "CLAUDE.md",
     ".claude/commands/speckit.",
     ".specify/**/*.md",
-    ".claude/commands/**/*.md"
+    ".claude/commands/**/*.md",
+    "node_modules/**/*.md"
   ]
 }
