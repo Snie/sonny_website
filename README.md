@@ -1,0 +1,130 @@
+# Sonny Website
+
+Hello there, my name is Sonny Monti and this project is the placeolder for my personal website.  
+
+The websites will explain who I am, be my online resume, and serve as sandbox for my experiments such as ML, AI or
+ other software projects worth to operationalize behind an API.
+
+**Author notes baby!**
+
+At the time I wrote this README in 2026 (and believe me or not but I manually wrote most of it),
+ my job was ML Tech Lead at the Swiss Post, AI agentic development was in its golden age, so as LLMs,
+ and the word AI was used more than the word *the*. At the time I will read this paragraph again
+ AI will have reached the terminator level, rule hum.... heeeam, I will be a farmer and live the best life!  
+
+Jokes aside, I wanted to tell you this story because, despite the immense advancements done by coding agents, I believe
+ that good engineers with deep architectural skills so as experience in designing systems
+ and interfaces will be needed for a while.  
+Letting AI vibecode entire application stacks without carefully inspecting its work is the perfect recipe for
+ disasters, because agents consume interfaces. They never invent them. If an agent is deciding what an API endpoint
+ looks like, the process is already broken.  
+
+That said, welcome to my website project and have a good reading here.
+
+> **Be aware:** This project may contain brogrammer jokes, rude expressions, funny, outrageous or even profane text.
+ Reviewers discretion is advised ;)
+
+## Prequisites
+
+- `markdownlint-cli2` for linting markdown
+- GitHub account with dependabot and codereview enabled
+
+### AI development
+
+The project can, and is developed manually. However, install the following to use AI Agents and do Spec-Driven-Design:
+
+- An LLM, and a good coding agent of course ;)
+  - Coding agents configuration in this repo is made to be portable and compatible with the standard configurations.
+  However, `Claude Code` is advised since the configuration may have Claude specific config. and rules
+- [GitHub Spec Kit](https://github.com/github/spec-kit) used for SDD
+  - `uv` uv is used to install GH Spec Kit
+
+## Contributing and Development
+
+The project uses GitHub spec kit, this allows me and LLM agents to understand precisely what happened and how specs
+were implemented.  
+
+At a high level here the workflow to implement a new spec using GitHub spec kit
+
+### AI agent SDD with Spec Kit
+
+1. /speckit.constitution - Establish project principles
+2. /speckit.specify - Create baseline specification
+3. /speckit.plan - Create implementation plan
+4. /speckit.tasks - Generate actionable tasks
+5. /speckit.implement - Execute implementation
+
+### Git Strategy
+
+#### N1 RULE
+
+I know that you know, but never work on the main branch directly
+
+#### BRANCHING STRATEGY
+
+To add new features, or fix some nasty bug, respectively create a `feat/<BRANCH NAME>` or `fix/<BRANCH NAME>`.
+this because Sonny uses conventional commits
+
+#### COMMIT MESSAGE
+
+Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), and begin your commit message
+ with the commit type prefixes `feat:`, `fix:`
+or `BREAKING CHANGE`
+
+The commit message should be structured as follows:
+
+```text
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+## Documentation
+
+As a general outline, refer to this README.md to have an overview on the project and quick start guides.  
+Whereas AGENTS.md containns technical documentation and precise commands to operate on this repository,
+principally for agents but also for humans.  
+
+The repository comes with markdownlint-cli2, a powerful tool to lint markdowns, I know it may be fucking annoying but
+clean .md files are beautiful and llms can better work with them ;)
+
+> **hint:** use the readme-agents-sync skill to let a coding agent inspect and synchronize README.md and AGENTS.md.  
+> **warning**: if contributing, not documenting, not using conventional commits or nor using linting and formatting tools,
+Sonny Monti will receive a cosmic message from the GitHub gods and get really angry,
+ he really hates dirty code and messy docs...
+
+### README.md and AGENTS.md
+
+[from the official AGENTS.md documentation](https://agents.md/):
+
+README.md files are for humans: quick starts, project descriptions, and contribution guidelines.
+
+AGENTS.md complements this by containing the extra, sometimes detailed context coding agents need: build steps,
+tests, and conventions that might clutter a README or aren't relevant to human contributors.
+
+### CHANGELOG.md
+
+Keep a nice changelog following [the keep a changelog standard](https://keepachangelog.com/en/1.1.0/) to track
+ what features have been implemented and when, this helps developers and makes Sonny happy
+ to write even more documentation, despite being a lazy ass by nature. Lol, that was a typical brogrammer joke bro!
+ He loves writing detailed docs!
+
+## CI/CD
+
+## CI/DC utilities
+
+This repository utilizes the following tooling and configurations to have a pleasant and precise software development
+lifecycle, ensure maintainability and repeatability architectural principles, but mostly to automate the SH out of IT
+(this was another brogrammer joke if you are wondering what the hell this means).
+
+### GitHub configuration
+
+- GitHub dependabot to conduct security scans, update modules through pull requests
+- GitHub codescan to find nasty misconfiguration and issues in the code
+- GitHub action for `markdownlint-cli2`
+
+> **hint**: use the skill `github-dependabot` to see dependabot alerts and also pull requests for dependencies.  
+>
+> Use the skill `github-check-jobs` to grab failing jobs
