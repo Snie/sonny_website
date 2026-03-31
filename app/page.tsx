@@ -16,6 +16,9 @@ export default function Home() {
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
           </h1>
+          <div
+            className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-white bg-red-500"
+          />
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a

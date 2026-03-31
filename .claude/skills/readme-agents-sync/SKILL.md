@@ -17,8 +17,9 @@ Run this skill whenever `README.md` or `AGENTS.md` is modified.
 
 - What the repository is (project description, purpose).
 - Repository structure at a high level.
-- Quick start: how to get started using the materials.
+- Quick start: how to get started using the materials, at high level.
 - Contribution guidelines: how to contribute.
+- Documentation: how to document.
 - A visible pointer to `AGENTS.md` for contributors who want full detail.
 
 ### AGENTS.md — for agents and detail-oriented humans
@@ -34,7 +35,8 @@ Run this skill whenever `README.md` or `AGENTS.md` is modified.
 Run through every item. Flag any that fail.
 
 1. **Scope — README.md**: Confirm it covers quick start, structure, and contribution guidelines.
-   It must not contain agent instructions, rules, or conventions that belong in AGENTS.md.
+   It must not contain detailed agent instructions, rules, or conventions that belong in AGENTS.md.
+   Simple commands and quickstart are ok, but not too detailed.
 
 2. **Scope — AGENTS.md**: Confirm it covers rules, conventions, and agent instructions.
    It must not duplicate content already in README.md, but rather extend it maintaining its scope.

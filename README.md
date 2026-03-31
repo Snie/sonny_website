@@ -7,7 +7,7 @@ The websites will explain who I am, be my online resume, and serve as sandbox fo
 
 **Author notes baby!**
 
-At the time I wrote this README in 2026 (and believe me or not but I manually wrote most of it),
+At the time I wrote this note in 2026 (and believe me or not but I manually wrote most of it),
  my job was ML Tech Lead at the Swiss Post, AI agentic development was in its golden age, so as LLMs,
  and the word AI was used more than the word *the*. At the time I will read this paragraph again
  AI will have reached the terminator level, rule hum.... heeeam, I will be a farmer and live the best life!  
@@ -40,6 +40,18 @@ The project can, and is developed manually. However, install the following to us
   However, `Claude Code` is advised since the configuration may have Claude specific config. and rules
 - [GitHub Spec Kit](https://github.com/github/spec-kit) used for SDD
   - `uv` uv is used to install GH Spec Kit
+- Keep track of used tokens using ccusage `bunx ccusage blocks`
+- [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills/tree/main) —
+  a curated skill library for coding agents. Install or update with:
+
+  ```shell
+  bunx antigravity-awesome-skills --claude
+  ```
+
+  Active bundles for this project: **Essentials**, **Web Wizard**, **Full-Stack Developer**,
+  **Security Engineer**. See [AGENTS.md](AGENTS.md) for the full skill list.
+
+  > **hint:** re-running the command above also updates all skills to the latest version.
 
 ## Quick start
 
@@ -51,45 +63,10 @@ bun dev
 
 ## Contributing and Development
 
-The project uses GitHub spec kit, this allows me and LLM agents to understand precisely what happened and how specs
-were implemented.  
+The project uses [GitHub Spec Kit](https://github.com/github/spec-kit) for spec-driven development.
+Use conventional commits, feature branches (`feat/<name>`, `fix/<name>`), and never push directly to `main`.
 
-At a high level here the workflow to implement a new spec using GitHub spec kit
-
-### AI agent SDD with Spec Kit
-
-1. /speckit.constitution - Establish project principles
-2. /speckit.specify - Create baseline specification
-3. /speckit.plan - Create implementation plan
-4. /speckit.tasks - Generate actionable tasks
-5. /speckit.implement - Execute implementation
-
-### Git Strategy
-
-#### N1 RULE
-
-I know that you know, but never work on the main branch directly
-
-#### BRANCHING STRATEGY
-
-To add new features, or fix some nasty bug, respectively create a `feat/<BRANCH NAME>` or `fix/<BRANCH NAME>`.
-this because Sonny uses conventional commits
-
-#### COMMIT MESSAGE
-
-Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), and begin your commit message
- with the commit type prefixes `feat:`, `fix:`
-or `BREAKING CHANGE`
-
-The commit message should be structured as follows:
-
-```text
-<type>[optional scope]: <description>
-
-[optional body]
-
-[optional footer(s)]
-```
+See [AGENTS.md](AGENTS.md) for the full SDD workflow, git conventions, and agent instructions.
 
 ## Documentation
 
@@ -105,15 +82,6 @@ clean .md files are beautiful and llms can better work with them ;)
 Sonny Monti will receive a cosmic message from the GitHub gods and get really angry,
  he really hates dirty code and messy docs...
 
-### README.md and AGENTS.md
-
-[from the official AGENTS.md documentation](https://agents.md/):
-
-README.md files are for humans: quick starts, project descriptions, and contribution guidelines.
-
-AGENTS.md complements this by containing the extra, sometimes detailed context coding agents need: build steps,
-tests, and conventions that might clutter a README or aren't relevant to human contributors.
-
 ### CHANGELOG.md
 
 Keep a nice changelog following [the keep a changelog standard](https://keepachangelog.com/en/1.1.0/) to track
@@ -121,9 +89,13 @@ Keep a nice changelog following [the keep a changelog standard](https://keepacha
  to write even more documentation, despite being a lazy ass by nature. Lol, that was a typical brogrammer joke bro!
  He loves writing detailed docs!
 
+## Webpage style
+
+TODO
+
 ## CI/CD
 
-## CI/DC utilities
+### CI/DC utilities
 
 This repository utilizes the following tooling and configurations to have a pleasant and precise software development
 lifecycle, ensure maintainability and repeatability architectural principles, but mostly to automate the SH out of IT

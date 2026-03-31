@@ -77,6 +77,26 @@ Preserve all frontmatter fields. Do not remove sections that have no upstream eq
 - Skipped: list each skill that was within threshold or has `update-policy: manual/never`.
 - Failed: list each skill where the fetch or parse failed, with the reason.
 
+## Antigravity Skills
+
+Antigravity skills (installed in `~/.claude/skills/`) are managed externally and must **not** be
+edited or updated by this skill. They are versioned and distributed as a separate package.
+
+To update them, remind the user to run:
+
+```shell
+bunx antigravity-awesome-skills --claude
+```
+
+Re-running the installer updates all skills to the latest version in place.
+
+When `/update-skills` or `/update-skills --force` is invoked, append this reminder to the report:
+
+```text
+Antigravity skills (~/.claude/skills/) are externally managed.
+Run `bunx antigravity-awesome-skills --claude` to update them.
+```
+
 ## Rules
 
 - Never change `metadata.update-policy`, `metadata.update-source`, or `name` when updating a skill.
@@ -85,5 +105,4 @@ Preserve all frontmatter fields. Do not remove sections that have no upstream eq
 - When `metadata.update-source` is a URL, fetch it directly — do not search for it or substitute it.
 - When `metadata.update-source: web-search`, use official documentation only. Prefer the tool's own
   docs site over any third-party source.
-- Lint updated markdown with `markdownlint-cli2` before writing.
-- Max line length is 120 characters.
+- Never edit or update skills located in `~/.claude/skills/` — those are antigravity-managed.
