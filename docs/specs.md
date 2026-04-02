@@ -22,7 +22,7 @@ All content sections use the `ContentSection` component (`/components/ui/content
 **Usage example:**
 
 ```tsx
-<ContentSection maxWidth="4xl" heading={t("heading")}>
+<ContentSection maxWidth="5xl" heading={t("heading")}>
   {/* Section content */}
 </ContentSection>
 ```

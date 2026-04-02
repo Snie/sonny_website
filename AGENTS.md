@@ -19,10 +19,12 @@ A website in nextjs about the owner of it Sonny Monti.
 ```text
 .
 ├── app/                  # Next.js app router (pages, layouts, global styles)
+├── components/           # React UI components (sections, controls, ui primitives)
 ├── docs/                 # Developer documentation (markdown)
 │   └── dev/              # Development notes and references
 ├── public/               # Static assets served at /
 ├── types/                # Shared TypeScript type declarations
+├── lib/                  # Utility functions and i18n.ts configuration
 ├── .claude/              # Claude Code configuration (skills, settings, hooks)
 ├── .github/              # GitHub Actions workflows and Dependabot config
 ├── AGENTS.md             # Agent and contributor conventions (this file)
@@ -31,7 +33,8 @@ A website in nextjs about the owner of it Sonny Monti.
 ├── next.config.ts        # Next.js configuration
 ├── tsconfig.json         # TypeScript configuration
 ├── eslint.config.mjs     # ESLint configuration
-└── package.json          # Dependencies and scripts
+├── package.json          # Dependencies and scripts
+└── proxy.ts              # Next.js 16 proxy (i18n routing middleware via next-intl)
 ```
 
 ## How Personal Claude Skills Are Structured
