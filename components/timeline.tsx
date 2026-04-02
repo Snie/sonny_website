@@ -51,7 +51,7 @@ export function Timeline() {
   };
 
   return (
-    <ContentSection maxWidth="4xl" heading={t("heading")}>
+    <ContentSection maxWidth="5xl" heading={t("heading")}>
       <motion.div
         className="relative"
         variants={prefersReducedMotion ? {} : containerVariants}
@@ -69,7 +69,7 @@ export function Timeline() {
             variants={prefersReducedMotion ? {} : itemVariants}
           >
             {/* Node circle */}
-            <div className="absolute left-0 md:left-8 top-0 w-4 h-4 -ml-[7px] rounded-full bg-primary border-4 border-background" />
+            <div className="absolute left-0 md:left-8 top-0 w-4 h-4 -ml-1.75 rounded-full bg-primary border-4 border-background" />
 
             {/* Content */}
             <div className="space-y-2">

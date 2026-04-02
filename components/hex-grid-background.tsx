@@ -55,19 +55,41 @@ export function HexGridBackground() {
     const size = 100;
     const speed = 0.008; // Base speed for lights (slow)
 
-    // Theme-based colors
-    const isDark = resolvedTheme === "dark";
-    const primaryColor = isDark
-      ? { r: 0, g: 255, b: 0 }     // Terminal green
-      : { r: 0, g: 255, b: 255 };  // Cyan
+    // Helper to get fresh theme colors from CSS variables
+    const getThemeColor = () => {
+      // Force a reflow to ensure CSS is up to date
+      void document.body.offsetHeight;
+
+      const computedStyle = getComputedStyle(document.documentElement);
+      const accentRgb = computedStyle.getPropertyValue('--theme-accent-rgb').trim();
+      const htmlClasses = document.documentElement.className;
+
+      if (!accentRgb || accentRgb === '') {
+        // Fallback: check if dark class is present on HTML element
+        const isDarkMode = htmlClasses.includes('dark');
+        return isDarkMode
+          ? { r: 0, g: 255, b: 0 }   // Terminal green
+          : { r: 0, g: 255, b: 255 }; // Cyan
+      }
+
+      const [r, g, b] = accentRgb.split(',').map(n => parseInt(n.trim()));
+      const color = {
+        r: isNaN(r) ? 0 : r,
+        g: isNaN(g) ? 255 : g,
+        b: isNaN(b) ? 255 : b,
+      };
+      return color;
+    };
+
+    const primaryColor = getThemeColor();
 
     // Visual configuration
     const config = {
       hexFillAlphaMultiplier: 0.08,  // Controls hex fill intensity
-      lightGlowRadius: 8,
-      lightCoreRadius: 2.5,
+      lightGlowRadius: 5,
+      lightCoreRadius: 1.5,
       trailGlowRadius: 4,
-      trailLength: 25,
+      trailLength: 99,
       trailFadeRate: 0.92,
     };
 
@@ -141,7 +163,7 @@ export function HexGridBackground() {
     ];
 
     const lights: TravelingLight[] = [];
-    const maxLights = 7;
+    const maxLights = 12;
 
     const createLight = () => {
       const randomCell = cells[Math.floor(Math.random() * cells.length)];
@@ -195,16 +217,16 @@ export function HexGridBackground() {
         ctx.fill();
       }
 
-      const strokeColor = isDark
-        ? "rgba(100, 100, 100, 0.2)"
-        : "rgba(200, 200, 200, 0.2)";
+      const strokeColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--hex-stroke')
+        .trim();
       ctx.strokeStyle = strokeColor;
       ctx.lineWidth = 1;
       ctx.stroke();
     };
 
     const drawLightDot = (x: number, y: number, intensity: number) => {
-      // Outer glow
+      // Outer glow - theme color
       const gradient = ctx.createRadialGradient(x, y, 0, x, y, config.lightGlowRadius);
       gradient.addColorStop(0, `rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${intensity * 0.9})`);
       gradient.addColorStop(0.4, `rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${intensity * 0.5})`);
@@ -215,19 +237,16 @@ export function HexGridBackground() {
       ctx.arc(x, y, config.lightGlowRadius, 0, Math.PI * 2);
       ctx.fill();
 
-      // Bright center
-      const lightR = Math.min(255, primaryColor.r + 150);
-      const lightG = Math.min(255, primaryColor.g);
-      const lightB = Math.min(255, primaryColor.b + 150);
-      ctx.fillStyle = `rgba(${lightR}, ${lightG}, ${lightB}, ${intensity})`;
+      // Bright center - pure theme color at full opacity
+      ctx.fillStyle = `rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${intensity})`;
       ctx.beginPath();
       ctx.arc(x, y, config.lightCoreRadius, 0, Math.PI * 2);
       ctx.fill();
 
-      // Tiny white core
-      ctx.fillStyle = `rgba(255, 255, 255, ${intensity * 0.9})`;
+      // Tiny white core for brilliance
+      ctx.fillStyle = `rgba(255, 255, 255, ${intensity * 0.6})`;
       ctx.beginPath();
-      ctx.arc(x, y, 1, 0, Math.PI * 2);
+      ctx.arc(x, y, 0.8, 0, Math.PI * 2);
       ctx.fill();
     };
 

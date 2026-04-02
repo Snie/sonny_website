@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { useTheme } from "@wrksz/themes/client";
 import dynamic from "next/dynamic";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import type { ApexOptions } from "apexcharts";
 import { ContentSection } from "@/components/ui/content-section";
 
@@ -46,10 +46,30 @@ export function LanguagesSection() {
     },
   ];
 
-  const isDark = resolvedTheme === "dark";
-  const accentColor = isDark ? "#00ff00" : "#00ffff";
-  const textColor = isDark ? "#e5e5e5" : "#262626";
-  const gridColor = isDark ? "#333333" : "#e5e5e5";
+  // Get theme colors from CSS variables (client-side only)
+  const [colors, setColors] = useState({
+    accent: "#00ffff",
+    text: "#262626",
+    grid: "#e5e5e5",
+  });
+
+  useEffect(() => {
+    const getColor = (varName: string) =>
+      getComputedStyle(document.documentElement)
+        .getPropertyValue(varName)
+        .trim();
+
+    const accentRgb = getColor('--theme-accent-rgb');
+    const accentHex = `#${accentRgb.split(',').map(n =>
+      parseInt(n.trim()).toString(16).padStart(2, '0')
+    ).join('')}`;
+
+    setColors({
+      accent: accentHex,
+      text: getColor('--chart-text'),
+      grid: getColor('--chart-grid'),
+    });
+  }, [resolvedTheme]);
 
   const series = useMemo(
     () => [
@@ -60,6 +80,8 @@ export function LanguagesSection() {
     ],
     [entries]
   );
+
+  const isDark = resolvedTheme === "dark";
 
   const options: ApexOptions = useMemo(
     () => ({
@@ -83,14 +105,14 @@ export function LanguagesSection() {
           enabled: false,
         },
       },
-      colors: [accentColor],
+      colors: [colors.accent],
       fill: {
         type: "gradient",
         gradient: {
           shade: isDark ? "dark" : "light",
           type: "horizontal",
           shadeIntensity: 0.5,
-          gradientToColors: [accentColor],
+          gradientToColors: [colors.accent],
           inverseColors: false,
           opacityFrom: 0.6,
           opacityTo: 0.1,
@@ -100,12 +122,12 @@ export function LanguagesSection() {
       stroke: {
         show: true,
         width: 3,
-        colors: [accentColor],
+        colors: [colors.accent],
         dashArray: 0,
       },
       markers: {
         size: 6,
-        colors: [accentColor],
+        colors: [colors.accent],
         strokeColors: isDark ? "#000000" : "#ffffff",
         strokeWidth: 2,
         hover: {
@@ -118,7 +140,7 @@ export function LanguagesSection() {
         labels: {
           show: true,
           style: {
-            colors: Array(5).fill(textColor),
+            colors: Array(5).fill(colors.text),
             fontSize: "13px",
             fontWeight: 700,
           },
@@ -133,7 +155,7 @@ export function LanguagesSection() {
         labels: {
           show: true,
           style: {
-            colors: textColor,
+            colors: colors.text,
             fontSize: "11px",
             fontWeight: 600,
           },
@@ -152,9 +174,9 @@ export function LanguagesSection() {
           offsetX: 0,
           offsetY: 0,
           polygons: {
-            strokeColors: gridColor,
+            strokeColors: colors.grid,
             strokeWidth: "1",
-            connectorColors: gridColor,
+            connectorColors: colors.grid,
             fill: {
               colors: undefined,
             },
@@ -209,11 +231,11 @@ export function LanguagesSection() {
         show: false,
       },
     }),
-    [entries, accentColor, textColor, gridColor, isDark]
+    [entries, colors, isDark]
   );
 
   return (
-    <ContentSection maxWidth="4xl" heading={t("heading")}>
+    <ContentSection maxWidth="5xl" heading={t("heading")}>
       <div className="flex flex-col items-center gap-8">
         <div className="w-full max-w-3xl">
           <Chart

@@ -24,7 +24,7 @@ export function AcademicSection() {
   const entries: AcademicEntry[] = t.raw("entries");
 
   return (
-    <ContentSection maxWidth="4xl" heading={t("heading")}>
+    <ContentSection maxWidth="5xl" heading={t("heading")}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {entries.map((entry, index) => (
           <Card key={index} className="flex flex-col">

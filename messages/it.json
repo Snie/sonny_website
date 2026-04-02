@@ -1,79 +1,75 @@
 {
   "hero": {
-    "title": "Ciao, I'm Sonny",
-    "intro": "Software engineer, problem solver, and continuous learner"
+    "title": "Ciao, sono Sonny",
+    "intro": "Lavoro da Tech Lead, mani da ingegnere, cervello da architetto e anima da apprendista continuo"
   },
   "authorNote": {
-    "text": "I believe technology should empower people, not complicate their lives. My approach combines technical rigor with human-centered design — whether I'm architecting distributed systems or crafting user experiences."
+    "text": "Nel momento in cui ho scritto questa nota nel 2026 (e credetemi o no ma ne ho scritto la maggior parte manualmente), il mio lavoro era ML Tech Lead alla Posta Svizzera, lo sviluppo agenticale dell'IA era nella sua età dell'oro, così come i LLM, e la parola IA veniva usata più della parola *il*. Nel momento in cui rileggerò questo paragrafo l'IA avrà raggiunto l'AGI, il livello Terminator, gli umani alimenteranno la matrix dell'Architetto (tranne Neo ovviamente), governeranno l'umanit.... ehm, sarò un contadino e vivrò la vita migliore!\n\nScherzi a parte, volevo raccontarvi questa storia perché, nonostante gli immensi progressi fatti dagli agenti di codifica, credo che buoni ingegneri con competenze architetturali profonde, così come esperienza nella progettazione di sistemi e interfacce saranno ancora necessari per un po'.\n\nLasciare che l'IA vibecodi interi stack applicativi senza ispezionare attentamente il suo lavoro è la ricetta perfetta per i disastri, perché gli agenti consumano interfacce. Non le inventano mai. Se un agente sta decidendo come appare un endpoint API, il processo è già fallito.\n\nDetto questo, benvenuti nel mio progetto di sito web e buona lettura qui."
   },
   "about": {
-    "text": "I'm a software engineer specializing in full-stack development, cloud architecture, and developer tooling. With a background in computer science from USI Lugano, I've built scalable systems for startups and enterprises alike. My work spans from building robust backend infrastructure to creating intuitive frontends that users love. When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge with the developer community."
+    "heading": "Chi sono",
+    "text": "Sono ML Tech Lead alla Posta Svizzera, dove guido la progettazione e l'operazionalizzazione di sistemi IA/ML su larga scala — dall'architettura alla produzione.\n\n\n Il mio lavoro si colloca all'intersezione tra ingegneria del machine learning, MLOps e pensiero della piattaforma: costruire l'infrastruttura e le pratiche che consentono alla data science di consegnare davvero. Ciò significa pipeline CI/CD, gestione del ciclo di vita dei modelli, osservabilità e i pattern organizzativi che rendono i team veloci senza diventare fragili.\n\nSono specializzato nell'ingegneria ML basata su Python e ho trascorso anni a trasformare flussi di lavoro di dati ad-hoc in sistemi scalabili e governati — mantenendo l'asticella ingegneristica abbastanza alta da contare.\n\nOltre all'aspetto tecnico, guido e faccio da mentore a team interfunzionali in data science, ingegneria e business — traducendo tra ciò che è statisticamente possibile, ciò che è architettonicamente solido e ciò che fa davvero la differenza."
   },
   "experience": {
-    "heading": "Work Experience",
+    "heading": "Esperienza professionale",
     "entries": [
       {
-        "role": "Senior Software Engineer",
-        "company": "Tech Innovators AG",
-        "city": "Zurich",
-        "period": "Jan 2023 – Present",
-        "description": "Leading the development of cloud-native microservices architecture. Mentoring junior developers and establishing engineering best practices across teams."
+        "role": "ML Tech Lead & Solution Architect",
+        "company": "Swiss Post",
+        "city": "Berna",
+        "period": "2026 – Presente",
+        "description": "Agendo all'intersezione tra leadership tecnica e architettura delle soluzioni: revisione delle implementazioni, proprietà della direzione della roadmap e guida di un centro di eccellenza che abbraccia ingegneria della piattaforma, governance della consegna e adozione degli standard ML. Definizione del Blueprint ML, del modello MLOps-as-a-service e dei record delle decisioni architetturali per standardizzare e modernizzare il panorama ML/IA. Supporto della fondazione GenAI, integrazione di MLflow come backbone di valutazione e monitoraggio, e applicazione di uno stack portabile, modulare, sicuro e indipendente dal fornitore attraverso i progetti."
       },
       {
-        "role": "Full Stack Engineer",
-        "company": "Digital Solutions GmbH",
-        "city": "Berlin",
-        "period": "Jun 2021 – Dec 2022",
-        "description": "Built scalable web applications using React and Node.js. Implemented CI/CD pipelines and improved deployment efficiency by 40%."
+        "role": "Lead Data Scientist & ML Engineer",
+        "company": "Swiss Post",
+        "city": "Berna",
+        "period": "2025 – 2026",
+        "description": "Costruzione e guida della comunità Data Science & MLOps a livello aziendale. Standardizzazione di progetti data-driven e architettura Python su larga scala. Guida della computer vision applicata alla logistica — rilevamento dei livelli di riempimento dei container e identificazione, tracciamento e conteggio dei carrelli postali tramite riconoscimento di codici ottici."
       },
       {
-        "role": "Software Developer",
-        "company": "StartupLab",
-        "city": "Milan",
-        "period": "Mar 2020 – May 2021",
-        "description": "Developed customer-facing features for a SaaS platform. Collaborated with product team to define technical requirements and deliver iterative improvements."
+        "role": "Data Scientist & ML Engineer",
+        "company": "Swiss Post",
+        "city": "Berna",
+        "period": "2022 – 2025",
+        "description": "Costruzione e stabilimento dell'architettura MLOps alla Posta Svizzera. Colmare le lacune di collaborazione tra team interfunzionali, migliorare la comunicazione interna e l'efficienza operativa. Consentire ad altre unità di adottare stack tecnologici moderni e processi di sviluppo. Consegna di visualizzazione dati, automazione dei processi e del primo chatbot interno ufficiale della Posta Svizzera — comprendendo integrazioni LLM SaaS e sviluppo interno personalizzato."
       },
       {
-        "role": "Junior Developer",
-        "company": "CodeCraft Italia",
-        "city": "Rome",
-        "period": "Sep 2019 – Feb 2020",
-        "description": "Contributed to frontend development of e-commerce platforms. Worked on responsive design implementation and performance optimization."
+        "role": "Data Engineer",
+        "company": "Swiss Post",
+        "city": "Berna",
+        "period": "2020 – 2022",
+        "description": "Amministratore Splunk, automazione della piattaforma Ansible. Implementazione di diversi progetti data-driven, incluso il monitoraggio della sicurezza della piattaforma IT principale con il team OPSEC, raggiungimento di operazioni conformi a PCI DSS. Guida tecnica per progetti critici a livello di consiglio per analizzare l'occupazione degli uffici e la produttività del lavoro da remoto, nonché la strategia immobiliare e HR. Modellato il processo di monitoraggio delle frodi basato su ML per i conti postali; questi progetti ad alto impatto continuano a plasmare la strategia dell'organizzazione oggi."
       },
       {
-        "role": "Software Engineering Intern",
-        "company": "Innovation Hub",
+        "role": "Security Analyst & Big Data Engineer",
+        "company": "Kstone SA",
         "city": "Lugano",
-        "period": "Jun 2019 – Aug 2019",
-        "description": "Assisted in developing internal tools for data visualization. Gained hands-on experience with modern web technologies and agile methodologies."
-      },
-      {
-        "role": "Research Assistant",
-        "company": "USI Lugano",
-        "city": "Lugano",
-        "period": "Jan 2019 – May 2019",
-        "description": "Supported research projects in software engineering. Conducted literature reviews and assisted with experimental design for academic studies."
+        "period": "2019 – 2020",
+        "description": "Consulenza per due grandi istituzioni finanziarie in Svizzera, supporto alle unità di sicurezza e osservabilità. Rilevamento di outlier, passaggio a soluzioni di machine learning per sostituire i processi manuali. Ha svolto un ruolo chiave nella razionalizzazione del monitoraggio della sicurezza e nel miglioramento dell'osservabilità complessiva del sistema."
       }
     ]
   },
   "education": {
-    "heading": "Education",
+    "heading": "Formazione",
     "entries": [
       {
-        "degree": "MSc in Informatics",
+        "degree": "M.Sc Master of Science in Informatica",
         "institution": "Università della Svizzera italiana (USI)",
         "city": "Lugano",
-        "period": "2018 – 2020",
-        "grade": "110/110 cum laude",
-        "specialisation": "Software Design and Distributed Systems"
+        "period": "2017 – 2019",
+        "grade": "8.5/10 (Magna Cum Laude)",
+        "specialisation": "IA & Machine Learning",
+        "thesis": "Controllori simili a quelli umani per auto simulate"
       },
       {
-        "degree": "BSc in Computer Science",
+        "degree": "B.Sc Bachelor of Science in Informatica",
         "institution": "Università della Svizzera italiana (USI)",
         "city": "Lugano",
-        "period": "2015 – 2018",
-        "grade": "108/110",
-        "specialisation": "Software Engineering"
+        "period": "2013 – 2016",
+        "grade": "7/10 (Legitim)",
+        "specialisation": "Computer Science",
+        "thesis": "Un sistema mobile basato su fotocamera iperspettrale per il monitoraggio della salute delle viti"
       }
     ]
   },
@@ -85,14 +81,14 @@
         "institution": "IDSIA",
         "city": "Lugano",
         "period": "2018 – 2019",
-        "description": "Progettato e convalidato un controllore per veicoli simulati che replica il comportamento umano di sterzo e modulazione della velocità. Integrato in un framework di simulazione del traffico per simulatori di scuola guida. Il lavoro ha combinato modellazione comportamentale, teoria del controllo e validazione sperimentale."
+        "description": "Progettato e validato un controllore per veicoli simulati che replica il comportamento umano di sterzo e modulazione della velocità. Integrato in un framework di simulazione del traffico più ampio per simulatori di scuola guida. Il lavoro ha combinato modellazione comportamentale, teoria del controllo e validazione sperimentale."
       },
       {
         "title": "Tesi B.Sc. — Sistema mobile di imaging iperspettrale per il monitoraggio della salute delle viti",
         "institution": "Dolphin Engineering Sagl",
         "city": "Lugano",
         "period": "2016 – 2017",
-        "description": "Progettato e implementato un sistema mobile basato su fotocamera per il monitoraggio della salute dei vigneti, integrando sensori climatici e un'interfaccia web di visualizzazione. Indagato l'imaging iperspettrale come livello diagnostico — alla fine impraticabile all'epoca a causa dei costi hardware. Esteso Predivine, una piattaforma commerciale di gestione delle colture attiva nell'agricoltura di precisione svizzera."
+        "description": "Progettato e implementato un sistema mobile basato su fotocamera per il monitoraggio della salute dei vigneti, integrando sensori climatici e un'interfaccia web di visualizzazione. Indagato l'imaging iperspettrale come livello diagnostico — alla fine non fattibile all'epoca a causa dei costi hardware. Esteso Predivine, una piattaforma commerciale di gestione delle colture attiva nell'agricoltura di precisione svizzera."
       }
     ]
   },
@@ -102,33 +98,46 @@
       {
         "language": "Italiano",
         "level": "C2",
-        "proficiency": 100,
+        "proficiency": "100",
         "story": "madrelingua"
       },
       {
         "language": "Inglese",
         "level": "C2",
-        "proficiency": 95,
+        "proficiency": "95",
         "story": "Cambridge CAE · C2"
       },
       {
         "language": "Tedesco",
         "level": "C1",
-        "proficiency": 85,
+        "proficiency": "85",
         "story": "lingua di lavoro · C1"
       },
       {
         "language": "Francese",
         "level": "B2-C1",
-        "proficiency": 70,
-        "story": "fluente con ruggine · B2-C1"
+        "proficiency": "70",
+        "story": "fluente, mais rouillé · B2-C1"
       },
       {
         "language": "Spagnolo",
         "level": "B1-B2",
-        "proficiency": 55,
-        "story": "acquisito per prossimità · B1-B2"
+        "proficiency": "55",
+        "story": "acquisito da autodidatta · B1-B2"
       }
     ]
+  },
+  "skills": {
+    "heading": "Stack",
+    "categories": {
+      "languages": "Linguaggi",
+      "codeQuality": "Qualità del codice & Build",
+      "infrastructure": "Infrastruttura & DevOps",
+      "cloud": "Cloud",
+      "dataML": "Dati & ML",
+      "observability": "Osservabilità",
+      "web": "Web",
+      "aiTooling": "Strumenti IA"
+    }
   }
 }

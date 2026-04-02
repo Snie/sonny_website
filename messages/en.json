@@ -123,8 +123,21 @@
         "language": "Spanish",
         "level": "B1-B2",
         "proficiency": "55",
-        "story": "acquired by proximity · B1-B2"
+        "story": "acquired as autodidact · B1-B2"
       }
     ]
+  },
+  "skills": {
+    "heading": "Stack",
+    "categories": {
+      "languages": "Languages",
+      "codeQuality": "Code Quality & Build",
+      "infrastructure": "Infrastructure & DevOps",
+      "cloud": "Cloud",
+      "dataML": "Data & ML",
+      "observability": "Observability",
+      "web": "Web",
+      "aiTooling": "AI Tooling"
+    }
   }
 }

@@ -9,10 +9,10 @@ A website in nextjs about the owner of it Sonny Monti.
 - Frontend: Next.js, Tailwind, shadcn/ui
 - Tooling: Bun, GitHub Dependabot, GitHub Codescan
 
-## Key Files
+## Workflow for new features
 
-- Spec: @docs/spec.md
-- Blockers: @docs/blockers.md
+- IMPORTANT! Read the specifications Spec: @docs/spec.md
+- Write Blockers in: @docs/blockers.md
 
 ## Repository Structure
 

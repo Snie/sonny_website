@@ -28,7 +28,7 @@ All content sections use the `ContentSection` component (`/components/ui/content
 
 ### Theme Colors
 
-The site uses a dual-color accent system that adapts to the theme:
+The site uses a dual-color accent system that adapts to the theme via CSS custom properties.
 
 **Dark mode:**
 - Primary accent: Terminal green `#00ff00` (rgb 0, 255, 0)
@@ -36,13 +36,37 @@ The site uses a dual-color accent system that adapts to the theme:
 **Light mode:**
 - Primary accent: Cyan `#00ffff` (rgb 0, 255, 255)
 
-**Implementation pattern:**
+**Design Tokens (defined in `app/globals.css`):**
+
+| Token | Purpose |
+|-------|---------|
+| `--theme-accent` | Primary accent color (OKLCH format) |
+| `--theme-accent-rgb` | RGB components for canvas/JS use |
+| `--hero-glow` | Hero section glow effect |
+| `--chart-accent` | Chart accent color |
+| `--chart-text` | Chart text color |
+| `--chart-grid` | Chart grid lines |
+| `--hex-stroke` | Hex grid stroke color |
+
+**Implementation patterns:**
+
 ```tsx
-const isDark = resolvedTheme === "dark";
-const accentColor = isDark ? "#00ff00" : "#00ffff";
+// For inline styles (React)
+style={{ filter: 'drop-shadow(0 1.2px 1.2px var(--hero-glow))' }}
+
+// For canvas/ApexCharts (client-side only)
+useEffect(() => {
+  const accentRgb = getComputedStyle(document.documentElement)
+    .getPropertyValue('--theme-accent-rgb')
+    .trim();
+  // Convert to hex or use directly
+}, [resolvedTheme]);
+
+// For Tailwind utilities
+className="text-theme-accent"
 ```
 
-All accent colors must switch based on theme to maintain consistent visual identity across light and dark modes.
+**Rule:** Never hardcode `#00ff00` or `#00ffff`. Always use CSS custom properties for theme consistency and maintainability.
 
 ## Internationalization (i18n)
 
