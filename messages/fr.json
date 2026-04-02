@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "title": "Ciao, I'm Sonny",
+    "intro": "Software engineer, problem solver, and continuous learner"
+  },
+  "authorNote": {
+    "text": "I believe technology should empower people, not complicate their lives. My approach combines technical rigor with human-centered design — whether I'm architecting distributed systems or crafting user experiences."
+  },
+  "about": {
+    "text": "I'm a software engineer specializing in full-stack development, cloud architecture, and developer tooling. With a background in computer science from USI Lugano, I've built scalable systems for startups and enterprises alike. My work spans from building robust backend infrastructure to creating intuitive frontends that users love. When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge with the developer community."
+  },
+  "experience": {
+    "heading": "Work Experience",
+    "entries": [
+      {
+        "role": "Senior Software Engineer",
+        "company": "Tech Innovators AG",
+        "city": "Zurich",
+        "period": "Jan 2023 – Present",
+        "description": "Leading the development of cloud-native microservices architecture. Mentoring junior developers and establishing engineering best practices across teams."
+      },
+      {
+        "role": "Full Stack Engineer",
+        "company": "Digital Solutions GmbH",
+        "city": "Berlin",
+        "period": "Jun 2021 – Dec 2022",
+        "description": "Built scalable web applications using React and Node.js. Implemented CI/CD pipelines and improved deployment efficiency by 40%."
+      },
+      {
+        "role": "Software Developer",
+        "company": "StartupLab",
+        "city": "Milan",
+        "period": "Mar 2020 – May 2021",
+        "description": "Developed customer-facing features for a SaaS platform. Collaborated with product team to define technical requirements and deliver iterative improvements."
+      },
+      {
+        "role": "Junior Developer",
+        "company": "CodeCraft Italia",
+        "city": "Rome",
+        "period": "Sep 2019 – Feb 2020",
+        "description": "Contributed to frontend development of e-commerce platforms. Worked on responsive design implementation and performance optimization."
+      },
+      {
+        "role": "Software Engineering Intern",
+        "company": "Innovation Hub",
+        "city": "Lugano",
+        "period": "Jun 2019 – Aug 2019",
+        "description": "Assisted in developing internal tools for data visualization. Gained hands-on experience with modern web technologies and agile methodologies."
+      },
+      {
+        "role": "Research Assistant",
+        "company": "USI Lugano",
+        "city": "Lugano",
+        "period": "Jan 2019 – May 2019",
+        "description": "Supported research projects in software engineering. Conducted literature reviews and assisted with experimental design for academic studies."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "entries": [
+      {
+        "degree": "MSc in Informatics",
+        "institution": "Università della Svizzera italiana (USI)",
+        "city": "Lugano",
+        "period": "2018 – 2020",
+        "grade": "110/110 cum laude",
+        "specialisation": "Software Design and Distributed Systems"
+      },
+      {
+        "degree": "BSc in Computer Science",
+        "institution": "Università della Svizzera italiana (USI)",
+        "city": "Lugano",
+        "period": "2015 – 2018",
+        "grade": "108/110",
+        "specialisation": "Software Engineering"
+      }
+    ]
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title": "Ciao, I'm Sonny",
+    "intro": "Tech Lead job, Engineer hands, Architect brain, and continuous learner soul"
+  },
+  "authorNote": {
+    "text": "At the time I wrote this note in 2026 (and believe me or not but I manually wrote most of it), my job was ML Tech Lead at the Swiss Post, AI agentic development was in its golden age, and so were LLMs, and the word AI was used more than the word *the*. At the time I will read this paragraph again AI will have reached AGI, the terminator level, humans will power the Architect's matrix (except for Neo ofc), rule humanit.... heeeam, I will be a farmer and live the best life!\n\nJokes aside, I wanted to tell you this story because, despite the immense advancements done by coding agents, I believe that good engineers with deep architectural skills, as well as expertise in designing systems and interfaces will be still needed for a while.\n\nLetting AI vibecode entire application stacks without carefully inspecting its work is the perfect recipe for disasters, because agents consume interfaces. They never invent them. If an agent is deciding what an API endpoint looks like, the process is already broken.\n\nThat said, welcome to my website project and have a good reading here."
+  },
+  "about": {
+    "heading": "About",
+    "text": "I'm an ML Tech Lead at Swiss Post, where I drive the design and operationalization of large-scale AI/ML systems — from architecture to production.\n\n\n My work sits at the intersection of machine learning engineering, MLOps, and platform thinking: building the infrastructure and practices that let data science actually ship. That means CI/CD pipelines, model lifecycle management, observability, and the organizational patterns that make teams fast without becoming fragile.\n\nI specialize in Python-based ML engineering and have spent years turning ad-hoc data workflows into scalable, governed systems — while keeping the engineering bar high enough to matter.\n\nBeyond the technical side, I lead and mentor cross-functional teams across data science, engineering, and business — translating between what's statistically possible, what's architecturally sound, and what actually moves the needle."
+  },
+  "experience": {
+    "heading": "Work Experience",
+    "entries": [
+      {
+        "role": "ML Tech Lead & Solution Architect",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2026 – Present",
+        "description": "Acting at the intersection of technical leadership and solution architecture: reviewing implementations, owning roadmap direction, and driving a center of excellence spanning platform engineering, delivery governance, and ML standards adoption. Defining the ML Blueprint, MLOps-as-a-service model, and architectural decision records to standardize and modernize the ML/AI landscape. Supporting GenAI foundation, integrating MLflow as evaluation and monitoring backbone, and enforcing a portable, modular, secure, and vendor-agnostic stack across projects."
+      },
+      {
+        "role": "Lead Data Scientist & ML Engineer",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2025 – 2026",
+        "description": "Built and led the enterprise-wide Data Science & MLOps community. Standardized data-driven projects and Python architecture at scale. Led computer vision applied to logistics — detecting container fill levels and identifying, tracking, and counting parcel caddies via optical code recognition."
+      },
+      {
+        "role": "Data Scientist & ML Engineer",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2022 – 2025",
+        "description": "Built and established MLOps architecture at Swiss Post. Bridged collaboration gaps across cross-functional teams, improving internal communication and operational efficiency. Enabled other units to adopt modern tech stacks and development processes. Delivered data visualization, process automation, and the first official Swiss Post internal chatbot — spanning SaaS LLM integrations and custom in-house development."
+      },
+      {
+        "role": "Data Engineer",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2020 – 2022",
+        "description": "Splunk administrator, Ansible platform automation. Implemented several data-driven projects, including security monitoring of the core IT platform with the OPSEC team, achieving PCI DSS-compliant operations. Technical lead for critical board-level projects to analyze office occupancy and remote work productivity, so as real estate and HR strategy. Shaped the ML-based fraud-monitoring process for Post accounts; these high-impact projects continue to shape the organization's strategy today."
+      },
+      {
+        "role": "Security Analyst & Big Data Engineer",
+        "company": "Kstone SA",
+        "city": "Lugano",
+        "period": "2019 – 2020",
+        "description": "Consulted for two major financial institutions in Switzerland, supporting the security and observability units. Outlier detection, shift to machine learning solutions to replace manual processes. Played a key role in streamlining security monitoring and improving overall system observability."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Education",
+    "entries": [
+      {
+        "degree": "M.Sc Master of Science in Informatics",
+        "institution": "Università della Svizzera italiana (USI)",
+        "city": "Lugano",
+        "period": "2017 – 2019",
+        "grade": "8.5/10 (Magna Cum Laude)",
+        "specialisation": "AI & Machine Learning",
+        "thesis": "Human-like Controllers for Simulated Cars"
+      },
+      {
+        "degree": "B.Sc Bachelor of Science in Informatics",
+        "institution": "Università della Svizzera italiana (USI)",
+        "city": "Lugano",
+        "period": "2013 – 2016",
+        "grade": "7/10 (Legitim)",
+        "specialisation": "Computer Science",
+        "thesis": "A mobile, hyperspectral-camera-based system for monitoring the health of grapevines"
+      }
+    ]
+  },
+  "academic": {
+    "heading": "Academic Work",
+    "entries": [
+      {
+        "title": "M.Sc. Thesis — Human-like Controllers for Simulated Cars",
+        "institution": "IDSIA",
+        "city": "Lugano",
+        "period": "2018 – 2019",
+        "description": "Designed and validated a controller for simulated vehicles replicating human steering and speed modulation behavior. Integrated into a larger traffic simulation framework for driving school simulators. Work combined behavioral modeling, control theory, and experimental validation."
+      },
+      {
+        "title": "B.Sc. Thesis — Mobile Hyperspectral Imaging System for Grapevine Health Monitoring",
+        "institution": "Dolphin Engineering Sagl",
+        "city": "Lugano",
+        "period": "2016 – 2017",
+        "description": "Designed and implemented a mobile camera-based system for vineyard health monitoring, integrating climatic sensors and a web visualization interface. Investigated hyperspectral imaging as a diagnostic layer — ultimately unfeasible at the time due to hardware costs. Extended Predivine, a commercial crop management platform active in Swiss precision agriculture."
+      }
+    ]
+  },
+  "languages": {
+    "heading": "Languages",
+    "entries": [
+      {
+        "language": "Italian",
+        "level": "C2",
+        "proficiency": "100",
+        "story": "mother tongue"
+      },
+      {
+        "language": "English",
+        "level": "C2",
+        "proficiency": "95",
+        "story": "Cambridge CAE · C2"
+      },
+      {
+        "language": "German",
+        "level": "C1",
+        "proficiency": "85",
+        "story": "working language · C1"
+      },
+      {
+        "language": "French",
+        "level": "B2-C1",
+        "proficiency": "70",
+        "story": "fluent, mais rouillé · B2-C1"
+      },
+      {
+        "language": "Spanish",
+        "level": "B1-B2",
+        "proficiency": "55",
+        "story": "acquired by proximity · B1-B2"
+      }
+    ]
+  }
+}

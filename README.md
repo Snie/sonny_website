@@ -10,11 +10,11 @@ The websites will explain who I am, be my online resume, and serve as sandbox fo
 At the time I wrote this note in 2026 (and believe me or not but I manually wrote most of it),
  my job was ML Tech Lead at the Swiss Post, AI agentic development was in its golden age, so as LLMs,
  and the word AI was used more than the word *the*. At the time I will read this paragraph again
- AI will have reached the terminator level, rule hum.... heeeam, I will be a farmer and live the best life!  
+ AI will have reached the terminator level, rule human.... heeeam, I will be a farmer and live the best life!  
 
 Jokes aside, I wanted to tell you this story because, despite the immense advancements done by coding agents, I believe
  that good engineers with deep architectural skills so as experience in designing systems
- and interfaces will be needed for a while.  
+ and interfaces will be still needed for a while.  
 Letting AI vibecode entire application stacks without carefully inspecting its work is the perfect recipe for
  disasters, because agents consume interfaces. They never invent them. If an agent is deciding what an API endpoint
  looks like, the process is already broken.  

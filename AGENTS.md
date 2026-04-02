@@ -5,10 +5,12 @@
 A website in nextjs about the owner of it Sonny Monti.
 
 ## Tech Stack
+
 - Frontend: Next.js, Tailwind, shadcn/ui
 - Tooling: Bun, GitHub Dependabot, GitHub Codescan
 
 ## Key Files
+
 - Spec: @docs/spec.md
 - Blockers: @docs/blockers.md
 
