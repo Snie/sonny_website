@@ -307,7 +307,7 @@ export function HexGridBackground() {
               const random = Math.random();
               let nextQ = light.currentQ;
               let nextR = light.currentR;
-              let nextEdge = light.currentEdge;
+              let nextEdge;
               let willChangeCell = false;
 
               if (random < 0.30) {
