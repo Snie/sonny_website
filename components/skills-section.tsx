@@ -166,19 +166,9 @@ export function SkillsSection({ className }: SkillsSectionProps) {
               group relative rounded-lg border border-border
               bg-card p-4 transition-all duration-300
               hover:border-icons-primary
+              hover:shadow-[0_0_20px_2px_color-mix(in_srgb,var(--icons-primary)_30%,transparent)]
               ${category.span === "wide" ? "lg:col-span-2" : ""}
             `}
-            style={{
-              boxShadow:
-                "0 0 0 0 var(--icons-primary)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.boxShadow =
-                "0 0 20px 2px color-mix(in srgb, var(--icons-primary) 30%, transparent)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.boxShadow = "0 0 0 0 var(--icons-primary)";
-            }}
           >
             <h3 className="text-sm font-semibold mb-3 text-foreground">
               {t(`categories.${category.titleKey}`)}

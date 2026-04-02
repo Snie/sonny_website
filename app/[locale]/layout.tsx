@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@wrksz/themes/next";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { locales } from "@/lib/i18n";
 import "../globals.css";
 
 const notoSans = Noto_Sans({
@@ -13,10 +14,52 @@ const notoSans = Noto_Sans({
   weight: ["400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "Sonny Monti",
-  description: "Personal portfolio",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+
+  const titles: Record<string, string> = {
+    en: "Sonny Monti — ML Tech Lead & Solution Architect",
+    de: "Sonny Monti — ML Tech Lead & Solution Architect",
+    fr: "Sonny Monti — ML Tech Lead & Solution Architect",
+    it: "Sonny Monti — ML Tech Lead & Solution Architect",
+  };
+
+  const descriptions: Record<string, string> = {
+    en: "ML Tech Lead at Swiss Post. Portfolio showcasing AI/ML engineering, MLOps, and platform architecture.",
+    de: "ML Tech Lead bei der Schweizerischen Post. Portfolio mit KI/ML-Engineering, MLOps und Plattformarchitektur.",
+    fr: "ML Tech Lead à la Poste Suisse. Portfolio présentant l'ingénierie IA/ML, MLOps et architecture de plateforme.",
+    it: "ML Tech Lead alla Posta Svizzera. Portfolio di ingegneria IA/ML, MLOps e architettura di piattaforma.",
+  };
+
+  const title = titles[locale] ?? titles.en;
+  const description = descriptions[locale] ?? descriptions.en;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      locale,
+      type: "website",
+      siteName: "Sonny Monti",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `/${l}`])
+      ),
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

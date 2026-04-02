@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useTheme } from "@wrksz/themes/client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { VideoText } from "@/components/ui/video-text";
 import { HexGridBackground } from "./hex-grid-background";
@@ -18,23 +18,28 @@ export function HeroSection() {
     ? "/frontpage_green.webm"
     : "/frontpage_blue.webm";
 
+  const ticking = useRef(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const fadeStart = 0;
-      const fadeEnd = 800; // Fade out over 400px of scroll
+      if (ticking.current) return;
+      ticking.current = true;
+      requestAnimationFrame(() => {
+        const scrollY = window.scrollY;
+        const fadeEnd = 800;
 
-      if (scrollY <= fadeStart) {
-        setScrollOpacity(1);
-      } else if (scrollY >= fadeEnd) {
-        setScrollOpacity(0);
-      } else {
-        const opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
-        setScrollOpacity(opacity);
-      }
+        if (scrollY <= 0) {
+          setScrollOpacity(1);
+        } else if (scrollY >= fadeEnd) {
+          setScrollOpacity(0);
+        } else {
+          setScrollOpacity(1 - scrollY / fadeEnd);
+        }
+        ticking.current = false;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -61,7 +66,7 @@ export function HeroSection() {
 
       {/* Fixed portrait in bottom-right corner */}
       <div
-        className="fixed bottom-0 right-0 z-20 transition-opacity duration-100"
+        className="fixed bottom-0 right-0 z-0 transition-opacity duration-100"
         style={{
           width: 'clamp(25vw, calc(50% - ((100vw - 400px) / 600) * 25%), 50%)',
           display: 'flex',
