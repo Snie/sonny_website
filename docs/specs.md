@@ -20,6 +20,7 @@ The page is static, no database needed.
 All content sections use the `ContentSection` component (`/components/ui/content-section.tsx`) to maintain visual consistency across the site.
 
 **Usage example:**
+
 ```tsx
 <ContentSection maxWidth="4xl" heading={t("heading")}>
   {/* Section content */}
@@ -31,15 +32,17 @@ All content sections use the `ContentSection` component (`/components/ui/content
 The site uses a dual-color accent system that adapts to the theme via CSS custom properties.
 
 **Dark mode:**
+
 - Primary accent: Terminal green `#00ff00` (rgb 0, 255, 0)
 
 **Light mode:**
+
 - Primary accent: Cyan `#00ffff` (rgb 0, 255, 255)
 
 **Design Tokens (defined in `app/globals.css`):**
 
 | Token | Purpose |
-|-------|---------|
+| ------- | --------- |
 | `--theme-accent` | Primary accent color (OKLCH format) |
 | `--theme-accent-rgb` | RGB components for canvas/JS use |
 | `--hero-glow` | Hero section glow effect |
@@ -75,6 +78,7 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
 ### Structure
 
 **Translation files:** `/messages/[locale].json`
+
 - `en.json` — English (default)
 - and swiss national languages
 
@@ -83,6 +87,7 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
 ### Adding translations to a new section
 
 1. **Add translation keys to JSON files:**
+
    ```json
    // messages/en.json
    {
@@ -94,6 +99,7 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
    ```
 
 2. **Use in component:**
+
    ```tsx
    import { useTranslations } from "next-intl";
 
@@ -109,9 +115,11 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
    ```
 
 3. **For arrays (timelines, cards):**
+
    ```tsx
    const entries = t.raw("entries") as EntryType[];
    ```
 
-**Text with newlines:** Use `\n` in JSON, then render with `jsonTextToHtml()` utility (`/lib/text-utils.tsx`).
+**Text with newlines:**
 
+Use `\n` in JSON, then render with `jsonTextToHtml()` utility (`/lib/text-utils.tsx`).
