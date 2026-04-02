@@ -1,0 +1,27 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[[package]]
+name = "ccusage"
+version = "0.1.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a4/fc/9c10da02da15fe4be75ce15d8a794f2e5a9be509b1ea6a826f2643bbc01c/ccusage-0.1.6.tar.gz", hash = "sha256:b571880b112e163661bc1b92decce15f2209e74be40111a3440baa575b4b079a", size = 6742, upload-time = "2026-03-17T06:23:09.18Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ce/a7/c8023c8e0861648e1d1db7c45b545a7eb642a6dc4eb3d391013476b1d484/ccusage-0.1.6-py3-none-any.whl", hash = "sha256:690d52a976b01828b3633e96997ddcfcef132417b1785475462b26898528c8f6", size = 7502, upload-time = "2026-03-17T06:23:08.141Z" },
+]
+
+[[package]]
+name = "sonny-website"
+version = "0.1.0"
+source = { virtual = "." }
+
+[package.dev-dependencies]
+dev = [
+    { name = "ccusage" },
+]
+
+[package.metadata]
+
+[package.metadata.requires-dev]
+dev = [{ name = "ccusage", specifier = ">=0.1.6" }]

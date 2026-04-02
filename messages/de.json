@@ -1,0 +1,143 @@
+{
+  "hero": {
+    "title": "Ciao, ich bin Sonny",
+    "intro": "Tech Lead im Beruf, Ingenieur im Handwerk, Architekt im Denken und lebenslanger Lernender im Herzen"
+  },
+  "authorNote": {
+    "text": "Als ich diese Notiz 2026 schrieb (und glaubt mir oder nicht, das meiste davon habe ich tatsächlich selbst getippt), war mein Job ML Tech Lead bei der Schweizerischen Post, die agentenbasierte KI-Entwicklung erlebte ihre Blütezeit, ebenso die LLMs, und das Wort KI wurde häufiger benutzt als der Artikel *der*. Wenn ich diesen Absatz das nächste Mal lese, wird die KI AGI erreicht haben, Terminator-Niveau, die Menschen werden die Matrix des Architekten befeuern (ausser Neo natürlich), die Menschheit beherr.... ähm, ich werde Bauer sein und das beste Leben führen!\n\nSpass beiseite — ich wollte euch diese Geschichte erzählen, weil ich trotz der enormen Fortschritte durch Coding-Agenten überzeugt bin, dass gute Ingenieure mit fundiertem Architekturverständnis und Erfahrung im Design von Systemen und Schnittstellen noch eine ganze Weile gebraucht werden.\n\nKI komplette Anwendungsstacks vibecoden zu lassen, ohne deren Arbeit sorgfältig zu prüfen, ist das perfekte Rezept für Katastrophen — denn Agenten konsumieren Schnittstellen. Sie erfinden sie nie. Wenn ein Agent darüber entscheidet, wie ein API-Endpunkt aussieht, ist der Prozess bereits gescheitert.\n\nWie dem auch sei: willkommen bei meinem Website-Projekt und viel Spass beim Lesen."
+  },
+  "about": {
+    "heading": "Über mich",
+    "text": "Ich bin ML Tech Lead bei der Schweizerischen Post, wo ich die Konzeption und Operationalisierung grosser KI/ML-Systeme vorantreibe — von der Architektur bis in die Produktion.\n\n\n Meine Arbeit liegt an der Schnittstelle von Machine-Learning-Engineering, MLOps und Plattformdenken: Aufbau der Infrastruktur und Praktiken, die Data Science dazu befähigen, tatsächlich zu liefern. Konkret bedeutet das CI/CD-Pipelines, Model Lifecycle Management, Observability und die organisatorischen Muster, die Teams schnell machen, ohne fragil zu werden.\n\nIch bin spezialisiert auf Python-basiertes ML-Engineering und habe Jahre damit verbracht, Ad-hoc-Datenworkflows in skalierbare, steuerbare Systeme zu überführen — bei gleichbleibend hohem Engineering-Anspruch.\n\nÜber die Technik hinaus leite und begleite ich cross-funktionale Teams in Data Science, Engineering und Business — und übersetze dabei zwischen dem, was statistisch möglich ist, was architektonisch tragfähig ist und was wirklich etwas bewegt."
+  },
+  "experience": {
+    "heading": "Berufserfahrung",
+    "entries": [
+      {
+        "role": "ML Tech Lead & Solution Architect",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2026 – Heute",
+        "description": "An der Schnittstelle von technischer Führung und Lösungsarchitektur: Review von Implementierungen, Verantwortung für die Roadmap und Aufbau eines Centers of Excellence über Platform Engineering, Delivery Governance und ML-Standards hinweg. Definition des ML Blueprint, des MLOps-as-a-Service-Modells und architektonischer Entscheidungsdokumentation zur Standardisierung und Modernisierung der ML/KI-Landschaft. Aufbau der GenAI-Grundlagen, Integration von MLflow als Backbone für Evaluation und Monitoring sowie Durchsetzung eines portablen, modularen, sicheren und herstellerunabhängigen Stacks über alle Projekte."
+      },
+      {
+        "role": "Lead Data Scientist & ML Engineer",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2025 – 2026",
+        "description": "Aufbau und Leitung der unternehmensweiten Data-Science- & MLOps-Community. Standardisierung datengetriebener Projekte und Python-Architektur im grossen Massstab. Leitung von Computer-Vision-Anwendungen in der Logistik — Erkennung von Container-Füllständen sowie Identifikation, Tracking und Zählung von Paketcontainern mittels optischer Code-Erkennung."
+      },
+      {
+        "role": "Data Scientist & ML Engineer",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2022 – 2025",
+        "description": "Aufbau und Etablierung der MLOps-Architektur bei der Schweizerischen Post. Überbrückung von Silos zwischen cross-funktionalen Teams mit Verbesserung der internen Kommunikation und operativen Effizienz. Befähigung weiterer Einheiten zur Einführung moderner Tech-Stacks und Entwicklungsprozesse. Umsetzung von Datenvisualisierungen, Prozessautomatisierung und des ersten offiziellen internen Chatbots der Schweizerischen Post — von SaaS-LLM-Integrationen bis hin zu hauseigener Eigenentwicklung."
+      },
+      {
+        "role": "Data Engineer",
+        "company": "Swiss Post",
+        "city": "Bern",
+        "period": "2020 – 2022",
+        "description": "Splunk-Administration und Ansible-basierte Plattformautomatisierung. Umsetzung mehrerer datengetriebener Projekte, darunter das Sicherheitsmonitoring der zentralen IT-Plattform gemeinsam mit dem OPSEC-Team mit Erreichen PCI-DSS-konformer Abläufe. Technische Leitung geschäftskritischer Vorstandsprojekte zur Analyse von Bürobelegung und Remote-Work-Produktivität sowie zur Immobilien- und HR-Strategie. Konzeption des ML-gestützten Betrugsüberwachungsprozesses für Postkonten — diese hochwirksamen Projekte prägen die Unternehmensstrategie bis heute."
+      },
+      {
+        "role": "Security Analyst & Big Data Engineer",
+        "company": "Kstone SA",
+        "city": "Lugano",
+        "period": "2019 – 2020",
+        "description": "Beratung für zwei grosse Schweizer Finanzinstitute mit Unterstützung der Security- und Observability-Teams. Ausreissererkennung und Umstellung auf Machine-Learning-Lösungen als Ersatz für manuelle Prozesse. Zentrale Rolle bei der Straffung des Sicherheitsmonitorings und der Verbesserung der Systembeobachtbarkeit."
+      }
+    ]
+  },
+  "education": {
+    "heading": "Ausbildung",
+    "entries": [
+      {
+        "degree": "M.Sc. Master of Science in Informatik",
+        "institution": "Università della Svizzera italiana (USI)",
+        "city": "Lugano",
+        "period": "2017 – 2019",
+        "grade": "8.5/10 (Magna Cum Laude)",
+        "specialisation": "KI & Machine Learning",
+        "thesis": "Menschenähnliche Steuerungen für simulierte Fahrzeuge"
+      },
+      {
+        "degree": "B.Sc. Bachelor of Science in Informatik",
+        "institution": "Università della Svizzera italiana (USI)",
+        "city": "Lugano",
+        "period": "2013 – 2016",
+        "grade": "7/10 (Legitim)",
+        "specialisation": "Informatik",
+        "thesis": "Ein mobiles, auf Hyperspektralkameras basierendes System zur Überwachung der Rebengesundheit"
+      }
+    ]
+  },
+  "academic": {
+    "heading": "Akademische Arbeiten",
+    "entries": [
+      {
+        "title": "M.Sc.-Thesis — Menschenähnliche Steuerungen für simulierte Fahrzeuge",
+        "institution": "IDSIA",
+        "city": "Lugano",
+        "period": "2018 – 2019",
+        "description": "Entwurf und Validierung einer Steuerung für simulierte Fahrzeuge, die menschliches Lenk- und Geschwindigkeitsverhalten nachbildet. Integration in ein grösseres Verkehrssimulations-Framework für Fahrschulsimulatoren. Die Arbeit verband Verhaltensmodellierung, Regelungstheorie und experimentelle Validierung."
+      },
+      {
+        "title": "B.Sc.-Thesis — Mobiles Hyperspektral-Bildgebungssystem zur Überwachung der Rebengesundheit",
+        "institution": "Dolphin Engineering Sagl",
+        "city": "Lugano",
+        "period": "2016 – 2017",
+        "description": "Entwurf und Implementierung eines mobilen kamerabasierten Systems zur Überwachung der Weinberggesundheit mit Integration klimatischer Sensoren und einer Web-Visualisierungsoberfläche. Evaluation hyperspektraler Bildgebung als diagnostische Ebene — zum damaligen Zeitpunkt aufgrund der Hardwarekosten nicht umsetzbar. Erweiterung von Predivine, einer kommerziellen Pflanzenbau-Management-Plattform im Bereich Schweizer Präzisionslandwirtschaft."
+      }
+    ]
+  },
+  "languages": {
+    "heading": "Sprachen",
+    "entries": [
+      {
+        "language": "Italienisch",
+        "level": "C2",
+        "proficiency": "100",
+        "story": "Muttersprache"
+      },
+      {
+        "language": "Englisch",
+        "level": "C2",
+        "proficiency": "95",
+        "story": "Cambridge CAE · C2"
+      },
+      {
+        "language": "Deutsch",
+        "level": "C1",
+        "proficiency": "85",
+        "story": "Arbeitssprache · C1"
+      },
+      {
+        "language": "Französisch",
+        "level": "B2-C1",
+        "proficiency": "70",
+        "story": "fliessend, mais rouillé · B2-C1"
+      },
+      {
+        "language": "Spanisch",
+        "level": "B1-B2",
+        "proficiency": "55",
+        "story": "autodidaktisch erlernt · B1-B2"
+      }
+    ]
+  },
+  "skills": {
+    "heading": "Stack",
+    "categories": {
+      "languages": "Sprachen",
+      "codeQuality": "Code-Qualität & Build",
+      "infrastructure": "Infrastruktur & DevOps",
+      "cloud": "Cloud",
+      "dataML": "Daten & ML",
+      "observability": "Observability",
+      "web": "Web",
+      "aiTooling": "KI-Tooling"
+    }
+  }
+}
