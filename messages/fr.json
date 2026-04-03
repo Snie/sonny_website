@@ -139,5 +139,28 @@
       "web": "Web",
       "aiTooling": "Outillage IA"
     }
+  },
+  "elsewhere": {
+    "heading": "En dehors du code",
+    "acm": {
+      "title": "ACM",
+      "body": "Membre professionnel depuis 2019 — parce que les fondamentaux de l'informatique restent le socle de tout le reste."
+    },
+    "army": {
+      "title": "Armée Suisse",
+      "body": "Sergent dans la DCA, Flab Bttr 31, bataillon tessinois. Quatre sections formées sur trois écoles de recrues — certifié en conduite personnelle, compétences sociales, commandement, exécution technique et instruction."
+    },
+    "cantina": {
+      "title": "Cantina Monti",
+      "body": "Le domaine viticole de la famille, au Tessin. Je donne un coup de main aux vendanges, j'ai monté la boutique en ligne et je gère la présence web — mais soyons honnêtes : ma contribution la plus fidèle reste le contrôle qualité lors de la dégustation. De temps en temps, je troque le clavier pour les vignes — la meilleure session de debug que la nature puisse offrir."
+    },
+    "gaming": {
+      "title": "Musique & Gaming",
+      "body": "La bonne musique n'a pas de genre — juste du savoir-faire et l'émotion qu'elle laisse. Joueur Xbox depuis 2006, gamertag Neutrin883 sur Xbox et PlayStation. Multijoueur compétitif, Minecraft, Zergs sur Starcraft, et quelques crises existentielles sur Sekiro. Envie de vraie compétition ou de chaos coopératif ? Faites signe. Jeux préférés : Zelda OoT, WoW, Halo, Sekiro."
+    },
+    "sport": {
+      "title": "Tennis & Snowboard",
+      "body": "Freerider passionné, hors-piste de préférence — Zermatt, Saas-Fee, Laax. La poudreuse fraîche dans les Alpes suisses offre un sentiment de liberté qu'on ne peut ni expliquer ni refuser. Tennis depuis l'enfance, dix ans de pause, en plein dérouillage. Un des rares sports où les excuses ne marchent pas : juste toi, la balle et ta tête. Personne d'autre à blâmer — seule la discipline fait la différence."
+    }
   }
 }

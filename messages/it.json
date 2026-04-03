@@ -139,5 +139,28 @@
       "web": "Web",
       "aiTooling": "Strumenti IA"
     }
+  },
+  "elsewhere": {
+    "heading": "Oltre il codice",
+    "acm": {
+      "title": "ACM",
+      "body": "Membro professionale dal 2019 — perché i fondamenti dell'informatica restano alla base di tutto il resto."
+    },
+    "army": {
+      "title": "Esercito Svizzero",
+      "body": "Sergente nella difesa contraerea, Flab Bttr 31, battaglione ticinese. Ho formato quattro sezioni in tre scuole reclute — certificato in condotta personale, competenze sociali, comando, esecuzione tecnica e istruzione."
+    },
+    "cantina": {
+      "title": "Cantina Monti",
+      "body": "La cantina di famiglia, in Ticino. Do una mano con la vendemmia, ho costruito il webshop e curo la presenza online — ma a dirla tutta, il mio contributo più costante è il controllo qualità in fase di degustazione. Ogni tanto scambio la tastiera con la vigna — la miglior sessione di debug che la natura possa offrire."
+    },
+    "gaming": {
+      "title": "Musica & Gaming",
+      "body": "La buona musica non ha genere — ha solo mestiere e l'emozione che ti lascia addosso. Gamer Xbox dal 2006, gamertag Neutrin883 su Xbox e PlayStation. Multiplayer competitivo, Minecraft, Zerg su Starcraft e qualche crisi esistenziale su Sekiro. Se cercate competizione vera o caos cooperativo, fatevi vivi. Giochi preferiti: Zelda OoT, WoW, Halo, Sekiro."
+    },
+    "sport": {
+      "title": "Tennis & Snowboard",
+      "body": "Freerider appassionato, fuoripista di preferenza — Zermatt, Saas-Fee, Laax. La neve fresca sulle montagne svizzere regala una libertà che non si spiega e a cui non si resiste. Tennis fin da bambino, dieci anni di pausa, attualmente in fase di sgrugginatura. Uno dei pochi sport dove le scuse non reggono: solo tu, la palla e la tua testa. Nessun compagno a cui dare la colpa — vince solo chi ha disciplina."
+    }
   }
 }

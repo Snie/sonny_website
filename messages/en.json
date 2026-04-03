@@ -139,5 +139,28 @@
       "web": "Web",
       "aiTooling": "AI Tooling"
     }
+  },
+  "elsewhere": {
+    "heading": "Elsewhere",
+    "acm": {
+      "title": "ACM",
+      "body": "Professional member since 2019 — staying current with the discipline that underpins everything else."
+    },
+    "army": {
+      "title": "Swiss Army",
+      "body": "Served as Sergeant in the anti-aircraft artillery, Flab Bttr 31, Ticino battalion. Trained 4 sections across three different recruit schools — certified in personal leadership, social conduct, command, technical execution, and instruction."
+    },
+    "cantina": {
+      "title": "Cantina Monti",
+      "body": "Family winery in Ticino. I help with harvesting, built the webshop, and handle the web presence — but if pressed, my most consistent contribution is quality control at the tasting stage. Occasionally I get to trade the keyboard for the vineyard, which is the best debugging session nature offers."
+    },
+    "gaming": {
+      "title": "Music & Gaming",
+      "body": "Good music has no genre — only technical execution and the feeling it leaves behind. Xbox gamer since 2006, gamertag Neutrin883 on both Xbox and PlayStation. Competitive multiplayer, Minecraft, Starcraft Zergs, the occasional existential crisis in Sekiro. Find me if you want genuine competition or cooperative chaos. Favourite games: Zelda OoT, WoW, Halo, Sekiro."
+    },
+    "sport": {
+      "title": "Tennis & Snowboard",
+      "body": "Experienced freerider, backcountry preferred — Zermatt, Saas Fee, Laax. Fresh powder on Swiss mountains delivers a sense of freedom that's hard to explain and pointless to resist. Tennis since childhood, decade-long hiatus, currently removing the rust. One of the few sports where excuses are structurally impossible: you, the ball, and your own mind. No teammates to blame — only self-control and discipline bring victory."
+    }
   }
 }
