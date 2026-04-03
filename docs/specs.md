@@ -97,9 +97,10 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
      }
    }
    ```
-IMPORTANT! Make each translation sound like it was written natively rather than translated from English.
 
-2. **Use in component:**
+   IMPORTANT! Make each translation sound like it was written natively rather than translated from English.
+
+1. **Use in component:**
 
    ```tsx
    import { useTranslations } from "next-intl";
@@ -115,7 +116,7 @@ IMPORTANT! Make each translation sound like it was written natively rather than 
    }
    ```
 
-3. **For arrays (timelines, cards):**
+1. **For arrays (timelines, cards):**
 
    ```tsx
    const entries = t.raw("entries") as EntryType[];
