@@ -139,5 +139,28 @@
       "web": "Web",
       "aiTooling": "KI-Tooling"
     }
+  },
+  "elsewhere": {
+    "heading": "Abseits vom Code",
+    "acm": {
+      "title": "ACM",
+      "body": "Professionelles Mitglied seit 2019 — weil die Grundlagen der Informatik das Fundament für alles Weitere bilden."
+    },
+    "army": {
+      "title": "Schweizer Armee",
+      "body": "Wachtmeister in der Fliegerabwehr, Flab Bttr 31, Tessiner Bataillon. Vier Sektionen über drei Rekrutenschulen hinweg ausgebildet — zertifiziert in Menschenführung, sozialer Kompetenz, Kommandoführung, technischer Umsetzung und Instruktion."
+    },
+    "cantina": {
+      "title": "Cantina Monti",
+      "body": "Unser Familiengut im Tessin. Ich helfe bei der Lese, habe den Webshop aufgebaut und pflege den Webauftritt — aber Hand aufs Herz: Am zuverlässigsten bin ich bei der Qualitätskontrolle während der Degustation. Ab und zu tausche ich die Tastatur gegen die Rebberge — das beste Debugging, das die Natur zu bieten hat."
+    },
+    "gaming": {
+      "title": "Musik & Gaming",
+      "body": "Gute Musik kennt kein Genre — nur Handwerk und das Gefühl, das sie hinterlässt. Xbox-Gamer seit 2006, Gamertag Neutrin883 auf Xbox und PlayStation. Kompetitiver Multiplayer, Minecraft, Starcraft-Zergs und die eine oder andere Existenzkrise in Sekiro. Wer echte Konkurrenz oder kooperatives Chaos sucht, darf sich gerne melden. Lieblingsspiele: Zelda OoT, WoW, Halo, Sekiro."
+    },
+    "sport": {
+      "title": "Tennis & Snowboard",
+      "body": "Leidenschaftlicher Freerider, am liebsten abseits der Piste — Zermatt, Saas-Fee, Laax. Frischer Pulverschnee in den Schweizer Bergen schenkt eine Freiheit, die man nicht erklären kann und der man nicht widerstehen will. Tennis seit Kindesbeinen, zehn Jahre Pause, derzeit am Rost kratzen. Einer der wenigen Sports, in denen Ausreden nicht funktionieren: nur du, der Ball und dein eigener Kopf. Kein Team, dem man die Schuld schieben kann — nur Selbstdisziplin bringt den Sieg."
+    }
   }
 }

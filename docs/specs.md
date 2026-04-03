@@ -97,6 +97,7 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
      }
    }
    ```
+IMPORTANT! Make each translation sound like it was written natively rather than translated from English.
 
 2. **Use in component:**
 
