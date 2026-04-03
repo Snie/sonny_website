@@ -6,8 +6,45 @@ A website in nextjs about the owner of it Sonny Monti.
 
 ## Tech Stack
 
-- Frontend: Next.js, Tailwind, shadcn/ui
-- Tooling: Bun, GitHub Dependabot, GitHub Codescan
+- **Runtime:** Bun 1.3.11, Node v25.8.2
+- **Framework:** Next.js 16.2.1, React 19.2.4, React DOM 19.2.4
+- **Language:** TypeScript 6
+- **Styling:** Tailwind CSS 4, tw-animate-css 1.4.0, tailwind-merge 3.5.0, class-variance-authority 0.7.1, @tailwindcss/postcss 4
+- **UI Components:** shadcn 4.1.1, @base-ui/react 1.3.0, lucide-react 1.7.0
+- **Icons:** react-icons 5.6.0
+- **Animation:** framer-motion 12.38.0
+- **Charts:** apexcharts 5.10.4, react-apexcharts 2.1.0
+- **Theming:** next-themes 0.4.6, @wrksz/themes 0.7.9 (wrksz fixes some errors with nextjs 16)
+- **i18n:** next-intl 4.8.3
+- **Utilities:** clsx 2.1.1
+- **Linting:** eslint 10, eslint-config-next 16.2.1 (note that eslint has issues with nextjs 16)
+- **Tooling:** GitHub Dependabot, GitHub Codescan, Context7 MCP
+- **MCP Servers:** [Context7](https://context7.com/docs/overview) (`.claude/.mcp.json`)
+
+## MCP Servers
+
+### Context7
+
+Context7 provides up-to-date documentation for libraries directly in context.
+Configured in `.claude/.mcp.json` as a stdio server via `npx @upstash/context7-mcp@latest`.
+
+**When to use:** Consult Context7 when encountering errors related to the tech stack,
+when tests fail due to API misuse, or when debugging stack traces that suggest incorrect
+usage of a dependency. It provides accurate, version-aware documentation that avoids
+hallucinated or outdated API references.
+
+## Tooling Maintenance
+
+External tooling must be kept up to date. Run these commands periodically
+to ensure the latest versions are in use.
+
+| Tool | Update command | Cadence |
+| --- | --- | --- |
+| Context7 MCP | `npx ctx7 setup` | monthly or after issues |
+| Antigravity skills | `bunx antigravity-awesome-skills --claude` | monthly |
+| GitHub Spec Kit | `uv tool upgrade spec-kit` | monthly |
+| Bun | `bun upgrade` | monthly |
+| Dependencies | `bun update` / `bun outdated` | weekly |
 
 ## Workflow for new features
 

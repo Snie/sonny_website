@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="outline" size="icon" className="w-10 h-10">
+      <Button variant="outline" size="icon" className="w-10 h-10 !border-[var(--theme-accent)]">
         <span className="sr-only">Loading theme</span>
       </Button>
     );
@@ -32,7 +32,7 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={cycleTheme}
-      className="w-10 h-10"
+      className="w-10 h-10 !border-[var(--theme-accent)] text-foreground hover:bg-[var(--theme-accent)]/10"
       aria-label={`Current theme: ${theme}. Click to cycle.`}
     >
       {theme === "light" && (
