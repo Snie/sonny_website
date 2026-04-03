@@ -22,7 +22,7 @@ Letting AI vibecode entire application stacks without carefully inspecting its w
 That said, welcome to my website project and have a good reading here.
 
 > **Be aware:** This project may contain brogrammer jokes, rude expressions, funny, outrageous or even profane text.
- Reviewers discretion is advised ;)
+ Reviewers discretion is advised my fellow readers!;)
 
 ## Prequisites
 
