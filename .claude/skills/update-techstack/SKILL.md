@@ -24,7 +24,7 @@ Sync the `## Tech Stack` section in `AGENTS.md` with the current `package.json` 
 5. Reconstruct the Tech Stack block using the following grouping logic:
 
 | Group | Source | Packages |
-|---|---|---|
+| --- | --- | --- |
 | Runtime | shell | Bun (`bun --version`), Node (`node --version`) |
 | Framework | package.json | next, react, react-dom |
 | Language | package.json | typescript |
@@ -39,12 +39,13 @@ Sync the `## Tech Stack` section in `AGENTS.md` with the current `package.json` 
 | Linting | package.json | eslint, eslint-config-next |
 | Tooling | static | GitHub Dependabot, GitHub Codescan |
 
-6. For package.json entries strip `^` or `~` and write version as-is
-7. Replace the existing `## Tech Stack` section in `AGENTS.md` with the newly generated block
-8. Do not modify any other section of `AGENTS.md`
-9. Report which versions changed since the previous entry
+1. For package.json entries strip `^` or `~` and write version as-is
+1. Replace the existing `## Tech Stack` section in `AGENTS.md` with the newly generated block
+1. Do not modify any other section of `AGENTS.md`
+1. Report which versions changed since the previous entry
 
 ## Output format
+
 ```markdown
 ## Tech Stack
 
