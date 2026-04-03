@@ -22,7 +22,7 @@ Letting AI vibecode entire application stacks without carefully inspecting its w
 That said, welcome to my website project and have a good reading here.
 
 > **Be aware:** This project may contain brogrammer jokes, rude expressions, funny, outrageous or even profane text.
- Reviewers discretion is advised ;)
+ Reviewers discretion is advised my fellow readers!;)
 
 ## Prequisites
 
@@ -30,6 +30,8 @@ That said, welcome to my website project and have a good reading here.
  test runner, and bundler
 - `markdownlint-cli2` for linting markdown
 - GitHub account with dependabot and codereview enabled
+- GitHub branch protection rules on `main` and `dev` with required status checks `unit` and `e2e`
+  (enables Dependabot auto-merge to gate on CI — see [CI/CD](#cicd) section)
 
 ### AI development
 
@@ -109,6 +111,19 @@ TODO
 This repository utilizes the following tooling and configurations to have a pleasant and precise software development
 lifecycle, ensure maintainability and repeatability architectural principles, but mostly to automate the SH out of IT
 (this was another brogrammer joke if you are wondering what the hell this means).
+
+### Branching strategy
+
+```text
+feat/<name>  ──┐
+fix/<name>   ──┴──► dev (PR + CI) ──► main (PR + CI + manual approval)
+                         ▲
+dependabot PRs ──────────┘ (auto-merge when unit + e2e pass)
+```
+
+- `feat/*` and `fix/*` branches open a PR targeting `dev`
+- CI runs unit and E2E tests on every PR
+- `dev` → `main` requires a manual PR approval — no auto-merge
 
 ### GitHub configuration
 

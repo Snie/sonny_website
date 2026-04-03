@@ -17,6 +17,7 @@ A website in nextjs about the owner of it Sonny Monti.
 - **Theming:** next-themes 0.4.6, @wrksz/themes 0.7.9 (wrksz fixes some errors with nextjs 16)
 - **i18n:** next-intl 4.8.3
 - **Utilities:** clsx 2.1.1
+- **Testing:** vitest 4.1.2, @testing-library/react 16.3.2, @testing-library/jest-dom 6.9.1, @testing-library/user-event 14.6.1, @playwright/test 1.59.1
 - **Linting:** eslint 10, eslint-config-next 16.2.1 (note that eslint has issues with nextjs 16)
 - **Tooling:** GitHub Dependabot, GitHub Codescan, Context7 MCP
 - **MCP Servers:** [Context7](https://context7.com/docs/overview) (`.claude/.mcp.json`)
@@ -50,6 +51,7 @@ to ensure the latest versions are in use.
 
 - IMPORTANT! Read the specifications Spec: @docs/spec.md
 - Write Blockers in: @docs/blockers.md
+- Write tests for new components and utilities
 
 ## Repository Structure
 
@@ -62,6 +64,11 @@ to ensure the latest versions are in use.
 ├── public/               # Static assets served at /
 ├── types/                # Shared TypeScript type declarations
 ├── lib/                  # Utility functions and i18n.ts configuration
+├── test/                 # Shared test infrastructure (setup, mocks, utils)
+│   ├── e2e/              # Playwright E2E specs
+│   └── mocks/            # Module mocks for Vitest
+├── vitest.config.ts      # Vitest configuration
+├── playwright.config.ts  # Playwright configuration
 ├── .claude/              # Claude Code configuration (skills, settings, hooks)
 ├── .github/              # GitHub Actions workflows and Dependabot config
 ├── AGENTS.md             # Agent and contributor conventions (this file)
@@ -146,6 +153,23 @@ bun update @types/bun --latest
 bun outdated
 ```
 
+### Testing
+
+```bash
+bun run test        # Unit and component tests (Vitest)
+bun run test:watch  # Watch mode during development
+bun run test:e2e    # E2E smoke test (Playwright, builds the app)
+bun run test:all    # Run unit + E2E tests
+```
+
+## Testing Rules
+
+- Co-locate test files in `__tests__/` directories next to source files
+- Use real translations (`messages/en.json`) via the custom render wrapper in `test/utils.tsx`
+- Mock external dependencies (framer-motion, react-icons, next/image, next/link) using mocks in `test/mocks/`
+- No snapshot testing or visual regression testing
+- Tests must be deterministic and fast (full suite under 60 seconds)
+
 ## Git Conventions
 
 ### Branching strategy
@@ -225,3 +249,60 @@ The workflow for implementing a new feature with AI agents:
 - Human = spec owner + evaluator (defines WHAT and WHY, never HOW)
 - Powerful and expensive LLM = lead orchestrator (architecture decisions, spec review)
 - Less powerful and cheaper LLM = subagent worker
+
+### Subagent Orchestration
+
+When the user asks to "work with subagents" or "use agents", the orchestrator (Opus)
+delegates tasks from the active spec's `tasks.md` to specialized subagents defined
+in `.claude/agents/`. The orchestrator reads the tasks, decides which agent handles
+each task, and parallelizes independent work.
+
+#### Available subagents
+
+| Agent | Model | Scope | Color | Memory |
+| --- | --- | --- | --- | --- |
+| `frontend` | claude-sonnet-4-6 | Next.js, React, Tailwind — UI components, pages, styling | cyan | project |
+| `tester` | claude-sonnet-4-6 | Vitest, RTL, Playwright — tests, test infra, test fixing | green | project |
+| `reviewer` | claude-sonnet-4-6 | Code review — bugs, security, performance, conventions | purple | project |
+
+All subagents have access to Context7 MCP, with respect to the rules in this file, and all agents have project-scoped persistent memory.
+
+#### Delegation rules
+
+1. **Orchestrator reads** `specs/<feature>/tasks.md` to understand the full task list
+2. **Orchestrator prompts each subagent** with enough context from the spec, plan,
+   and task description so the subagent can execute without additional discovery
+3. **Parallelism**: tasks marked `[P]` in the same phase are dispatched in parallel
+4. **Sequential**: tasks without `[P]` or cross-phase dependencies run sequentially
+5. **Review gate**: after each phase, the orchestrator may dispatch the `reviewer`
+   agent to check the work before proceeding
+6. **Test fixing**: when tests fail, the orchestrator dispatches the `tester` agent
+   with the `@test-fixing` skill to diagnose and fix failures
+
+#### Task-to-agent mapping
+
+| Task type | Agent |
+| --- | --- |
+| Component creation, styling, layouts | `frontend` |
+| Test files, test infrastructure, mocks | `tester` |
+| E2E tests (Playwright) | `tester` |
+| CI workflows, GitHub Actions | orchestrator (Opus) |
+| Documentation updates (AGENTS.md, specs) | orchestrator (Opus) |
+| Code review after implementation | `reviewer` |
+
+#### How to invoke
+
+Tell the orchestrator:
+
+```text
+work with subagents
+```
+
+**And using spec kit:**
+
+```text
+/speckit.implement work with subagents
+```
+
+The orchestrator will load the tasks, delegate to the appropriate agents,
+and coordinate the work.

@@ -125,3 +125,31 @@ The site uses **next-intl** for multilanguage support with locale-based routing.
 **Text with newlines:**
 
 Use `\n` in JSON, then render with `jsonTextToHtml()` utility (`/lib/text-utils.tsx`).
+
+## Testing
+
+### Test Runners
+
+Unit, component, and E2E tests
+
+### Content Verification Strategy
+
+Tests use **real translation files** (`messages/en.json`) loaded via
+`NextIntlClientProvider` — not mocked `useTranslations` hooks. This catches
+both rendering failures and missing or changed translation keys.
+
+### What Is Not Tested
+
+- Snapshot testing
+- Visual regression testing
+
+### Test File Location
+
+Test files live in co-located `__tests__/` directories adjacent to the source:
+
+- `components/__tests__/` — section and control component tests
+- `components/ui/__tests__/` — UI primitive tests
+- `app/[locale]/__tests__/` — page-level tests
+- `lib/__tests__/` — utility function tests
+- `test/` — shared infrastructure (setup, mocks, utils)
+- `test/e2e/` — Playwright E2E specs
