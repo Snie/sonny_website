@@ -5,6 +5,7 @@
     ".claude/commands/speckit.",
     ".specify/**/*.md",
     ".claude/commands/**/*.md",
-    "node_modules/**/*.md"
+    "node_modules/**/*.md",
+    "specs/**/*.md"
   ]
 }
