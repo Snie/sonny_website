@@ -17,11 +17,11 @@
 
 **Purpose**: Install dependencies and create configuration files
 
-- [ ] T001 Install test dependencies: `bun add -d vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event @vitejs/plugin-react vite-tsconfig-paths jsdom @playwright/test`
-- [ ] T002 Install Playwright chromium browser: `bunx playwright install --with-deps chromium`
-- [ ] T003 Create Vitest configuration in vitest.config.ts (jsdom env, react plugin, tsconfig-paths, setup file ./test/setup.ts, include pattern `**/__tests__/**/*.test.{ts,tsx}`, globals enabled)
-- [ ] T004 Create Playwright configuration in playwright.config.ts (testDir ./test/e2e, chromium only, webServer bun run build && bun run start on port 3000)
-- [ ] T005 Add test scripts to package.json: `"test": "vitest run"`, `"test:watch": "vitest"`, `"test:e2e": "playwright test"`, `"test:all": "vitest run && playwright test"`
+- [x] T001 Install test dependencies: `bun add -d vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event @vitejs/plugin-react vite-tsconfig-paths jsdom @playwright/test`
+- [x] T002 Install Playwright chromium browser: `bunx playwright install --with-deps chromium`
+- [x] T003 Create Vitest configuration in vitest.config.ts (jsdom env, react plugin, tsconfig-paths, setup file ./test/setup.ts, include pattern `**/__tests__/**/*.test.{ts,tsx}`, globals enabled)
+- [x] T004 Create Playwright configuration in playwright.config.ts (testDir ./test/e2e, chromium only, webServer bun run build && bun run start on port 3000)
+- [x] T005 Add test scripts to package.json: `"test": "vitest run"`, `"test:watch": "vitest"`, `"test:e2e": "playwright test"`, `"test:all": "vitest run && playwright test"`
 
 ---
 
@@ -31,14 +31,14 @@
 
 **CRITICAL**: No test file can be written until this phase is complete
 
-- [ ] T006 Create global test setup in test/setup.ts — import @testing-library/jest-dom, mock window.matchMedia, IntersectionObserver, ResizeObserver, HTMLCanvasElement.prototype.getContext (stub 2D context with no-op drawing methods)
-- [ ] T007 Create shared render wrapper in test/utils.tsx — wrap components in NextIntlClientProvider with real messages/en.json, re-export everything from @testing-library/react
-- [ ] T008 [P] Create next/image mock in test/mocks/next-image.tsx — render plain `<img>` with src, alt, width, height props
-- [ ] T009 [P] Create next/link mock in test/mocks/next-link.tsx — render plain `<a>` with href and children
-- [ ] T010 [P] Create framer-motion mock in test/mocks/framer-motion.tsx — mock motion namespace so motion.div renders as div, motion.span as span, etc. Export AnimatePresence as passthrough
-- [ ] T011 [P] Create @wrksz/themes/client mock in test/mocks/wrksz-themes.ts — export useTheme returning controllable resolvedTheme, setTheme, and theme values
-- [ ] T012 [P] Create react-apexcharts mock in test/mocks/react-apexcharts.tsx — default export renders `<div data-testid="apex-chart" />`
-- [ ] T013 Verify test infrastructure works: run `bun test` with an empty placeholder test to confirm vitest.config.ts, setup.ts, and utils.tsx load correctly, then delete the placeholder
+- [x] T006 Create global test setup in test/setup.ts — import @testing-library/jest-dom, mock window.matchMedia, IntersectionObserver, ResizeObserver, HTMLCanvasElement.prototype.getContext (stub 2D context with no-op drawing methods)
+- [x] T007 Create shared render wrapper in test/utils.tsx — wrap components in NextIntlClientProvider with real messages/en.json, re-export everything from @testing-library/react
+- [x] T008 [P] Create next/image mock in test/mocks/next-image.tsx — render plain `<img>` with src, alt, width, height props
+- [x] T009 [P] Create next/link mock in test/mocks/next-link.tsx — render plain `<a>` with href and children
+- [x] T010 [P] Create framer-motion mock in test/mocks/framer-motion.tsx — mock motion namespace so motion.div renders as div, motion.span as span, etc. Export AnimatePresence as passthrough
+- [x] T011 [P] Create @wrksz/themes/client mock in test/mocks/wrksz-themes.ts — export useTheme returning controllable resolvedTheme, setTheme, and theme values
+- [x] T012 [P] Create react-apexcharts mock in test/mocks/react-apexcharts.tsx — default export renders `<div data-testid="apex-chart" />`
+- [x] T013 Verify test infrastructure works: run `bun test` with an empty placeholder test to confirm vitest.config.ts, setup.ts, and utils.tsx load correctly, then delete the placeholder
 
 **Checkpoint**: Test infrastructure ready — all test files can now be written
 
@@ -52,35 +52,35 @@
 
 ### UI Primitive Tests (FR-003)
 
-- [ ] T014 [P] [US2] Create render tests for ContentSection in components/ui/__tests__/content-section.test.tsx — renders children, renders heading when provided, omits heading when not provided, applies custom className
-- [ ] T015 [P] [US2] Create render tests for Card components in components/ui/__tests__/card.test.tsx — Card renders children, CardHeader/CardTitle/CardDescription/CardContent/CardFooter/CardAction render with correct data-slot attributes
-- [ ] T016 [P] [US2] Create render tests for Button in components/ui/__tests__/button.test.tsx — renders with default variant, renders each variant (outline, secondary, ghost, destructive, link), renders sizes, handles onClick, renders as disabled
+- [x] T014 [P] [US2] Create render tests for ContentSection in components/ui/__tests__/content-section.test.tsx — renders children, renders heading when provided, omits heading when not provided, applies custom className
+- [x] T015 [P] [US2] Create render tests for Card components in components/ui/__tests__/card.test.tsx — Card renders children, CardHeader/CardTitle/CardDescription/CardContent/CardFooter/CardAction render with correct data-slot attributes
+- [x] T016 [P] [US2] Create render tests for Button in components/ui/__tests__/button.test.tsx — renders with default variant, renders each variant (outline, secondary, ghost, destructive, link), renders sizes, handles onClick, renders as disabled
 
 ### Section Component Tests (FR-002)
 
-- [ ] T017 [P] [US2] Create render + content test for AuthorNote in components/__tests__/author-note.test.tsx — renders without error, contains authorNote.text paragraphs from en.json (vi.mock framer-motion)
-- [ ] T018 [P] [US2] Create render + content test for AboutSection in components/__tests__/about-section.test.tsx — renders heading "About", contains about.text paragraphs from en.json
-- [ ] T019 [P] [US2] Create render + content test for SkillsSection in components/__tests__/skills-section.test.tsx — renders heading "Stack", renders all 8 category titles (Languages, Code Quality & Build, etc.), spot-checks tool names (Python, Docker, React) (vi.mock framer-motion, react-icons)
-- [ ] T020 [P] [US2] Create render + content test for Timeline in components/__tests__/timeline.test.tsx — renders heading "Work Experience", renders all 5 entry roles/companies/periods from en.json (vi.mock framer-motion)
-- [ ] T021 [P] [US2] Create render + content test for EducationSection in components/__tests__/education-section.test.tsx — renders heading "Education", renders degree titles and institution names from en.json
-- [ ] T022 [P] [US2] Create render + content test for AcademicSection in components/__tests__/academic-section.test.tsx — renders heading "Academic Work", renders entry titles and institutions from en.json
-- [ ] T023 [P] [US2] Create render + content test for LanguagesSection in components/__tests__/languages-section.test.tsx — renders heading "Languages", mocked chart present via data-testid="apex-chart" (vi.mock react-apexcharts, @wrksz/themes/client, next/dynamic)
-- [ ] T024 [P] [US2] Create render + content test for ElsewhereSection in components/__tests__/elsewhere-section.test.tsx — renders heading "Elsewhere", renders card titles (ACM, Swiss Army, Cantina Monti, Music & Gaming, Tennis & Snowboard) from en.json (vi.mock next/image, framer-motion)
-- [ ] T025 [P] [US2] Create render + content test for HeroSection in components/__tests__/hero-section.test.tsx — renders intro text from en.json (vi.mock next/image, @wrksz/themes/client, HexGridBackground → div, VideoText → plain children, framer-motion)
+- [x] T017 [P] [US2] Create render + content test for AuthorNote in components/__tests__/author-note.test.tsx — renders without error, contains authorNote.text paragraphs from en.json (vi.mock framer-motion)
+- [x] T018 [P] [US2] Create render + content test for AboutSection in components/__tests__/about-section.test.tsx — renders heading "About", contains about.text paragraphs from en.json
+- [x] T019 [P] [US2] Create render + content test for SkillsSection in components/__tests__/skills-section.test.tsx — renders heading "Stack", renders all 8 category titles (Languages, Code Quality & Build, etc.), spot-checks tool names (Python, Docker, React) (vi.mock framer-motion, react-icons)
+- [x] T020 [P] [US2] Create render + content test for Timeline in components/__tests__/timeline.test.tsx — renders heading "Work Experience", renders all 5 entry roles/companies/periods from en.json (vi.mock framer-motion)
+- [x] T021 [P] [US2] Create render + content test for EducationSection in components/__tests__/education-section.test.tsx — renders heading "Education", renders degree titles and institution names from en.json
+- [x] T022 [P] [US2] Create render + content test for AcademicSection in components/__tests__/academic-section.test.tsx — renders heading "Academic Work", renders entry titles and institutions from en.json
+- [x] T023 [P] [US2] Create render + content test for LanguagesSection in components/__tests__/languages-section.test.tsx — renders heading "Languages", mocked chart present via data-testid="apex-chart" (vi.mock react-apexcharts, @wrksz/themes/client, next/dynamic)
+- [x] T024 [P] [US2] Create render + content test for ElsewhereSection in components/__tests__/elsewhere-section.test.tsx — renders heading "Elsewhere", renders card titles (ACM, Swiss Army, Cantina Monti, Music & Gaming, Tennis & Snowboard) from en.json (vi.mock next/image, framer-motion)
+- [x] T025 [P] [US2] Create render + content test for HeroSection in components/__tests__/hero-section.test.tsx — renders intro text from en.json (vi.mock next/image, @wrksz/themes/client, HexGridBackground → div, VideoText → plain children, framer-motion)
 
 ### Control Component Tests (FR-004)
 
-- [ ] T026 [P] [US2] Create render test for ThemeToggle in components/__tests__/theme-toggle.test.tsx — renders a button, displays correct icon per theme state (vi.mock @wrksz/themes/client)
-- [ ] T027 [P] [US2] Create render test for LanguageSwitcher in components/__tests__/language-switcher.test.tsx — renders 4 locale buttons (EN, IT, DE, FR), current locale highlighted (vi.mock next/link, next-intl/navigation)
+- [x] T026 [P] [US2] Create render test for ThemeToggle in components/__tests__/theme-toggle.test.tsx — renders a button, displays correct icon per theme state (vi.mock @wrksz/themes/client)
+- [x] T027 [P] [US2] Create render test for LanguageSwitcher in components/__tests__/language-switcher.test.tsx — renders 4 locale buttons (EN, IT, DE, FR), current locale highlighted (vi.mock next/link, next-intl/navigation)
 
 ### App Page Tests (FR-010)
 
-- [ ] T028 [P] [US2] Create render test for error boundary in app/[locale]/__tests__/error.test.tsx — renders error message text, renders "Try again" button, clicking calls the reset function
-- [ ] T029 [P] [US2] Create render test for loading state in app/[locale]/__tests__/loading.test.tsx — renders spinner element (div with animate-spin)
+- [x] T028 [P] [US2] Create render test for error boundary in app/[locale]/__tests__/error.test.tsx — renders error message text, renders "Try again" button, clicking calls the reset function
+- [x] T029 [P] [US2] Create render test for loading state in app/[locale]/__tests__/loading.test.tsx — renders spinner element (div with animate-spin)
 
 ### Validation
 
-- [ ] T030 [US2] Run `bun test` and verify all component tests pass. Use @test-fixing skill if any fail.
+- [x] T030 [US2] Run `bun test` and verify all component tests pass. Use @test-fixing skill if any fail.
 
 **Checkpoint**: All 16 component/UI/control/page test files pass. User Story 2 is independently verified.
 
@@ -94,13 +94,13 @@
 
 ### Implementation
 
-- [ ] T031 [P] [US3] Create unit tests for cn() in lib/__tests__/utils.test.ts — normal merge ("px-2", "py-1"), conflict resolution ("px-2", "px-4" → "px-4"), conditional (false, undefined, null filtered), empty call returns ""
-- [ ] T032 [P] [US3] Create unit tests for jsonTextToHtml() in lib/__tests__/text-utils.test.tsx — multi-line text produces correct number of `<p>` elements, single line produces one `<p>`, empty string produces empty array, whitespace-only lines filtered
-- [ ] T033 [P] [US3] Create locale loading tests in lib/__tests__/i18n.test.ts — verify all 4 locale files (en.json, it.json, de.json, fr.json) import successfully and contain expected top-level keys (hero, about, experience, education, academic, languages, skills, elsewhere, authorNote)
+- [x] T031 [P] [US3] Create unit tests for cn() in lib/__tests__/utils.test.ts — normal merge ("px-2", "py-1"), conflict resolution ("px-2", "px-4" → "px-4"), conditional (false, undefined, null filtered), empty call returns ""
+- [x] T032 [P] [US3] Create unit tests for jsonTextToHtml() in lib/__tests__/text-utils.test.tsx — multi-line text produces correct number of `<p>` elements, single line produces one `<p>`, empty string produces empty array, whitespace-only lines filtered
+- [x] T033 [P] [US3] Create locale loading tests in lib/__tests__/i18n.test.ts — verify all 4 locale files (en.json, it.json, de.json, fr.json) import successfully and contain expected top-level keys (hero, about, experience, education, academic, languages, skills, elsewhere, authorNote)
 
 ### Validation
 
-- [ ] T034 [US3] Run `bun test lib/__tests__/` and verify all utility tests pass
+- [x] T034 [US3] Run `bun test lib/__tests__/` and verify all utility tests pass
 
 **Checkpoint**: All 3 utility test files pass. User Story 3 is independently verified.
 
@@ -114,8 +114,8 @@
 
 ### Implementation
 
-- [ ] T035 [US4] Look up current commit SHA for oven-sh/setup-bun from GitHub (must pin to hash per project rules)
-- [ ] T036 [US4] Create CI test workflow in .github/workflows/test.yml — triggers on PRs to main + push to main/feat/**; two jobs: `unit` (checkout, setup-bun, bun install --frozen-lockfile, bun test) and `e2e` (checkout, setup-bun, bun install, playwright install chromium, bun run test:e2e). Pin actions/checkout to de0fac2e4500dabe0009e67214ff5f5447ce83dd and oven-sh/setup-bun to looked-up hash. Add concurrency group and timeout-minutes.
+- [x] T035 [US4] Look up current commit SHA for oven-sh/setup-bun from GitHub (must pin to hash per project rules)
+- [x] T036 [US4] Create CI test workflow in .github/workflows/test.yml — triggers on PRs to main + push to main/feat/**; two jobs: `unit` (checkout, setup-bun, bun install --frozen-lockfile, bun test) and `e2e` (checkout, setup-bun, bun install, playwright install chromium, bun run test:e2e). Pin actions/checkout to de0fac2e4500dabe0009e67214ff5f5447ce83dd and oven-sh/setup-bun to looked-up hash. Add concurrency group and timeout-minutes.
 
 **Checkpoint**: CI workflow file created. Verified on next PR push.
 
@@ -131,12 +131,12 @@
 
 ### Implementation
 
-- [ ] T037 [US1] Look up current commit SHA for dependabot/fetch-metadata from GitHub (must pin to hash)
-- [ ] T038 [US1] Create Dependabot auto-merge workflow in .github/workflows/dependabot-auto-merge.yml — triggers on pull_request from dependabot[bot]; uses dependabot/fetch-metadata to check update-type; runs `gh pr merge --auto --squash` only for semver-patch and semver-minor. Permissions: contents write, pull-requests write. Pin all actions to commit hashes.
+- [x] T037 [US1] Look up current commit SHA for dependabot/fetch-metadata from GitHub (must pin to hash)
+- [x] T038 [US1] Create Dependabot auto-merge workflow in .github/workflows/dependabot-auto-merge.yml — triggers on pull_request from dependabot[bot]; uses dependabot/fetch-metadata to check update-type; runs `gh pr merge --auto --squash` only for semver-patch and semver-minor. Permissions: contents write, pull-requests write. Pin all actions to commit hashes.
 
 ### E2E Smoke Test
 
-- [ ] T039 [US1] Create Playwright E2E smoke test in test/e2e/smoke.spec.ts — navigate to /en, verify page title contains "Sonny Monti", verify all section headings visible (About, Stack, Work Experience, Education, Academic Work, Languages, Elsewhere), click locale switcher to IT, verify URL changes to /it
+- [x] T039 [US1] Create Playwright E2E smoke test in test/e2e/smoke.spec.ts — navigate to /en, verify page title contains "Sonny Monti", verify all section headings visible (About, Stack, Work Experience, Education, Academic Work, Languages, Elsewhere), click locale switcher to IT, verify URL changes to /it
 
 **Checkpoint**: Auto-merge workflow + E2E test created. Full safety net in place.
 
@@ -146,13 +146,13 @@
 
 **Purpose**: Documentation updates and final validation
 
-- [ ] T040 [P] Update docs/specs.md — add "Testing" section covering: test runners (Vitest + RTL for unit/component, Playwright for E2E), content verification strategy (real translations, not mocked hooks), no snapshot/visual testing, test file location convention (__tests__/ co-located)
-- [ ] T041 [P] Update AGENTS.md tech stack — add Testing group: vitest, @testing-library/react, @testing-library/jest-dom, @testing-library/user-event, @playwright/test
-- [ ] T042 Update AGENTS.md — add "Testing" subsection under Commands with `bun test`, `bun run test:e2e`, `bun run test:all`; update "Workflow for new features" to include writing tests; update Repository Structure to include test/, vitest.config.ts, playwright.config.ts, __tests__/ dirs; add testing rules section
-- [ ] T043 [P] Update .claude/skills/update-techstack/SKILL.md — add Testing group row to grouping table: Testing | package.json | vitest, @testing-library/react, @testing-library/jest-dom, @testing-library/user-event, @playwright/test
-- [ ] T044 Run markdownlint-cli2 on docs/specs.md and AGENTS.md, fix any violations
-- [ ] T045 Run `bun test` — verify full test suite passes and completes under 60 seconds
-- [ ] T046 Run `bun lint` — verify no ESLint errors
+- [x] T040 [P] Update docs/specs.md — add "Testing" section covering: test runners (Vitest + RTL for unit/component, Playwright for E2E), content verification strategy (real translations, not mocked hooks), no snapshot/visual testing, test file location convention (__tests__/ co-located)
+- [x] T041 [P] Update AGENTS.md tech stack — add Testing group: vitest, @testing-library/react, @testing-library/jest-dom, @testing-library/user-event, @playwright/test
+- [x] T042 Update AGENTS.md — add "Testing" subsection under Commands with `bun test`, `bun run test:e2e`, `bun run test:all`; update "Workflow for new features" to include writing tests; update Repository Structure to include test/, vitest.config.ts, playwright.config.ts, __tests__/ dirs; add testing rules section
+- [x] T043 [P] Update .claude/skills/update-techstack/SKILL.md — add Testing group row to grouping table: Testing | package.json | vitest, @testing-library/react, @testing-library/jest-dom, @testing-library/user-event, @playwright/test
+- [x] T044 Run markdownlint-cli2 on docs/specs.md and AGENTS.md, fix any violations
+- [x] T045 Run `bun test` — verify full test suite passes and completes under 60 seconds
+- [x] T046 Run `bun lint` — verify no ESLint errors
 
 ---
 

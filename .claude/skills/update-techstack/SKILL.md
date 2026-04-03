@@ -36,6 +36,7 @@ Sync the `## Tech Stack` section in `AGENTS.md` with the current `package.json` 
 | Theming | package.json | next-themes, @wrksz/themes |
 | i18n | package.json | next-intl |
 | Utilities | package.json | clsx |
+| Testing | package.json | vitest, @testing-library/react, @testing-library/jest-dom, @testing-library/user-event, @playwright/test |
 | Linting | package.json | eslint, eslint-config-next |
 | Tooling | static | GitHub Dependabot, GitHub Codescan |
 
