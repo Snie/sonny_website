@@ -53,6 +53,15 @@ The project can, and is developed manually. However, install the following to us
 
   > **hint:** re-running the command above also updates all skills to the latest version.
 
+- [Context7](https://context7.com/) MCP server for up-to-date library documentation. Install or update with:
+
+  ```shell
+  npx ctx7 setup
+  ```
+
+> **Keep tooling fresh:** all external tools (Context7, antigravity skills, Spec Kit, Bun)
+> should be updated periodically. See [AGENTS.md](AGENTS.md) for the full update table.
+
 ## Quick start
 
 To launch the dev server:

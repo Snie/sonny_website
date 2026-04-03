@@ -25,7 +25,11 @@ export function LanguageSwitcher() {
           <Button
             variant={locale === currentLocale ? "default" : "outline"}
             size="sm"
-            className="w-12"
+            className={
+              locale === currentLocale
+                ? "w-12 bg-[var(--theme-accent)] text-black border-[var(--theme-accent)] hover:bg-[var(--theme-accent)]/80 hover:text-black"
+                : "w-12 !border-[var(--theme-accent)] text-foreground hover:bg-[var(--theme-accent)]/10"
+            }
             aria-label={`Switch to ${localeNames[locale]}`}
             aria-current={locale === currentLocale ? "true" : undefined}
           >
