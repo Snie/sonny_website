@@ -65,6 +65,12 @@ export interface VideoTextProps {
   as?: ElementType
 }
 
+function escapeAttr(v: string): string {
+  return v.replace(/[<>&"']/g, (c) =>
+    ({ "<": "&lt;", ">": "&gt;", "&": "&amp;", '"': "&quot;", "'": "&apos;" })[c]!
+  )
+}
+
 export function VideoText({
   src,
   children,
@@ -82,19 +88,24 @@ export function VideoText({
 }: VideoTextProps) {
   const [svgMask, setSvgMask] = useState("")
   const content = React.Children.toArray(children).join("")
+  const safeContent = escapeAttr(content)
+  const safeWeight = escapeAttr(String(fontWeight))
+  const safeAnchor = escapeAttr(String(textAnchor))
+  const safeBaseline = escapeAttr(String(dominantBaseline))
+  const safeFamily = escapeAttr(String(fontFamily))
 
   useEffect(() => {
     const updateSvgMask = () => {
       const responsiveFontSize =
         typeof fontSize === "number" ? `${fontSize}vw` : fontSize
-      const newSvgMask = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><text x='50%' y='50%' font-size='${responsiveFontSize}' font-weight='${fontWeight}' text-anchor='${textAnchor}' dominant-baseline='${dominantBaseline}' font-family='${fontFamily}'>${content}</text></svg>`
+      const newSvgMask = `<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><text x='50%' y='50%' font-size='${responsiveFontSize}' font-weight='${safeWeight}' text-anchor='${safeAnchor}' dominant-baseline='${safeBaseline}' font-family='${safeFamily}'>${safeContent}</text></svg>`
       setSvgMask(newSvgMask)
     }
 
     updateSvgMask()
     window.addEventListener("resize", updateSvgMask)
     return () => window.removeEventListener("resize", updateSvgMask)
-  }, [content, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily])
+  }, [safeContent, fontSize, fontWeight, textAnchor, dominantBaseline, fontFamily])
 
   const dataUrlMask = `url("data:image/svg+xml,${encodeURIComponent(svgMask)}")`
 

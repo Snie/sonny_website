@@ -42,6 +42,7 @@ jobs:
               - components
               - lib
               - types
+              - proxy.ts
             paths-ignore:
               - node_modules
               - .next

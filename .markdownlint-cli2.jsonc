@@ -6,6 +6,7 @@
     ".specify/**/*.md",
     ".claude/commands/**/*.md",
     "node_modules/**/*.md",
-    "specs/**/*.md"
+    "specs/**/*.md",
+    "docs/security/*.md"
   ]
 }
