@@ -1,0 +1,35 @@
+## 1.0.0 (2026-04-06)
+
+### Features
+
+* added codeql configuration ([619c2a8](https://github.com/Snie/sonny_website/commit/619c2a834654d67322f52a2b629f2479e8da26a6))
+* added context7 as MCP for claudeand sanitized the tech stack in agents.md, so as synching it with readme. created new skill to update the teck stack in agents.md ([9e2cad2](https://github.com/Snie/sonny_website/commit/9e2cad28ba6697715d5941fbce3e98b775ff10d7))
+* added elsewhere section and related translations ([0c3186e](https://github.com/Snie/sonny_website/commit/0c3186ebc07c82b4ff051405972dfcbf78ba021b))
+* **ci:** add semantic-release automation ([7110547](https://github.com/Snie/sonny_website/commit/711054726a7c8cd4866552be8fb10b18ae6c9606))
+* **ci:** backmerge main into dev after each release ([9bd741a](https://github.com/Snie/sonny_website/commit/9bd741a4b0aea9f9303402fa46436829ab5125e4))
+* First commit with initial setup and README draft ([b570365](https://github.com/Snie/sonny_website/commit/b5703659c5ff097aa5263c07c2cd727841452052))
+* fixed hexgrid, implemented two colors logic depending on the light or dark mode, added languages and Academic Work sections, Finalized text for en version ([345b340](https://github.com/Snie/sonny_website/commit/345b340848cedfa0a4aefadb09ea96e7ea4f85c7))
+* fixed translations, and updated them so as small enhancements in AGENTS.md ([eecdcbc](https://github.com/Snie/sonny_website/commit/eecdcbcf557f130484bd0f6e8d4a6c35b13f5334))
+* initial commit ([a1c7ab8](https://github.com/Snie/sonny_website/commit/a1c7ab81eaa4048555d8317a0e6224fd7a3ec938))
+* initiated nextjs project with bun ([cceb992](https://github.com/Snie/sonny_website/commit/cceb99247a96551f6363fc85f1f022ec6c7b5e63))
+* task created for writing a test suite ([01bf27a](https://github.com/Snie/sonny_website/commit/01bf27a78c7817c191c0326920bbb2b195660016))
+* wrote full test suite. Added actions to run test on PR on dev and automerge when all test pass for dependabot deps updates, a manual PR to main should be done by a human reviewer (meee mf) ([5a40d81](https://github.com/Snie/sonny_website/commit/5a40d811bae3dd7dc2f50eb16fc464ad0c54491b))
+
+### Bug Fixes
+
+* careful review, implemented error and loading pages so as page title. Translations improved ([549ad95](https://github.com/Snie/sonny_website/commit/549ad953244ebe21bbd8369f4336a075d7ec43a3))
+* **ci:** correct oven-sh/setup-bun commit SHA ([cb2447d](https://github.com/Snie/sonny_website/commit/cb2447d16f3bf2c84ea9a1f01f366b3d27394060))
+* **ci:** pin Node 22 for semantic-release compatibility ([658e6c9](https://github.com/Snie/sonny_website/commit/658e6c9558983776694863be5caf1d323059050e))
+* **ci:** use full commit SHA for oven-sh/setup-bun action ([a91c1d7](https://github.com/Snie/sonny_website/commit/a91c1d7f57f60ebda99a4524cf2d563326a37c12))
+* **ci:** use GitHub App token to bypass branch protection ([9cb0b2d](https://github.com/Snie/sonny_website/commit/9cb0b2d9a85f524c3f8f75affa2c23275b1877e6))
+* **ci:** use RELEASE_TOKEN to bypass branch protection ([daff3fd](https://github.com/Snie/sonny_website/commit/daff3fd2501bcacb3ca3b0afa7ab10181dd981a6))
+* fixed codeql findings ([ae76645](https://github.com/Snie/sonny_website/commit/ae7664552af5855f01c074587c2a8d98767f46b1))
+* fixed mardkown errors in update-tech-stack ([50e5dd0](https://github.com/Snie/sonny_website/commit/50e5dd0852c80334b96f9db58c1f44b5ca614d52))
+* fixed markdowns ([e355268](https://github.com/Snie/sonny_website/commit/e3552684eae2e0b14c76dcef1ce7a6b3b602ceea))
+* fixed md for specs ([2d0446b](https://github.com/Snie/sonny_website/commit/2d0446b78986e35d2f5acdc2f9c64cdf530673e3))
+* Merge pull request [#3](https://github.com/Snie/sonny_website/issues/3) from Snie/dependabot/bun/types/node-25.5.0 ([93d2af0](https://github.com/Snie/sonny_website/commit/93d2af08a6643e83bbb1f14a19e162a40628d762))
+* Merge pull request [#4](https://github.com/Snie/sonny_website/issues/4) from Snie/dependabot/bun/typescript-6.0.2 ([2e6d655](https://github.com/Snie/sonny_website/commit/2e6d655bcfaee6e96e2c82a1f20768256e128a4d))
+
+### Security
+
+* Website audited and hardened ([2aca906](https://github.com/Snie/sonny_website/commit/2aca9066c69231effe666d361e27d1b946458897))
