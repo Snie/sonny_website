@@ -421,5 +421,5 @@ export function HexGridBackground() {
 		};
 	}, [resolvedTheme]);
 
-	return <canvas ref={canvasRef} className="fixed inset-0 -z-10" />;
+	return <canvas ref={canvasRef} className="pointer-events-none fixed inset-0 -z-10" />;
 }
