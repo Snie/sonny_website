@@ -1,3 +1,9 @@
+## [1.3.5](https://github.com/Snie/sonny_website/compare/v1.3.4...v1.3.5) (2026-04-06)
+
+### Bug Fixes
+
+* **ui:** improved hexgrid animations on mobile ([969e946](https://github.com/Snie/sonny_website/commit/969e9469386c4223b754bccb3af78f1f5de5d25c))
+
 ## [1.3.4](https://github.com/Snie/sonny_website/compare/v1.3.3...v1.3.4) (2026-04-06)
 
 ### Bug Fixes
