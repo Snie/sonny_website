@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/Snie/sonny_website/compare/v1.2.0...v1.3.0) (2026-04-06)
+
+### Features
+
+* **observacility:** Added Vercel Analytics ([3f8f1f4](https://github.com/Snie/sonny_website/commit/3f8f1f4133a8049b12ff9d141c8c67ffd613f02d))
+
 ## [1.2.0](https://github.com/Snie/sonny_website/compare/v1.1.0...v1.2.0) (2026-04-06)
 
 ### Features
