@@ -32,9 +32,12 @@ interface TravelingLight {
 
 export function HexGridBackground() {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
-	useTheme();
+	const { resolvedTheme } = useTheme();
 
 	useEffect(() => {
+		// resolvedTheme is read to re-run this effect on theme changes
+		void resolvedTheme;
+
 		const canvas = canvasRef.current;
 		if (!canvas) return;
 
@@ -75,13 +78,17 @@ export function HexGridBackground() {
 		};
 
 		const primaryColor = getThemeColor();
+		const strokeColor = getComputedStyle(document.documentElement)
+			.getPropertyValue("--hex-stroke")
+			.trim();
 
 		// Visual configuration
-		const config = {
+		let config = {
 			hexFillAlphaMultiplier: 0.08, // Controls hex fill intensity
-			lightGlowRadius: 5,
-			lightCoreRadius: 1.5,
-			trailGlowRadius: 4,
+			lightGlowRadius: size >= 100 ? 5 : 2.5,
+			lightCoreRadius: size >= 100 ? 1.5 : 0.8,
+			trailGlowRadius: size >= 100 ? 4 : 2,
+			whiteCoreRadius: size >= 100 ? 0.8 : 0.4,
 			trailLength: 99,
 			trailFadeRate: 0.92,
 		};
@@ -141,6 +148,13 @@ export function HexGridBackground() {
 			canvas.width = window.innerWidth;
 			canvas.height = window.innerHeight;
 			size = getSize();
+			config = {
+				...config,
+				lightGlowRadius: size >= 100 ? 5 : 2.5,
+				lightCoreRadius: size >= 100 ? 1.5 : 0.8,
+				trailGlowRadius: size >= 100 ? 4 : 2,
+				whiteCoreRadius: size >= 100 ? 0.8 : 0.4,
+			};
 
 			cellsMap = new Map<string, HexCell>();
 
@@ -212,9 +226,6 @@ export function HexGridBackground() {
 				ctx.fill();
 			}
 
-			const strokeColor = getComputedStyle(document.documentElement)
-				.getPropertyValue("--hex-stroke")
-				.trim();
 			ctx.strokeStyle = strokeColor;
 			ctx.lineWidth = 1;
 			ctx.stroke();
@@ -247,7 +258,7 @@ export function HexGridBackground() {
 			// Tiny white core for brilliance
 			ctx.fillStyle = `rgba(255, 255, 255, ${intensity * 0.6})`;
 			ctx.beginPath();
-			ctx.arc(x, y, 0.8, 0, Math.PI * 2);
+			ctx.arc(x, y, config.whiteCoreRadius, 0, Math.PI * 2);
 			ctx.fill();
 		};
 
@@ -402,7 +413,7 @@ export function HexGridBackground() {
 				cancelAnimationFrame(animationFrameId);
 			}
 		};
-	}, []);
+	}, [resolvedTheme]);
 
 	return <canvas ref={canvasRef} className="fixed inset-0 -z-10" />;
 }
