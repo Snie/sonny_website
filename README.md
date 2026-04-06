@@ -1,6 +1,6 @@
 # Sonny Website
 
-Hello there, my name is Sonny Monti and this project is the placeolder for my personal website.  
+Hello there, my name is Sonny Monti and this project is the placeholder for my personal website.  
 
 The websites will explain who I am, be my online resume, and serve as sandbox for my experiments such as ML, AI or
  other software projects worth to operationalize behind an API.
@@ -30,8 +30,9 @@ That said, welcome to my website project and have a good reading here.
  test runner, and bundler
 - `markdownlint-cli2` for linting markdown
 - GitHub account with dependabot and codereview enabled
-- GitHub branch protection rules on `main` and `dev` with required status checks `unit` and `e2e`
+- GitHub branch protection rules on `main` and `dev` with required status checks for testing
   (enables Dependabot auto-merge to gate on CI — see [CI/CD](#cicd) section)
+- My own GitHub app to allow the the `semantic-release` bot doing releases with respect to conventional commits
 
 ### AI development
 
@@ -72,6 +73,19 @@ To launch the dev server:
 bun dev
 ```
 
+## Repository Structure
+
+```text
+.
+├── app/          # Next.js app router (pages, layouts, global styles)
+├── components/   # React UI components
+├── docs/         # Developer documentation
+├── public/       # Static assets
+├── types/        # Shared TypeScript types
+├── lib/          # Utility functions and i18n configuration
+└── test/         # Test infrastructure, mocks, and E2E specs
+```
+
 ## Contributing and Development
 
 The project uses [GitHub Spec Kit](https://github.com/github/spec-kit) for spec-driven development.
@@ -82,7 +96,7 @@ See [AGENTS.md](AGENTS.md) for the full SDD workflow, git conventions, and agent
 ## Documentation
 
 As a general outline, refer to this README.md to have an overview on the project and quick start guides.  
-Whereas AGENTS.md containns technical documentation and precise commands to operate on this repository,
+Whereas AGENTS.md contains technical documentation and precise commands to operate on this repository,
 principally for agents but also for humans.  
 
 The repository comes with markdownlint-cli2, a powerful tool to lint markdowns, I know it may be fucking annoying but

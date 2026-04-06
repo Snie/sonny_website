@@ -7,15 +7,15 @@ A website in nextjs about the owner of it Sonny Monti.
 ## Tech Stack
 
 - **Runtime:** Bun 1.3.11, Node v25.8.2
-- **Framework:** Next.js 16.2.1, React 19.2.4, React DOM 19.2.4
+- **Framework:** Next.js 16.2.2, React 19.2.4, React DOM 19.2.4
 - **Language:** TypeScript 6
 - **Styling:** Tailwind CSS 4, tw-animate-css 1.4.0, tailwind-merge 3.5.0, class-variance-authority 0.7.1, @tailwindcss/postcss 4
-- **UI Components:** shadcn 4.1.1, @base-ui/react 1.3.0, lucide-react 1.7.0
+- **UI Components:** shadcn 4.1.2, @base-ui/react 1.3.0, lucide-react 1.7.0
 - **Icons:** react-icons 5.6.0
 - **Animation:** framer-motion 12.38.0
-- **Charts:** apexcharts 5.10.4, react-apexcharts 2.1.0
-- **Theming:** next-themes 0.4.6, @wrksz/themes 0.7.9 (wrksz fixes some errors with nextjs 16)
-- **i18n:** next-intl 4.8.3
+- **Charts:** apexcharts 5.10.5, react-apexcharts 2.1.0
+- **Theming:** next-themes 0.4.6, @wrksz/themes 0.7.9 ([wrksz fixes some errors with nextjs 16](https://www.wrksz.dev/blog/wrksz-themes))
+- **i18n:** next-intl 4.9.0
 - **Utilities:** clsx 2.1.1
 - **Testing:** vitest 4.1.2, @testing-library/react 16.3.2, @testing-library/jest-dom 6.9.1, @testing-library/user-event 14.6.1, @playwright/test 1.59.1
 - **Linting/Formatting:** @biomejs/biome 2.4.10 (replaces ESLint + Prettier)

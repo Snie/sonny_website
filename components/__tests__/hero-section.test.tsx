@@ -1,6 +1,15 @@
 vi.mock("framer-motion", () => import("../../test/mocks/framer-motion"));
 vi.mock("next/image", () => import("../../test/mocks/next-image"));
 vi.mock("@wrksz/themes/client", () => import("../../test/mocks/wrksz-themes"));
+
+const { IconStub } = vi.hoisted(() => {
+	const IconStub = () => null;
+	return { IconStub };
+});
+
+vi.mock("react-icons/fa", () => ({ FaLinkedin: IconStub }));
+vi.mock("react-icons/md", () => ({ MdEmail: IconStub }));
+vi.mock("react-icons/si", () => ({ SiGithub: IconStub }));
 vi.mock("@/components/hex-grid-background", () => ({
 	HexGridBackground: () => <div data-testid="hex-grid" />,
 }));
