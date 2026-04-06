@@ -7,6 +7,7 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { locales } from "@/lib/i18n";
 import "../globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const notoSans = Noto_Sans({
 	variable: "--font-noto-sans",
@@ -75,6 +76,7 @@ export default async function RootLayout({
 			className={`${notoSans.variable} h-full antialiased`}
 			suppressHydrationWarning
 		>
+			<SpeedInsights />
 			<body className="min-h-full flex flex-col font-sans">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<NextIntlClientProvider messages={messages}>
