@@ -1,17 +1,17 @@
-import React from "react";
+import type React from "react";
 
 function MockLink({
-  href,
-  children,
-  ...props
+	href,
+	children,
+	...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: string;
+	href: string;
 }) {
-  return (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  );
+	return (
+		<a href={href} {...props}>
+			{children}
+		</a>
+	);
 }
 
 export default MockLink;

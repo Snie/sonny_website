@@ -11,3 +11,7 @@ updates:
     schedule:
       interval: "weekly"
     target-branch: "dev"
+    ignore:
+      - dependency-name: "*"
+        update-types:
+          - "version-update:semver-major"
