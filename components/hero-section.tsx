@@ -1,9 +1,13 @@
 "use client";
 
 import { useTheme } from "@wrksz/themes/client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import { FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { SiGithub } from "react-icons/si";
 import { VideoText } from "@/components/ui/video-text";
 import sonny from "../public/sonny_frontpage.webp";
 import { HexGridBackground } from "./hex-grid-background";
@@ -56,6 +60,42 @@ export function HeroSection() {
 			<div>
 				<p className="text-xl sm:text-2xl md:text-3xl text-foreground/80">{t("intro")}</p>
 			</div>
+
+			<motion.div
+				className="flex items-center gap-5 mt-6"
+				initial={{ opacity: 0, y: 10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ delay: 0.3, duration: 0.5 }}
+			>
+				<a
+					href="https://github.com/Snie"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="GitHub"
+					className="text-2xl opacity-70 hover:opacity-100 transition-opacity duration-200"
+					style={{ color: "var(--icons-primary)" }}
+				>
+					<SiGithub />
+				</a>
+				<a
+					href="https://www.linkedin.com/in/sonnymonti/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="LinkedIn"
+					className="text-2xl opacity-70 hover:opacity-100 transition-opacity duration-200"
+					style={{ color: "var(--icons-primary)" }}
+				>
+					<FaLinkedin />
+				</a>
+				<a
+					href="mailto:montis@acm.org"
+					aria-label="Email"
+					className="text-2xl opacity-70 hover:opacity-100 transition-opacity duration-200"
+					style={{ color: "var(--icons-primary)" }}
+				>
+					<MdEmail />
+				</a>
+			</motion.div>
 
 			{/* Fixed portrait in bottom-right corner */}
 			<div
