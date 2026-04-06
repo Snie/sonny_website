@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/Snie/sonny_website/compare/v1.1.0...v1.2.0) (2026-04-06)
+
+### Features
+
+* **observability:** Added Vercel Speed Insights ([7e58685](https://github.com/Snie/sonny_website/commit/7e586853cb6cbd974a07f44e44c44e934829e98b))
+
 ## [1.1.0](https://github.com/Snie/sonny_website/compare/v1.0.0...v1.1.0) (2026-04-06)
 
 ### Features
