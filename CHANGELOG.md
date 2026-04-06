@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/Snie/sonny_website/compare/v1.3.2...v1.3.3) (2026-04-06)
+
+### Bug Fixes
+
+* **background:** Add responsive hex size breakpoint at 640px ([1ec810d](https://github.com/Snie/sonny_website/commit/1ec810de7d8981dda3d34a8ab31f945cf567f984))
+
 ## [1.3.2](https://github.com/Snie/sonny_website/compare/v1.3.1...v1.3.2) (2026-04-06)
 
 ### Bug Fixes
