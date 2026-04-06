@@ -1,3 +1,9 @@
+## [1.3.4](https://github.com/Snie/sonny_website/compare/v1.3.3...v1.3.4) (2026-04-06)
+
+### Bug Fixes
+
+* **theme:** make hexgrid, radar chart, and pill colors react to theme changes ([95d8bca](https://github.com/Snie/sonny_website/commit/95d8bca0e9c37e1575a82c0c859a435011f23324))
+
 ## [1.3.3](https://github.com/Snie/sonny_website/compare/v1.3.2...v1.3.3) (2026-04-06)
 
 ### Bug Fixes
