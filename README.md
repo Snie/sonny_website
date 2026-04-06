@@ -135,6 +135,33 @@ dependabot PRs ──────────┘ (auto-merge when unit + e2e pas
 >
 > Use the skill `github-check-jobs` to grab failing jobs
 
+### Releases
+
+Releases are fully automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/)
+triggered on every push to `main`. No manual versioning required.
+
+**What triggers a release:**
+
+| Commit type | Version bump | CHANGELOG section |
+| --- | --- | --- |
+| `feat:` | minor | Features |
+| `fix:` | patch | Bug Fixes |
+| `sec:` | patch | Security |
+| `feat!:` / `BREAKING CHANGE:` | major | Breaking Changes |
+| `chore:`, `docs:`, `refactor:`, `test:` | none | — |
+
+**What the workflow produces on a release:**
+
+1. `CHANGELOG.md` updated with grouped release notes
+2. `package.json` version bumped
+3. Commit pushed: `chore(release): x.y.z [skip ci]`
+4. Git tag `vx.y.z` created
+5. GitHub Release created with full notes
+
+The release commit includes `[skip ci]` to prevent CI from re-triggering on the automated bump.
+Dependabot PRs merged into `dev` and then promoted to `main` via a conventional commit
+(e.g. `chore(deps): update dependencies`) will not trigger a release.
+
 ### Dependency management
 
 Dependabot runs weekly and opens PRs targeting `dev` for patch and minor updates.
