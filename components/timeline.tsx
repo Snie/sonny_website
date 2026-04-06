@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ContentSection } from "@/components/ui/content-section";
 
 interface TimelineEntry {
@@ -25,6 +25,9 @@ export function Timeline() {
 		mediaQuery.addEventListener("change", handler);
 		return () => mediaQuery.removeEventListener("change", handler);
 	}, []);
+
+	const containerRef = useRef<HTMLDivElement>(null);
+	const isInView = useInView(containerRef, { once: true, amount: 0.05 });
 
 	// Get entries from translations
 	const entries: TimelineEntry[] = t.raw("entries") as TimelineEntry[];
@@ -53,11 +56,11 @@ export function Timeline() {
 	return (
 		<ContentSection maxWidth="5xl" heading={t("heading")}>
 			<motion.div
+				ref={containerRef}
 				className="relative"
 				variants={prefersReducedMotion ? {} : containerVariants}
 				initial={prefersReducedMotion ? "visible" : "hidden"}
-				whileInView="visible"
-				viewport={{ once: true, amount: 0.05 }}
+				animate={prefersReducedMotion || isInView ? "visible" : "hidden"}
 			>
 				{/* Vertical line */}
 				<div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-border" />
