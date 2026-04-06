@@ -83,8 +83,9 @@ export default async function RootLayout({
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<NextIntlClientProvider messages={messages}>
 						{/* Fixed controls in top-right */}
-						<div className="fixed top-4 right-4 z-50 flex gap-3">
+						<div className="fixed top-4 right-4 z-50 flex items-center gap-1 rounded-full border border-border/50 bg-background/80 backdrop-blur-md shadow-sm px-2 py-1">
 							<LanguageSwitcher />
+							<span className="w-px h-4 bg-border/60" aria-hidden="true" />
 							<ThemeToggle />
 						</div>
 						{children}
