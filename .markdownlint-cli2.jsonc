@@ -7,6 +7,7 @@
     ".claude/commands/**/*.md",
     "node_modules/**/*.md",
     "specs/**/*.md",
-    "docs/security/*.md"
+    "docs/security/*.md",
+    "CHANGELOG.md"
   ]
 }
