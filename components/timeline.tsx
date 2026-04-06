@@ -57,7 +57,7 @@ export function Timeline() {
 				variants={prefersReducedMotion ? {} : containerVariants}
 				initial={prefersReducedMotion ? "visible" : "hidden"}
 				whileInView="visible"
-				viewport={{ once: true, margin: "-100px" }}
+				viewport={{ once: true, amount: 0.05 }}
 			>
 				{/* Vertical line */}
 				<div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-border" />
@@ -69,7 +69,7 @@ export function Timeline() {
 						variants={prefersReducedMotion ? {} : itemVariants}
 					>
 						{/* Node circle */}
-						<div className="absolute left-0 md:left-8 top-0 w-4 h-4 -ml-1.75 rounded-full bg-primary border-4 border-background" />
+						<div className="absolute left-0 md:left-8 top-0 w-4 h-4 -ml-[7px] rounded-full bg-primary border-4 border-background" />
 
 						{/* Content */}
 						<div className="space-y-2">
