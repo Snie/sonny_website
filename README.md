@@ -134,3 +134,46 @@ dependabot PRs ──────────┘ (auto-merge when unit + e2e pas
 > **hint**: use the skill `github-dependabot` to see dependabot alerts and also pull requests for dependencies.  
 >
 > Use the skill `github-check-jobs` to grab failing jobs
+
+### Releases
+
+Releases are fully automated via [semantic-release](https://semantic-release.gitbook.io/semantic-release/)
+triggered on every push to `main`. No manual versioning required.
+
+**What triggers a release:**
+
+| Commit type | Version bump | CHANGELOG section |
+| --- | --- | --- |
+| `feat:` | minor | Features |
+| `fix:` | patch | Bug Fixes |
+| `sec:` | patch | Security |
+| `feat!:` / `BREAKING CHANGE:` | major | Breaking Changes |
+| `chore:`, `docs:`, `refactor:`, `test:` | none | — |
+
+**What the workflow produces on a release:**
+
+1. `CHANGELOG.md` updated with grouped release notes
+2. `package.json` version bumped
+3. Commit pushed: `chore(release): x.y.z [skip ci]`
+4. Git tag `vx.y.z` created
+5. GitHub Release created with full notes
+
+The release commit includes `[skip ci]` to prevent CI from re-triggering on the automated bump.
+Dependabot PRs merged into `dev` and then promoted to `main` via a conventional commit
+(e.g. `chore(deps): update dependencies`) will not trigger a release.
+
+### Dependency management
+
+Dependabot runs weekly and opens PRs targeting `dev` for patch and minor updates.
+Major version bumps are intentionally **blocked** — they require a manual PR.
+Dependabot PRs auto-merge once `unit` and `e2e` pass.
+
+To inspect dependencies locally:
+
+```shell
+bun outdated          # show all outdated packages with current/latest versions
+bun update            # update within semver ranges (respects package.json constraints)
+bun update --latest   # ignore semver ranges, pull everything to latest (use with care)
+```
+
+Major upgrades should be done manually, one package at a time, with a dedicated `feat/upgrade-<pkg>` branch.

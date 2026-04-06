@@ -1,18 +1,19 @@
-import React from "react";
+import type React from "react";
 
 function MockImage({
-  src,
-  alt,
-  width,
-  height,
-  ...props
+	src,
+	alt,
+	width,
+	height,
+	...props
 }: React.ImgHTMLAttributes<HTMLImageElement> & {
-  src: string | { src: string };
-  priority?: boolean;
-  fill?: boolean;
+	src: string | { src: string };
+	priority?: boolean;
+	fill?: boolean;
 }) {
-  const imgSrc = typeof src === "object" ? src.src : src;
-  return <img src={imgSrc} alt={alt} width={width} height={height} {...props} />;
+	const imgSrc = typeof src === "object" ? src.src : src;
+	// biome-ignore lint/performance/noImgElement: intentional mock for next/image
+	return <img src={imgSrc} alt={alt} width={width} height={height} {...props} />;
 }
 
 export default MockImage;
