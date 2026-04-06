@@ -1,166 +1,166 @@
 {
-  "hero": {
-    "title": "Ciao, sono Sonny",
-    "intro": "Tech Lead di professione, ingegnere nel fare, architetto nel pensare ed eterno studente nell'anima"
-  },
-  "authorNote": {
-    "text": "Quando ho scritto questa nota nel 2026 (e credetemi o no, l'ho scritta quasi tutta a mano), facevo l'ML Tech Lead alla Posta Svizzera, lo sviluppo di agenti IA viveva la sua età dell'oro, così come gli LLM, e la parola IA veniva usata più dell'articolo *il*. Quando rileggerò questo paragrafo, l'IA avrà raggiunto l'AGI, livello Terminator, gli umani alimenteranno la matrix dell'Architetto (tranne Neo ovviamente), domineranno l'umanit.... ehm, sarò un contadino e vivrò alla grande!\n\nScherzi a parte, volevo raccontarvi questa storia perché, nonostante i progressi enormi fatti dagli agenti di codifica, sono convinto che buoni ingegneri con solide competenze architetturali e con esperienza nella progettazione di sistemi e interfacce saranno ancora necessari per un bel po'.\n\nLasciare che l'IA vibecodi interi stack applicativi senza verificarne attentamente il lavoro è la ricetta perfetta per il disastro, perché gli agenti consumano interfacce. Non le inventano mai. Se un agente decide come deve apparire un endpoint API, il processo è già fallito.\n\nDetto ciò, benvenuti nel mio progetto web e buona lettura."
-  },
-  "about": {
-    "heading": "Chi sono",
-    "text": "Sono ML Tech Lead alla Posta Svizzera, dove guido la progettazione e la messa in produzione di sistemi IA/ML su larga scala — dall'architettura al deploy.\n\n\n Il mio lavoro si colloca all'intersezione tra machine learning engineering, MLOps e platform thinking: costruire l'infrastruttura e le pratiche che permettono alla data science di produrre risultati concreti. Pipeline CI/CD, gestione del ciclo di vita dei modelli, osservabilità e pattern organizzativi che rendono i team veloci senza renderli fragili.\n\nSono specializzato in ML engineering basato su Python e ho passato anni a trasformare workflow di dati ad hoc in sistemi scalabili e governati — mantenendo l'asticella ingegneristica alta abbastanza da fare la differenza.\n\nOltre alla tecnica, guido e faccio da mentore a team cross-funzionali in data science, engineering e business — traducendo tra ciò che è statisticamente possibile, architetturalmente solido e concretamente impattante."
-  },
-  "experience": {
-    "heading": "Esperienza professionale",
-    "entries": [
-      {
-        "role": "ML Tech Lead & Solution Architect",
-        "company": "Swiss Post",
-        "city": "Berna",
-        "period": "2026 – Presente",
-        "description": "All'intersezione tra leadership tecnica e solution architecture: review delle implementazioni, ownership della roadmap e costruzione di un centro di eccellenza trasversale a platform engineering, delivery governance e adozione di standard ML. Definizione dell'ML Blueprint, del modello MLOps-as-a-Service e degli Architecture Decision Record per standardizzare e modernizzare il panorama ML/IA. Costruzione delle fondamenta GenAI, integrazione di MLflow come backbone di valutazione e monitoring, e adozione di uno stack portabile, modulare, sicuro e vendor-agnostic su tutti i progetti."
-      },
-      {
-        "role": "Lead Data Scientist & ML Engineer",
-        "company": "Swiss Post",
-        "city": "Berna",
-        "period": "2025 – 2026",
-        "description": "Creazione e guida della community Data Science & MLOps a livello aziendale. Standardizzazione dei progetti data-driven e dell'architettura Python su larga scala. Guida della computer vision applicata alla logistica — rilevamento dei livelli di riempimento dei container, identificazione, tracciamento e conteggio dei carrelli postali tramite riconoscimento ottico di codici."
-      },
-      {
-        "role": "Data Scientist & ML Engineer",
-        "company": "Swiss Post",
-        "city": "Berna",
-        "period": "2022 – 2025",
-        "description": "Progettazione e messa in opera dell'architettura MLOps alla Posta Svizzera. Abbattimento dei silos tra team cross-funzionali, con miglioramento della comunicazione interna e dell'efficienza operativa. Abilitazione di altre unità all'adozione di stack tecnologici moderni e processi di sviluppo attuali. Realizzazione di dashboard dati, automazioni di processo e del primo chatbot interno ufficiale della Posta Svizzera — dalle integrazioni LLM SaaS allo sviluppo custom in-house."
-      },
-      {
-        "role": "Data Engineer",
-        "company": "Swiss Post",
-        "city": "Berna",
-        "period": "2020 – 2022",
-        "description": "Amministrazione Splunk e automazione della piattaforma tramite Ansible. Realizzazione di diversi progetti data-driven, tra cui il monitoraggio di sicurezza della piattaforma IT centrale con il team OPSEC, raggiungendo la conformità PCI DSS. Guida tecnica di progetti critici per il consiglio di amministrazione: analisi dell'occupazione degli uffici e della produttività in remote working, strategia immobiliare e HR. Progettazione del processo di fraud detection basato su ML per i conti postali — progetti ad alto impatto che continuano a orientare la strategia dell'organizzazione."
-      },
-      {
-        "role": "Security Analyst & Big Data Engineer",
-        "company": "Kstone SA",
-        "city": "Lugano",
-        "period": "2019 – 2020",
-        "description": "Consulenza per due grandi istituti finanziari svizzeri, a supporto dei team di sicurezza e osservabilità. Rilevamento di anomalie e transizione verso soluzioni di machine learning in sostituzione dei processi manuali. Ruolo chiave nella razionalizzazione del monitoraggio di sicurezza e nel miglioramento dell'osservabilità complessiva dei sistemi."
-      }
-    ]
-  },
-  "education": {
-    "heading": "Formazione",
-    "entries": [
-      {
-        "degree": "M.Sc. Master of Science in Informatica",
-        "institution": "Università della Svizzera italiana (USI)",
-        "city": "Lugano",
-        "period": "2017 – 2019",
-        "grade": "8.5/10 (Magna Cum Laude)",
-        "specialisation": "IA & Machine Learning",
-        "thesis": "Controllori dal comportamento umano per veicoli simulati"
-      },
-      {
-        "degree": "B.Sc. Bachelor of Science in Informatica",
-        "institution": "Università della Svizzera italiana (USI)",
-        "city": "Lugano",
-        "period": "2013 – 2016",
-        "grade": "7/10 (Legitim)",
-        "specialisation": "Informatica",
-        "thesis": "Sistema mobile a telecamera iperspettrale per il monitoraggio fitosanitario della vite"
-      }
-    ]
-  },
-  "academic": {
-    "heading": "Lavori accademici",
-    "entries": [
-      {
-        "title": "Tesi M.Sc. — Controllori dal comportamento umano per veicoli simulati",
-        "institution": "IDSIA",
-        "city": "Lugano",
-        "period": "2018 – 2019",
-        "description": "Progettazione e validazione di un controllore per veicoli simulati che replica il comportamento umano di sterzo e modulazione della velocità. Integrazione in un framework di simulazione del traffico più ampio per simulatori di scuola guida. Il lavoro ha combinato modellazione comportamentale, teoria del controllo e validazione sperimentale."
-      },
-      {
-        "title": "Tesi B.Sc. — Sistema mobile di imaging iperspettrale per il monitoraggio fitosanitario della vite",
-        "institution": "Dolphin Engineering Sagl",
-        "city": "Lugano",
-        "period": "2016 – 2017",
-        "description": "Progettazione e implementazione di un sistema mobile a telecamera per il monitoraggio della salute dei vigneti, con integrazione di sensori climatici e un'interfaccia web di visualizzazione. Esplorazione dell'imaging iperspettrale come strato diagnostico — all'epoca non praticabile per via dei costi hardware. Estensione di Predivine, piattaforma commerciale di gestione colturale attiva nell'agricoltura di precisione svizzera."
-      }
-    ]
-  },
-  "languages": {
-    "heading": "Lingue",
-    "entries": [
-      {
-        "language": "Italiano",
-        "level": "C2",
-        "proficiency": "100",
-        "story": "madrelingua"
-      },
-      {
-        "language": "Inglese",
-        "level": "C2",
-        "proficiency": "95",
-        "story": "Cambridge CAE · C2"
-      },
-      {
-        "language": "Tedesco",
-        "level": "C1",
-        "proficiency": "85",
-        "story": "lingua di lavoro · C1"
-      },
-      {
-        "language": "Francese",
-        "level": "B2-C1",
-        "proficiency": "70",
-        "story": "fluente, mais rouillé · B2-C1"
-      },
-      {
-        "language": "Spagnolo",
-        "level": "B1-B2",
-        "proficiency": "55",
-        "story": "imparato da autodidatta · B1-B2"
-      }
-    ]
-  },
-  "skills": {
-    "heading": "Stack",
-    "categories": {
-      "languages": "Linguaggi",
-      "codeQuality": "Qualità del codice & Build",
-      "infrastructure": "Infrastruttura & DevOps",
-      "cloud": "Cloud",
-      "dataML": "Dati & ML",
-      "observability": "Osservabilità",
-      "web": "Web",
-      "aiTooling": "Strumenti IA"
-    }
-  },
-  "elsewhere": {
-    "heading": "Oltre il codice",
-    "acm": {
-      "title": "ACM",
-      "body": "Membro professionale dal 2019 — perché i fondamenti dell'informatica restano alla base di tutto il resto."
-    },
-    "army": {
-      "title": "Esercito Svizzero",
-      "body": "Sergente nella difesa contraerea, Flab Bttr 31, battaglione ticinese. Ho formato quattro sezioni in tre scuole reclute — certificato in condotta personale, competenze sociali, comando, esecuzione tecnica e istruzione."
-    },
-    "cantina": {
-      "title": "Cantina Monti",
-      "body": "La cantina di famiglia, in Ticino. Do una mano con la vendemmia, ho costruito il webshop e curo la presenza online — ma a dirla tutta, il mio contributo più costante è il controllo qualità in fase di degustazione. Ogni tanto scambio la tastiera con la vigna — la miglior sessione di debug che la natura possa offrire."
-    },
-    "gaming": {
-      "title": "Musica & Gaming",
-      "body": "La buona musica non ha genere — ha solo mestiere e l'emozione che ti lascia addosso. Gamer Xbox dal 2006, gamertag Neutrin883 su Xbox e PlayStation. Multiplayer competitivo, Minecraft, Zerg su Starcraft e qualche crisi esistenziale su Sekiro. Se cercate competizione vera o caos cooperativo, fatevi vivi. Giochi preferiti: Zelda OoT, WoW, Halo, Sekiro."
-    },
-    "sport": {
-      "title": "Tennis & Snowboard",
-      "body": "Freerider appassionato, fuoripista di preferenza — Zermatt, Saas-Fee, Laax. La neve fresca sulle montagne svizzere regala una libertà che non si spiega e a cui non si resiste. Tennis fin da bambino, dieci anni di pausa, attualmente in fase di sgrugginatura. Uno dei pochi sport dove le scuse non reggono: solo tu, la palla e la tua testa. Nessun compagno a cui dare la colpa — vince solo chi ha disciplina."
-    }
-  }
+	"hero": {
+		"title": "Ciao, sono Sonny",
+		"intro": "Tech Lead di professione, ingegnere nel fare, architetto nel pensare ed eterno studente nell'anima"
+	},
+	"authorNote": {
+		"text": "Quando ho scritto questa nota nel 2026 (e credetemi o no, l'ho scritta quasi tutta a mano), facevo l'ML Tech Lead alla Posta Svizzera, lo sviluppo di agenti IA viveva la sua età dell'oro, così come gli LLM, e la parola IA veniva usata più dell'articolo *il*. Quando rileggerò questo paragrafo, l'IA avrà raggiunto l'AGI, livello Terminator, gli umani alimenteranno la matrix dell'Architetto (tranne Neo ovviamente), domineranno l'umanit.... ehm, sarò un contadino e vivrò alla grande!\n\nScherzi a parte, volevo raccontarvi questa storia perché, nonostante i progressi enormi fatti dagli agenti di codifica, sono convinto che buoni ingegneri con solide competenze architetturali e con esperienza nella progettazione di sistemi e interfacce saranno ancora necessari per un bel po'.\n\nLasciare che l'IA vibecodi interi stack applicativi senza verificarne attentamente il lavoro è la ricetta perfetta per il disastro, perché gli agenti consumano interfacce. Non le inventano mai. Se un agente decide come deve apparire un endpoint API, il processo è già fallito.\n\nDetto ciò, benvenuti nel mio progetto web e buona lettura."
+	},
+	"about": {
+		"heading": "Chi sono",
+		"text": "Sono ML Tech Lead alla Posta Svizzera, dove guido la progettazione e la messa in produzione di sistemi IA/ML su larga scala — dall'architettura al deploy.\n\n\n Il mio lavoro si colloca all'intersezione tra machine learning engineering, MLOps e platform thinking: costruire l'infrastruttura e le pratiche che permettono alla data science di produrre risultati concreti. Pipeline CI/CD, gestione del ciclo di vita dei modelli, osservabilità e pattern organizzativi che rendono i team veloci senza renderli fragili.\n\nSono specializzato in ML engineering basato su Python e ho passato anni a trasformare workflow di dati ad hoc in sistemi scalabili e governati — mantenendo l'asticella ingegneristica alta abbastanza da fare la differenza.\n\nOltre alla tecnica, guido e faccio da mentore a team cross-funzionali in data science, engineering e business — traducendo tra ciò che è statisticamente possibile, architetturalmente solido e concretamente impattante."
+	},
+	"experience": {
+		"heading": "Esperienza professionale",
+		"entries": [
+			{
+				"role": "ML Tech Lead & Solution Architect",
+				"company": "Swiss Post",
+				"city": "Berna",
+				"period": "2026 – Presente",
+				"description": "All'intersezione tra leadership tecnica e solution architecture: review delle implementazioni, ownership della roadmap e costruzione di un centro di eccellenza trasversale a platform engineering, delivery governance e adozione di standard ML. Definizione dell'ML Blueprint, del modello MLOps-as-a-Service e degli Architecture Decision Record per standardizzare e modernizzare il panorama ML/IA. Costruzione delle fondamenta GenAI, integrazione di MLflow come backbone di valutazione e monitoring, e adozione di uno stack portabile, modulare, sicuro e vendor-agnostic su tutti i progetti."
+			},
+			{
+				"role": "Lead Data Scientist & ML Engineer",
+				"company": "Swiss Post",
+				"city": "Berna",
+				"period": "2025 – 2026",
+				"description": "Creazione e guida della community Data Science & MLOps a livello aziendale. Standardizzazione dei progetti data-driven e dell'architettura Python su larga scala. Guida della computer vision applicata alla logistica — rilevamento dei livelli di riempimento dei container, identificazione, tracciamento e conteggio dei carrelli postali tramite riconoscimento ottico di codici."
+			},
+			{
+				"role": "Data Scientist & ML Engineer",
+				"company": "Swiss Post",
+				"city": "Berna",
+				"period": "2022 – 2025",
+				"description": "Progettazione e messa in opera dell'architettura MLOps alla Posta Svizzera. Abbattimento dei silos tra team cross-funzionali, con miglioramento della comunicazione interna e dell'efficienza operativa. Abilitazione di altre unità all'adozione di stack tecnologici moderni e processi di sviluppo attuali. Realizzazione di dashboard dati, automazioni di processo e del primo chatbot interno ufficiale della Posta Svizzera — dalle integrazioni LLM SaaS allo sviluppo custom in-house."
+			},
+			{
+				"role": "Data Engineer",
+				"company": "Swiss Post",
+				"city": "Berna",
+				"period": "2020 – 2022",
+				"description": "Amministrazione Splunk e automazione della piattaforma tramite Ansible. Realizzazione di diversi progetti data-driven, tra cui il monitoraggio di sicurezza della piattaforma IT centrale con il team OPSEC, raggiungendo la conformità PCI DSS. Guida tecnica di progetti critici per il consiglio di amministrazione: analisi dell'occupazione degli uffici e della produttività in remote working, strategia immobiliare e HR. Progettazione del processo di fraud detection basato su ML per i conti postali — progetti ad alto impatto che continuano a orientare la strategia dell'organizzazione."
+			},
+			{
+				"role": "Security Analyst & Big Data Engineer",
+				"company": "Kstone SA",
+				"city": "Lugano",
+				"period": "2019 – 2020",
+				"description": "Consulenza per due grandi istituti finanziari svizzeri, a supporto dei team di sicurezza e osservabilità. Rilevamento di anomalie e transizione verso soluzioni di machine learning in sostituzione dei processi manuali. Ruolo chiave nella razionalizzazione del monitoraggio di sicurezza e nel miglioramento dell'osservabilità complessiva dei sistemi."
+			}
+		]
+	},
+	"education": {
+		"heading": "Formazione",
+		"entries": [
+			{
+				"degree": "M.Sc. Master of Science in Informatica",
+				"institution": "Università della Svizzera italiana (USI)",
+				"city": "Lugano",
+				"period": "2017 – 2019",
+				"grade": "8.5/10 (Magna Cum Laude)",
+				"specialisation": "IA & Machine Learning",
+				"thesis": "Controllori dal comportamento umano per veicoli simulati"
+			},
+			{
+				"degree": "B.Sc. Bachelor of Science in Informatica",
+				"institution": "Università della Svizzera italiana (USI)",
+				"city": "Lugano",
+				"period": "2013 – 2016",
+				"grade": "7/10 (Legitim)",
+				"specialisation": "Informatica",
+				"thesis": "Sistema mobile a telecamera iperspettrale per il monitoraggio fitosanitario della vite"
+			}
+		]
+	},
+	"academic": {
+		"heading": "Lavori accademici",
+		"entries": [
+			{
+				"title": "Tesi M.Sc. — Controllori dal comportamento umano per veicoli simulati",
+				"institution": "IDSIA",
+				"city": "Lugano",
+				"period": "2018 – 2019",
+				"description": "Progettazione e validazione di un controllore per veicoli simulati che replica il comportamento umano di sterzo e modulazione della velocità. Integrazione in un framework di simulazione del traffico più ampio per simulatori di scuola guida. Il lavoro ha combinato modellazione comportamentale, teoria del controllo e validazione sperimentale."
+			},
+			{
+				"title": "Tesi B.Sc. — Sistema mobile di imaging iperspettrale per il monitoraggio fitosanitario della vite",
+				"institution": "Dolphin Engineering Sagl",
+				"city": "Lugano",
+				"period": "2016 – 2017",
+				"description": "Progettazione e implementazione di un sistema mobile a telecamera per il monitoraggio della salute dei vigneti, con integrazione di sensori climatici e un'interfaccia web di visualizzazione. Esplorazione dell'imaging iperspettrale come strato diagnostico — all'epoca non praticabile per via dei costi hardware. Estensione di Predivine, piattaforma commerciale di gestione colturale attiva nell'agricoltura di precisione svizzera."
+			}
+		]
+	},
+	"languages": {
+		"heading": "Lingue",
+		"entries": [
+			{
+				"language": "Italiano",
+				"level": "C2",
+				"proficiency": "100",
+				"story": "madrelingua"
+			},
+			{
+				"language": "Inglese",
+				"level": "C2",
+				"proficiency": "95",
+				"story": "Cambridge CAE · C2"
+			},
+			{
+				"language": "Tedesco",
+				"level": "C1",
+				"proficiency": "85",
+				"story": "lingua di lavoro · C1"
+			},
+			{
+				"language": "Francese",
+				"level": "B2-C1",
+				"proficiency": "70",
+				"story": "fluente, mais rouillé · B2-C1"
+			},
+			{
+				"language": "Spagnolo",
+				"level": "B1-B2",
+				"proficiency": "55",
+				"story": "imparato da autodidatta · B1-B2"
+			}
+		]
+	},
+	"skills": {
+		"heading": "Stack",
+		"categories": {
+			"languages": "Linguaggi",
+			"codeQuality": "Qualità del codice & Build",
+			"infrastructure": "Infrastruttura & DevOps",
+			"cloud": "Cloud",
+			"dataML": "Dati & ML",
+			"observability": "Osservabilità",
+			"web": "Web",
+			"aiTooling": "Strumenti IA"
+		}
+	},
+	"elsewhere": {
+		"heading": "Oltre il codice",
+		"acm": {
+			"title": "ACM",
+			"body": "Membro professionale dal 2019 — perché i fondamenti dell'informatica restano alla base di tutto il resto."
+		},
+		"army": {
+			"title": "Esercito Svizzero",
+			"body": "Sergente nella difesa contraerea, Flab Bttr 31, battaglione ticinese. Ho formato quattro sezioni in tre scuole reclute — certificato in condotta personale, competenze sociali, comando, esecuzione tecnica e istruzione."
+		},
+		"cantina": {
+			"title": "Cantina Monti",
+			"body": "La cantina di famiglia, in Ticino. Do una mano con la vendemmia, ho costruito il webshop e curo la presenza online — ma a dirla tutta, il mio contributo più costante è il controllo qualità in fase di degustazione. Ogni tanto scambio la tastiera con la vigna — la miglior sessione di debug che la natura possa offrire."
+		},
+		"gaming": {
+			"title": "Musica & Gaming",
+			"body": "La buona musica non ha genere — ha solo mestiere e l'emozione che ti lascia addosso. Gamer Xbox dal 2006, gamertag Neutrin883 su Xbox e PlayStation. Multiplayer competitivo, Minecraft, Zerg su Starcraft e qualche crisi esistenziale su Sekiro. Se cercate competizione vera o caos cooperativo, fatevi vivi. Giochi preferiti: Zelda OoT, WoW, Halo, Sekiro."
+		},
+		"sport": {
+			"title": "Tennis & Snowboard",
+			"body": "Freerider appassionato, fuoripista di preferenza — Zermatt, Saas-Fee, Laax. La neve fresca sulle montagne svizzere regala una libertà che non si spiega e a cui non si resiste. Tennis fin da bambino, dieci anni di pausa, attualmente in fase di sgrugginatura. Uno dei pochi sport dove le scuse non reggono: solo tu, la palla e la tua testa. Nessun compagno a cui dare la colpa — vince solo chi ha disciplina."
+		}
+	}
 }
