@@ -15,9 +15,11 @@ interface TimelineEntry {
 
 export function Timeline() {
 	const t = useTranslations("experience");
+	const [mounted, setMounted] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
 	useEffect(() => {
+		setMounted(true);
 		const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 		setPrefersReducedMotion(mediaQuery.matches);
 
@@ -28,6 +30,8 @@ export function Timeline() {
 
 	const containerRef = useRef<HTMLDivElement>(null);
 	const isInView = useInView(containerRef, { once: true, amount: 0.05 });
+
+	const skipAnimation = !mounted || prefersReducedMotion;
 
 	// Get entries from translations
 	const entries: TimelineEntry[] = t.raw("entries") as TimelineEntry[];
@@ -58,9 +62,9 @@ export function Timeline() {
 			<motion.div
 				ref={containerRef}
 				className="relative"
-				variants={prefersReducedMotion ? {} : containerVariants}
-				initial={prefersReducedMotion ? "visible" : "hidden"}
-				animate={prefersReducedMotion || isInView ? "visible" : "hidden"}
+				variants={skipAnimation ? {} : containerVariants}
+				initial={skipAnimation ? "visible" : "hidden"}
+				animate={skipAnimation || isInView ? "visible" : "hidden"}
 			>
 				{/* Vertical line */}
 				<div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-border" />
@@ -69,7 +73,7 @@ export function Timeline() {
 					<motion.div
 						key={`${entry.company}-${entry.period}`}
 						className="relative pl-8 md:pl-20 pb-12 last:pb-0"
-						variants={prefersReducedMotion ? {} : itemVariants}
+						variants={skipAnimation ? {} : itemVariants}
 					>
 						{/* Node circle */}
 						<div className="absolute left-0 md:left-8 top-0 w-4 h-4 -ml-[7px] rounded-full bg-primary border-4 border-background" />

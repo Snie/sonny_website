@@ -43,15 +43,10 @@ export function HexGridBackground() {
 
 		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-		const resizeCanvas = () => {
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
-		};
-		resizeCanvas();
-		window.addEventListener("resize", resizeCanvas);
+		const getSize = () => (window.innerWidth < 640 ? 20 : 100);
 
-		const size = 100;
-		const speed = 0.008; // Base speed for lights (slow)
+		let size = getSize();
+		const baseSpeed = 0.008;
 
 		// Helper to get fresh theme colors from CSS variables
 		const getThemeColor = () => {
@@ -98,46 +93,6 @@ export function HexGridBackground() {
 			f3: Math.sqrt(3.0),
 		};
 
-		const hexToPixel = (q: number, r: number) => {
-			const x = (orientation.f0 * q + orientation.f1 * r) * size;
-			const y = (orientation.f2 * q + orientation.f3 * r) * size;
-			return { x, y };
-		};
-
-		const cellsMap = new Map<string, HexCell>();
-
-		const hexWidth = size * 3;
-		const hexHeight = size * Math.sqrt(3);
-		const cols = Math.ceil(canvas.width / hexWidth) + 10; // more columns
-		const rows = Math.ceil(canvas.height / hexHeight) + 11; //more rows
-
-		const startQ = -Math.floor(cols / 2) - 2;
-		const startR = -Math.floor(rows / 2) - 2;
-
-		for (let r = startR; r < startR + rows; r++) {
-			for (let q = startQ; q < startQ + cols; q++) {
-				const s = -q - r;
-				const { x, y } = hexToPixel(q, r);
-
-				const screenX = x + canvas.width / 2;
-				const screenY = y + canvas.height / 2;
-
-				const key = `${q},${r}`;
-				cellsMap.set(key, {
-					q,
-					r,
-					s,
-					x: screenX,
-					y: screenY,
-					fillAlpha: 0,
-					targetAlpha: 0,
-					nextChangeTime: Math.random() * 3000,
-				});
-			}
-		}
-
-		const cells = Array.from(cellsMap.values());
-
 		// Cube coordinate neighbor offsets
 		const directions = [
 			{ q: 1, r: 0 }, // 0: E
@@ -149,36 +104,26 @@ export function HexGridBackground() {
 		];
 
 		// Edge-to-neighbor mapping for flat-top hexagons
-		// When a dot finishes edge E, it arrives at corner (E+1)%6 of current hex,
-		// which is corner (E+3)%6 of the neighbor — so enterEdge = (E+3)%6
 		const edgeToNeighbor = [
-			{ dir: 0, enterEdge: 3 }, // Edge 0 → neighbor dir 0, enter at corner 3
-			{ dir: 5, enterEdge: 4 }, // Edge 1 → neighbor dir 5, enter at corner 4
-			{ dir: 4, enterEdge: 5 }, // Edge 2 → neighbor dir 4, enter at corner 5
-			{ dir: 3, enterEdge: 0 }, // Edge 3 → neighbor dir 3, enter at corner 0
-			{ dir: 2, enterEdge: 1 }, // Edge 4 → neighbor dir 2, enter at corner 1
-			{ dir: 1, enterEdge: 2 }, // Edge 5 → neighbor dir 1, enter at corner 2
+			{ dir: 0, enterEdge: 3 },
+			{ dir: 5, enterEdge: 4 },
+			{ dir: 4, enterEdge: 5 },
+			{ dir: 3, enterEdge: 0 },
+			{ dir: 2, enterEdge: 1 },
+			{ dir: 1, enterEdge: 2 },
 		];
 
-		const lights: TravelingLight[] = [];
 		const maxLights = 12;
 
-		const createLight = () => {
-			const randomCell = cells[Math.floor(Math.random() * cells.length)];
-			return {
-				currentQ: randomCell.q,
-				currentR: randomCell.r,
-				currentEdge: Math.floor(Math.random() * 6),
-				progress: 0,
-				speed: speed + Math.random() * speed,
-				intensity: 0.8 + Math.random() * 0.2,
-				trail: [],
-			};
-		};
+		let cellsMap = new Map<string, HexCell>();
+		let cells: HexCell[] = [];
+		let lights: TravelingLight[] = [];
 
-		for (let i = 0; i < maxLights; i++) {
-			lights.push(createLight());
-		}
+		const hexToPixel = (q: number, r: number) => {
+			const x = (orientation.f0 * q + orientation.f1 * r) * size;
+			const y = (orientation.f2 * q + orientation.f3 * r) * size;
+			return { x, y };
+		};
 
 		const getHexCorners = (x: number, y: number) => {
 			const corners: { x: number; y: number }[] = [];
@@ -191,6 +136,63 @@ export function HexGridBackground() {
 			}
 			return corners;
 		};
+
+		const buildGrid = () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			size = getSize();
+
+			cellsMap = new Map<string, HexCell>();
+
+			const hexWidth = size * 3;
+			const hexHeight = size * Math.sqrt(3);
+			const cols = Math.ceil(canvas.width / hexWidth) + 10;
+			const rows = Math.ceil(canvas.height / hexHeight) + 11;
+
+			const startQ = -Math.floor(cols / 2) - 2;
+			const startR = -Math.floor(rows / 2) - 2;
+
+			for (let r = startR; r < startR + rows; r++) {
+				for (let q = startQ; q < startQ + cols; q++) {
+					const s = -q - r;
+					const { x, y } = hexToPixel(q, r);
+
+					const screenX = x + canvas.width / 2;
+					const screenY = y + canvas.height / 2;
+
+					const key = `${q},${r}`;
+					cellsMap.set(key, {
+						q,
+						r,
+						s,
+						x: screenX,
+						y: screenY,
+						fillAlpha: 0,
+						targetAlpha: 0,
+						nextChangeTime: Math.random() * 3000,
+					});
+				}
+			}
+
+			cells = Array.from(cellsMap.values());
+
+			lights = [];
+			for (let i = 0; i < maxLights; i++) {
+				const randomCell = cells[Math.floor(Math.random() * cells.length)];
+				lights.push({
+					currentQ: randomCell.q,
+					currentR: randomCell.r,
+					currentEdge: Math.floor(Math.random() * 6),
+					progress: 0,
+					speed: baseSpeed + Math.random() * baseSpeed,
+					intensity: 0.8 + Math.random() * 0.2,
+					trail: [],
+				});
+			}
+		};
+
+		buildGrid();
+		window.addEventListener("resize", buildGrid);
 
 		const drawHexagon = (x: number, y: number, fill: boolean = false, fillAlpha: number = 0) => {
 			const corners = getHexCorners(x, y);
@@ -395,7 +397,7 @@ export function HexGridBackground() {
 		animate();
 
 		return () => {
-			window.removeEventListener("resize", resizeCanvas);
+			window.removeEventListener("resize", buildGrid);
 			if (animationFrameId) {
 				cancelAnimationFrame(animationFrameId);
 			}
