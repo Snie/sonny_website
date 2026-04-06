@@ -145,8 +145,12 @@ export function HexGridBackground() {
 		};
 
 		const buildGrid = () => {
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
+			const dpr = window.devicePixelRatio || 1;
+			canvas.width = window.innerWidth * dpr;
+			canvas.height = window.innerHeight * dpr;
+			canvas.style.width = `${window.innerWidth}px`;
+			canvas.style.height = `${window.innerHeight}px`;
+			ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 			size = getSize();
 			config = {
 				...config,
@@ -158,10 +162,12 @@ export function HexGridBackground() {
 
 			cellsMap = new Map<string, HexCell>();
 
+			const logicalWidth = window.innerWidth;
+			const logicalHeight = window.innerHeight;
 			const hexWidth = size * 3;
 			const hexHeight = size * Math.sqrt(3);
-			const cols = Math.ceil(canvas.width / hexWidth) + 10;
-			const rows = Math.ceil(canvas.height / hexHeight) + 11;
+			const cols = Math.ceil(logicalWidth / hexWidth) + 10;
+			const rows = Math.ceil(logicalHeight / hexHeight) + 11;
 
 			const startQ = -Math.floor(cols / 2) - 2;
 			const startR = -Math.floor(rows / 2) - 2;
@@ -171,8 +177,8 @@ export function HexGridBackground() {
 					const s = -q - r;
 					const { x, y } = hexToPixel(q, r);
 
-					const screenX = x + canvas.width / 2;
-					const screenY = y + canvas.height / 2;
+					const screenX = x + logicalWidth / 2;
+					const screenY = y + logicalHeight / 2;
 
 					const key = `${q},${r}`;
 					cellsMap.set(key, {
@@ -283,7 +289,7 @@ export function HexGridBackground() {
 		let animationFrameId: number;
 
 		const animate = () => {
-			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
 			if (!prefersReducedMotion) {
 				lights.forEach((light) => {
