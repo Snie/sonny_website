@@ -18,7 +18,7 @@ A website in nextjs about the owner of it Sonny Monti.
 - **i18n:** next-intl 4.8.3
 - **Utilities:** clsx 2.1.1
 - **Testing:** vitest 4.1.2, @testing-library/react 16.3.2, @testing-library/jest-dom 6.9.1, @testing-library/user-event 14.6.1, @playwright/test 1.59.1
-- **Linting:** eslint 10, eslint-config-next 16.2.1 (note that eslint has issues with nextjs 16)
+- **Linting/Formatting:** @biomejs/biome 2.4.10 (replaces ESLint + Prettier)
 - **Tooling:** GitHub Dependabot, GitHub Codescan, Context7 MCP
 - **MCP Servers:** [Context7](https://context7.com/docs/overview) (`.claude/.mcp.json`)
 
@@ -76,7 +76,7 @@ to ensure the latest versions are in use.
 ├── CLAUDE.md             # Claude Code project instructions
 ├── next.config.ts        # Next.js configuration
 ├── tsconfig.json         # TypeScript configuration
-├── eslint.config.mjs     # ESLint configuration
+├── biome.json            # Biome linter/formatter configuration
 ├── package.json          # Dependencies and scripts
 └── proxy.ts              # Next.js 16 proxy (i18n routing middleware via next-intl)
 ```
@@ -133,7 +133,7 @@ to upgrade bun use `bun upgrade`
 ```bash
 bun dev       # Start the development server
 bun build     # Build for production
-bun lint      # Run ESLint
+bun lint      # Run Biome (lint + format check)
 ```
 
 #### Bun dependency management

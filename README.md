@@ -134,3 +134,19 @@ dependabot PRs ──────────┘ (auto-merge when unit + e2e pas
 > **hint**: use the skill `github-dependabot` to see dependabot alerts and also pull requests for dependencies.  
 >
 > Use the skill `github-check-jobs` to grab failing jobs
+
+### Dependency management
+
+Dependabot runs weekly and opens PRs targeting `dev` for patch and minor updates.
+Major version bumps are intentionally **blocked** — they require a manual PR.
+Dependabot PRs auto-merge once `unit` and `e2e` pass.
+
+To inspect dependencies locally:
+
+```shell
+bun outdated          # show all outdated packages with current/latest versions
+bun update            # update within semver ranges (respects package.json constraints)
+bun update --latest   # ignore semver ranges, pull everything to latest (use with care)
+```
+
+Major upgrades should be done manually, one package at a time, with a dedicated `feat/upgrade-<pkg>` branch.

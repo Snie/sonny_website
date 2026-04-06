@@ -2,8 +2,8 @@ vi.mock("framer-motion", () => import("../../test/mocks/framer-motion"));
 vi.mock("next/image", () => import("../../test/mocks/next-image"));
 
 const { IconStub } = vi.hoisted(() => {
-  const IconStub = () => null;
-  return { IconStub };
+	const IconStub = () => null;
+	return { IconStub };
 });
 
 vi.mock("react-icons/si", () => ({ SiAcm: IconStub }));
@@ -19,26 +19,18 @@ import { render, screen } from "../../test/utils";
 import { ElsewhereSection } from "../elsewhere-section";
 
 describe("ElsewhereSection", () => {
-  it("renders heading 'Elsewhere'", () => {
-    render(<ElsewhereSection />);
-    expect(
-      screen.getByRole("heading", { name: "Elsewhere" }),
-    ).toBeInTheDocument();
-  });
+	it("renders heading 'Elsewhere'", () => {
+		render(<ElsewhereSection />);
+		expect(screen.getByRole("heading", { name: "Elsewhere" })).toBeInTheDocument();
+	});
 
-  it("renders all card titles", () => {
-    render(<ElsewhereSection />);
-    const titles = [
-      "ACM",
-      "Swiss Army",
-      "Cantina Monti",
-      "Music & Gaming",
-      "Tennis & Snowboard",
-    ];
-    for (const title of titles) {
-      // Cards are rendered twice (desktop + mobile layouts)
-      const elements = screen.getAllByText(title);
-      expect(elements.length).toBeGreaterThanOrEqual(1);
-    }
-  });
+	it("renders all card titles", () => {
+		render(<ElsewhereSection />);
+		const titles = ["ACM", "Swiss Army", "Cantina Monti", "Music & Gaming", "Tennis & Snowboard"];
+		for (const title of titles) {
+			// Cards are rendered twice (desktop + mobile layouts)
+			const elements = screen.getAllByText(title);
+			expect(elements.length).toBeGreaterThanOrEqual(1);
+		}
+	});
 });
