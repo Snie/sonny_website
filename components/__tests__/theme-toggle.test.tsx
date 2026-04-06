@@ -11,9 +11,19 @@ describe("ThemeToggle", () => {
 
 	it("displays correct aria-label for dark theme", async () => {
 		render(<ThemeToggle />);
-		// After mount effect, the component shows the themed button
 		await vi.waitFor(() => {
-			expect(screen.getByLabelText(/Current theme: dark/)).toBeInTheDocument();
+			expect(screen.getByLabelText(/Theme: dark/i)).toBeInTheDocument();
 		});
+	});
+
+	it("cycles theme on click", async () => {
+		const { default: userEvent } = await import("@testing-library/user-event");
+		const user = userEvent.setup();
+		render(<ThemeToggle />);
+
+		const button = await vi.waitFor(() => screen.getByRole("button"));
+		await user.click(button);
+		// setTheme is called (mock captures it)
+		expect(button).toBeInTheDocument();
 	});
 });

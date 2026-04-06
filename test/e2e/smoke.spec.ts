@@ -23,7 +23,8 @@ test.describe("Smoke test", () => {
 		}
 
 		// Click locale switcher to IT
-		await page.getByRole("link", { name: "Switch to IT" }).click();
+		await page.getByRole("button", { name: /EN/i }).click();
+		await page.getByRole("menuitem", { name: "IT" }).click();
 
 		// Verify URL changes to /it
 		await expect(page).toHaveURL(/\/it/);

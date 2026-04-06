@@ -57,6 +57,9 @@ export function LanguagesSection() {
 	});
 
 	useEffect(() => {
+		// resolvedTheme is read to re-run this effect on theme changes
+		void resolvedTheme;
+
 		const getColor = (varName: string) =>
 			getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
 
@@ -71,7 +74,7 @@ export function LanguagesSection() {
 			text: getColor("--chart-text"),
 			grid: getColor("--chart-grid"),
 		});
-	}, []);
+	}, [resolvedTheme]);
 
 	const series = useMemo(
 		() => [
