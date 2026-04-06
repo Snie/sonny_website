@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/Snie/sonny_website/compare/v1.0.0...v1.1.0) (2026-04-06)
+
+### Features
+
+* **hero:** add social links and align résumé ([5a3c8a7](https://github.com/Snie/sonny_website/commit/5a3c8a7c686823f0f68a5c0778b8b4c90564c4e6))
+
 ## 1.0.0 (2026-04-06)
 
 ### Features
