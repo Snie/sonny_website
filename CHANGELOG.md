@@ -1,3 +1,9 @@
+## [1.3.6](https://github.com/Snie/sonny_website/compare/v1.3.5...v1.3.6) (2026-04-06)
+
+### Bug Fixes
+
+* **hex-grid:** make hex grid visible on mobile Safari ([98d01e7](https://github.com/Snie/sonny_website/commit/98d01e772f584e6dbe3b6429e899d6f526e97a93))
+
 ## [1.3.5](https://github.com/Snie/sonny_website/compare/v1.3.4...v1.3.5) (2026-04-06)
 
 ### Bug Fixes
