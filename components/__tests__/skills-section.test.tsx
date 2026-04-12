@@ -4,6 +4,9 @@ const { IconStub } = vi.hoisted(() => {
 	const IconStub = () => null;
 	return { IconStub };
 });
+vi.mock("react-icons/ai", () => ({
+	AiFillRobot: IconStub,
+}));
 
 vi.mock("react-icons/si", () => ({
 	SiPython: IconStub,
@@ -24,10 +27,12 @@ vi.mock("react-icons/si", () => ({
 	SiSplunk: IconStub,
 	SiGrafana: IconStub,
 	SiHtml5: IconStub,
+	SiOpensearch: IconStub,
 	SiReact: IconStub,
 	SiNodedotjs: IconStub,
 	SiNextdotjs: IconStub,
 	SiGithub: IconStub,
+	SiLangchain: IconStub,
 	SiBun: IconStub,
 	SiSonar: IconStub,
 	SiUv: IconStub,
@@ -40,9 +45,11 @@ vi.mock("react-icons/si", () => ({
 vi.mock("react-icons/fa6", () => ({
 	FaJava: IconStub,
 	FaCss3Alt: IconStub,
+	FaDatabase: IconStub,
 }));
 vi.mock("react-icons/fa", () => ({
 	FaAws: IconStub,
+	FaDatabase: IconStub,
 }));
 vi.mock("react-icons/vsc", () => ({
 	VscAzure: IconStub,
