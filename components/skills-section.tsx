@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { IconType } from "react-icons";
-import { FaAws } from "react-icons/fa";
+import { AiFillRobot } from "react-icons/ai";
+import { FaAws, FaDatabase } from "react-icons/fa";
 import { FaCss3Alt, FaJava } from "react-icons/fa6";
 import {
 	SiAnsible,
@@ -23,10 +24,12 @@ import {
 	SiJavascript,
 	SiJenkins,
 	SiKubernetes,
+	SiLangchain,
 	SiMlflow,
 	SiMysql,
 	SiNextdotjs,
 	SiNodedotjs,
+	SiOpensearch,
 	SiPrecommit,
 	SiPython,
 	SiPytorch,
@@ -104,6 +107,8 @@ const categories: Category[] = [
 			{ name: "PySpark", icon: SiApachespark },
 			{ name: "SQL", icon: SiMysql },
 			{ name: "MLflow", icon: SiMlflow },
+			{ name: "OpenSearch", icon: SiOpensearch },
+			{ name: "QDrant", icon: FaDatabase },
 		],
 	},
 	{
@@ -131,6 +136,8 @@ const categories: Category[] = [
 			{ name: "GitHub Copilot", icon: VscCopilot },
 			{ name: "AWS Bedrock", icon: FaAws },
 			{ name: "GitHub Spec-Kit", icon: SiGithub },
+			{ name: "LangChain", icon: SiLangchain },
+			{ name: "Google ADK", icon: AiFillRobot },
 		],
 	},
 ];
