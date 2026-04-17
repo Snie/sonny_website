@@ -1,4 +1,7 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@wrksz/themes/next";
+import { domAnimation, LazyMotion } from "framer-motion";
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
@@ -7,13 +10,12 @@ import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { locales } from "@/lib/i18n";
 import "../globals.css";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const notoSans = Noto_Sans({
 	variable: "--font-noto-sans",
 	subsets: ["latin"],
-	weight: ["400", "500", "600", "700"],
+	weight: ["400", "600"],
+	display: "swap",
 });
 
 export async function generateMetadata({
@@ -81,15 +83,17 @@ export default async function RootLayout({
 			<Analytics />
 			<body className="min-h-full flex flex-col font-sans">
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<NextIntlClientProvider messages={messages}>
-						{/* Fixed controls in top-right */}
-						<div className="fixed top-4 right-4 z-50 flex items-center gap-1 rounded-full border border-border/50 bg-background/80 backdrop-blur-md shadow-sm px-2 py-1">
-							<LanguageSwitcher />
-							<span className="w-px h-4 bg-border/60" aria-hidden="true" />
-							<ThemeToggle />
-						</div>
-						{children}
-					</NextIntlClientProvider>
+					<LazyMotion features={domAnimation} strict>
+						<NextIntlClientProvider messages={messages}>
+							{/* Fixed controls in top-right */}
+							<div className="fixed top-4 right-4 z-50 flex items-center gap-1 rounded-full border border-border/50 bg-background/80 backdrop-blur-md shadow-sm px-2 py-1">
+								<LanguageSwitcher />
+								<span className="w-px h-4 bg-border/60" aria-hidden="true" />
+								<ThemeToggle />
+							</div>
+							{children}
+						</NextIntlClientProvider>
+					</LazyMotion>
 				</ThemeProvider>
 			</body>
 		</html>

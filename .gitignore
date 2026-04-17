@@ -45,3 +45,7 @@ next-env.d.ts
 
 # documentation
 docs/security
+docs/resume
+
+# Claude Code worktrees (agent isolation sandboxes)
+.claude/worktrees

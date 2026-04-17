@@ -89,7 +89,7 @@ export function HexGridBackground() {
 			lightCoreRadius: size >= 100 ? 1.5 : 0.8,
 			trailGlowRadius: size >= 100 ? 4 : 2,
 			whiteCoreRadius: size >= 100 ? 0.8 : 0.4,
-			trailLength: 99,
+			trailLength: prefersReducedMotion ? 0 : window.innerWidth < 640 ? 25 : 60,
 			trailFadeRate: 0.92,
 		};
 
@@ -120,7 +120,7 @@ export function HexGridBackground() {
 			{ dir: 1, enterEdge: 2 },
 		];
 
-		const maxLights = 12;
+		let maxLights = window.innerWidth < 640 ? 6 : 12;
 
 		let cellsMap = new Map<string, HexCell>();
 		let cells: HexCell[] = [];
@@ -196,6 +196,7 @@ export function HexGridBackground() {
 
 			cells = Array.from(cellsMap.values());
 
+			maxLights = window.innerWidth < 640 ? 6 : 12;
 			lights = [];
 			for (let i = 0; i < maxLights; i++) {
 				const randomCell = cells[Math.floor(Math.random() * cells.length)];
@@ -238,52 +239,37 @@ export function HexGridBackground() {
 		};
 
 		const drawLightDot = (x: number, y: number, intensity: number) => {
-			// Outer glow - theme color
-			const gradient = ctx.createRadialGradient(x, y, 0, x, y, config.lightGlowRadius);
-			gradient.addColorStop(
-				0,
-				`rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${intensity * 0.9})`,
-			);
-			gradient.addColorStop(
-				0.4,
-				`rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${intensity * 0.5})`,
-			);
-			gradient.addColorStop(1, `rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, 0)`);
-
-			ctx.fillStyle = gradient;
+			const prev = ctx.globalAlpha;
+			const rgb = `rgb(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b})`;
+			// Outer glow
+			ctx.globalAlpha = intensity * 0.35;
+			ctx.fillStyle = rgb;
 			ctx.beginPath();
 			ctx.arc(x, y, config.lightGlowRadius, 0, Math.PI * 2);
 			ctx.fill();
-
-			// Bright center - pure theme color at full opacity
-			ctx.fillStyle = `rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${intensity})`;
+			// Bright core
+			ctx.globalAlpha = intensity;
 			ctx.beginPath();
 			ctx.arc(x, y, config.lightCoreRadius, 0, Math.PI * 2);
 			ctx.fill();
-
-			// Tiny white core for brilliance
-			ctx.fillStyle = `rgba(255, 255, 255, ${intensity * 0.6})`;
+			// Tiny white centre for brilliance
+			ctx.fillStyle = "rgb(255,255,255)";
+			ctx.globalAlpha = intensity * 0.6;
 			ctx.beginPath();
 			ctx.arc(x, y, config.whiteCoreRadius, 0, Math.PI * 2);
 			ctx.fill();
+			ctx.globalAlpha = prev;
 		};
 
 		const drawTrailDot = (x: number, y: number, alpha: number) => {
-			const gradient = ctx.createRadialGradient(x, y, 0, x, y, config.trailGlowRadius);
-			gradient.addColorStop(
-				0,
-				`rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${alpha * 0.6})`,
-			);
-			gradient.addColorStop(
-				0.5,
-				`rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, ${alpha * 0.3})`,
-			);
-			gradient.addColorStop(1, `rgba(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b}, 0)`);
-
-			ctx.fillStyle = gradient;
+			if (alpha < 0.05) return;
+			const prev = ctx.globalAlpha;
+			ctx.globalAlpha = alpha * 0.4;
+			ctx.fillStyle = `rgb(${primaryColor.r}, ${primaryColor.g}, ${primaryColor.b})`;
 			ctx.beginPath();
 			ctx.arc(x, y, config.trailGlowRadius, 0, Math.PI * 2);
 			ctx.fill();
+			ctx.globalAlpha = prev;
 		};
 
 		let animationFrameId: number;

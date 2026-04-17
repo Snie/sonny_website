@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import type { LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { IconType } from "react-icons";
@@ -153,7 +153,7 @@ export function SkillsSection({ className }: SkillsSectionProps) {
 		<ContentSection maxWidth="5xl" heading={t("heading")} className={className}>
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{categories.map((category, categoryIndex) => (
-					<motion.div
+					<m.div
 						key={category.titleKey}
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ export function SkillsSection({ className }: SkillsSectionProps) {
 						</h3>
 						<div className="flex flex-wrap gap-2">
 							{category.tools.map((tool) => (
-								<motion.div
+								<m.div
 									key={tool.name}
 									className={`
                     inline-flex items-center gap-1.5 px-2.5 py-1.5
@@ -199,10 +199,10 @@ export function SkillsSection({ className }: SkillsSectionProps) {
 											dormant
 										</span>
 									)}
-								</motion.div>
+								</m.div>
 							))}
 						</div>
-					</motion.div>
+					</m.div>
 				))}
 			</div>
 		</ContentSection>

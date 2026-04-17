@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "@wrksz/themes/client";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
@@ -61,7 +61,7 @@ export function HeroSection() {
 				<p className="text-xl sm:text-2xl md:text-3xl text-foreground/80">{t("intro")}</p>
 			</div>
 
-			<motion.div
+			<m.div
 				className="flex items-center gap-5 mt-6"
 				initial={{ opacity: 0, y: 10 }}
 				animate={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ export function HeroSection() {
 				>
 					<MdEmail />
 				</a>
-			</motion.div>
+			</m.div>
 
 			{/* Fixed portrait in bottom-right corner */}
 			<div
