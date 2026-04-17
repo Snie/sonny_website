@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -103,7 +103,7 @@ function ElsewhereCard({
 
 	if (link) {
 		return (
-			<motion.a
+			<m.a
 				href={link}
 				target="_blank"
 				rel="noopener noreferrer"
@@ -111,14 +111,14 @@ function ElsewhereCard({
 				{...motionProps}
 			>
 				{cardContent}
-			</motion.a>
+			</m.a>
 		);
 	}
 
 	return (
-		<motion.div className={containerClasses} {...motionProps}>
+		<m.div className={containerClasses} {...motionProps}>
 			{cardContent}
-		</motion.div>
+		</m.div>
 	);
 }
 

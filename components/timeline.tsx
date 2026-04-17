@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { m, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { ContentSection } from "@/components/ui/content-section";
@@ -59,7 +59,7 @@ export function Timeline() {
 
 	return (
 		<ContentSection maxWidth="5xl" heading={t("heading")}>
-			<motion.div
+			<m.div
 				ref={containerRef}
 				className="relative"
 				variants={skipAnimation ? {} : containerVariants}
@@ -70,7 +70,7 @@ export function Timeline() {
 				<div className="absolute left-0 md:left-8 top-0 bottom-0 w-0.5 bg-border" />
 
 				{entries.map((entry) => (
-					<motion.div
+					<m.div
 						key={`${entry.company}-${entry.period}`}
 						className="relative pl-8 md:pl-20 pb-12 last:pb-0"
 						variants={skipAnimation ? {} : itemVariants}
@@ -91,9 +91,9 @@ export function Timeline() {
 								{entry.description}
 							</p>
 						</div>
-					</motion.div>
+					</m.div>
 				))}
-			</motion.div>
+			</m.div>
 		</ContentSection>
 	);
 }
