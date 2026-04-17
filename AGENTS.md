@@ -162,6 +162,32 @@ bun run test:e2e    # E2E smoke test (Playwright, builds the app)
 bun run test:all    # Run unit + E2E tests
 ```
 
+### Bundle Analysis
+
+`@next/bundle-analyzer` is wired into `next.config.ts` behind the
+`ANALYZE` env flag. Use it when changing dependencies, adding heavy
+components, or investigating a regression in initial JS payload.
+
+```bash
+ANALYZE=true bun run build
+```
+
+The build emits three HTML reports under `.next/analyze/`:
+
+- `client.html` — what ships to the browser (the one you usually want)
+- `nodejs.html` — server-side bundle
+- `edge.html` — edge runtime bundle (empty for this project)
+
+What to look for:
+
+- framer-motion should sit in a lazy chunk (loaded via `LazyMotion`),
+  not in the main route bundle.
+- Below-fold sections wrapped in `next/dynamic` should each have their
+  own chunk.
+- Any single chunk above ~150 kB gzipped is worth investigating.
+
+The reports are git-ignored; do not commit them.
+
 ## Testing Rules
 
 - Co-locate test files in `__tests__/` directories next to source files
