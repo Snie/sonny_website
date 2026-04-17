@@ -1,3 +1,5 @@
+## [1.3.7](https://github.com/Snie/sonny_website/compare/v1.3.6...v1.3.7) (2026-04-17)
+
 ## [1.3.6](https://github.com/Snie/sonny_website/compare/v1.3.5...v1.3.6) (2026-04-06)
 
 ### Bug Fixes
