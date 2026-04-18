@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/Snie/sonny_website/compare/v1.3.7...v1.4.0) (2026-04-18)
+
+### Features
+
+* **seo:** full 2026 SEO surface, doc sync, static OG/icons ([6377db6](https://github.com/Snie/sonny_website/commit/6377db60e63908c1e34d8b4b047a9e69434af2db))
+
 ## [1.3.7](https://github.com/Snie/sonny_website/compare/v1.3.6...v1.3.7) (2026-04-17)
 
 ## [1.3.6](https://github.com/Snie/sonny_website/compare/v1.3.5...v1.3.6) (2026-04-06)
