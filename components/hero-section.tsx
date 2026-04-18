@@ -53,7 +53,13 @@ export function HeroSection() {
 				style={{ filter: "drop-shadow(0 1.2px 1.2px var(--hero-glow))" }}
 			>
 				{/* fontSize uses clamp() — values are provisional pending visual inspection. */}
-				<VideoText key={resolvedTheme} src={videoSrc} as="h1" fontSize="clamp(2.5rem, 11vw, 9rem)">
+				<VideoText
+					key={resolvedTheme}
+					src={videoSrc}
+					as="h1"
+					fontSize="clamp(2.5rem, 11vw, 9rem)"
+					preload="metadata"
+				>
 					{t("title")}
 				</VideoText>
 			</div>
@@ -111,7 +117,7 @@ export function HeroSection() {
 			>
 				<Image
 					alt="Sonny"
-					loading="eager"
+					priority
 					src={sonny}
 					sizes="(max-width: 400px) 50vw, (max-width: 1000px) 40vw, 25vw"
 					style={{
