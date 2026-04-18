@@ -6,19 +6,23 @@ A website in nextjs about the owner of it Sonny Monti.
 
 ## Tech Stack
 
-- **Runtime:** Bun 1.3.11, Node v25.8.2
-- **Framework:** Next.js 16.2.2, React 19.2.4, React DOM 19.2.4
-- **Language:** TypeScript 6
-- **Styling:** Tailwind CSS 4, tw-animate-css 1.4.0, tailwind-merge 3.5.0, class-variance-authority 0.7.1, @tailwindcss/postcss 4
-- **UI Components:** shadcn 4.1.2, @base-ui/react 1.3.0, lucide-react 1.7.0
-- **Icons:** react-icons 5.6.0
-- **Animation:** framer-motion 12.38.0
-- **Charts:** apexcharts 5.10.5, react-apexcharts 2.1.0
-- **Theming:** next-themes 0.4.6, @wrksz/themes 0.7.9 ([wrksz fixes some errors with nextjs 16](https://www.wrksz.dev/blog/wrksz-themes))
-- **i18n:** next-intl 4.9.0
-- **Utilities:** clsx 2.1.1
-- **Testing:** vitest 4.1.2, @testing-library/react 16.3.2, @testing-library/jest-dom 6.9.1, @testing-library/user-event 14.6.1, @playwright/test 1.59.1
-- **Linting/Formatting:** @biomejs/biome 2.4.10 (replaces ESLint + Prettier)
+Versions track `package.json`. Run `bun outdated` to see drift; the cadence
+table below covers refresh frequency.
+
+- **Runtime:** Bun (latest, see Tooling Maintenance), Node 25
+- **Framework:** Next.js 16.2.3, React 19.2.5, React DOM 19.2.5
+- **Language:** TypeScript ^6.0.2 (strict mode)
+- **Styling:** Tailwind CSS ^4.2.2, tw-animate-css ^1.4.0, tailwind-merge ^3.5.0, class-variance-authority ^0.7.1, @tailwindcss/postcss ^4.2.2
+- **UI Components:** shadcn ^4.3.0, @base-ui/react ^1.4.0, lucide-react ^1.8.0
+- **Icons:** react-icons ^5.6.0
+- **Animation:** framer-motion ^12.38.0
+- **Charts:** apexcharts ^5.10.6, react-apexcharts ^2.1.0
+- **Theming:** next-themes ^0.4.6, @wrksz/themes ^0.8.3 ([wrksz fixes some errors with nextjs 16](https://www.wrksz.dev/blog/wrksz-themes))
+- **i18n:** next-intl ^4.9.1
+- **Analytics:** @vercel/analytics ^2.0.1, @vercel/speed-insights ^2.0.0
+- **Utilities:** clsx ^2.1.1
+- **Testing:** vitest ^4.1.4, @testing-library/react ^16.3.2, @testing-library/jest-dom ^6.9.1, @testing-library/user-event ^14.6.1, @playwright/test ^1.59.1
+- **Linting/Formatting:** @biomejs/biome ^2.4.11 (replaces ESLint + Prettier)
 - **Tooling:** GitHub Dependabot, GitHub Codescan, Context7 MCP
 - **MCP Servers:** [Context7](https://context7.com/docs/overview) (`.claude/.mcp.json`)
 
@@ -57,28 +61,43 @@ to ensure the latest versions are in use.
 
 ```text
 .
-├── app/                  # Next.js app router (pages, layouts, global styles)
-├── components/           # React UI components (sections, controls, ui primitives)
-├── docs/                 # Developer documentation (markdown)
-│   └── dev/              # Development notes and references
-├── public/               # Static assets served at /
-├── types/                # Shared TypeScript type declarations
-├── lib/                  # Utility functions and i18n.ts configuration
-├── test/                 # Shared test infrastructure (setup, mocks, utils)
-│   ├── e2e/              # Playwright E2E specs
-│   └── mocks/            # Module mocks for Vitest
-├── vitest.config.ts      # Vitest configuration
-├── playwright.config.ts  # Playwright configuration
-├── .claude/              # Claude Code configuration (skills, settings, hooks)
-├── .github/              # GitHub Actions workflows and Dependabot config
-├── AGENTS.md             # Agent and contributor conventions (this file)
-├── README.md             # Human-facing overview and quick start
-├── CLAUDE.md             # Claude Code project instructions
-├── next.config.ts        # Next.js configuration
-├── tsconfig.json         # TypeScript configuration
-├── biome.json            # Biome linter/formatter configuration
-├── package.json          # Dependencies and scripts
-└── proxy.ts              # Next.js 16 proxy (i18n routing middleware via next-intl)
+├── app/                          # Next.js app router
+│   ├── [locale]/                 # Localized routes (en/it/de/fr)
+│   │   ├── layout.tsx            # Root layout, metadata, JSON-LD, header/footer
+│   │   ├── page.tsx              # Home page (ProfilePage JSON-LD)
+│   │   ├── opengraph-image.tsx   # Per-locale OG image (SSG via generateStaticParams)
+│   │   └── twitter-image.tsx     # Twitter card image (re-exports OG)
+│   ├── sitemap.ts                # Locale-aware sitemap (/sitemap.xml)
+│   ├── robots.ts                 # robots directives (/robots.txt)
+│   ├── manifest.ts               # PWA manifest (/manifest.webmanifest)
+│   ├── icon.tsx                  # 32×32 favicon (green SM monogram)
+│   └── apple-icon.tsx            # 180×180 Apple touch icon
+├── components/                   # React UI components (sections, controls, ui primitives)
+├── docs/                         # Developer documentation (markdown)
+│   └── dev/                      # Development notes and references
+├── messages/                     # next-intl translation files (en/it/de/fr)
+├── public/                       # Static assets served at /
+├── types/                        # Shared TypeScript type declarations
+├── lib/                          # Utility functions
+│   ├── i18n.ts                   # Locale list + next-intl request config
+│   ├── site-config.ts            # SITE constants (URL, name, social, accent)
+│   └── seo/jsonld.ts             # Person, WebSite, ProfilePage schema builders
+├── test/                         # Shared test infrastructure (setup, mocks, utils)
+│   ├── e2e/                      # Playwright E2E specs
+│   └── mocks/                    # Module mocks for Vitest
+├── specs/                        # Spec-Driven Development artifacts
+├── vitest.config.ts              # Vitest configuration
+├── playwright.config.ts          # Playwright configuration
+├── .claude/                      # Claude Code configuration (skills, settings, hooks)
+├── .github/                      # GitHub Actions workflows and Dependabot config
+├── AGENTS.md                     # Agent and contributor conventions (this file)
+├── README.md                     # Human-facing overview and quick start
+├── CLAUDE.md                     # Claude Code project instructions
+├── next.config.ts                # Next.js configuration
+├── tsconfig.json                 # TypeScript configuration
+├── biome.json                    # Biome linter/formatter configuration
+├── package.json                  # Dependencies and scripts
+└── proxy.ts                      # Next.js 16 proxy (i18n routing middleware via next-intl)
 ```
 
 ## How Personal Claude Skills Are Structured
@@ -187,6 +206,40 @@ What to look for:
 - Any single chunk above ~150 kB gzipped is worth investigating.
 
 The reports are git-ignored; do not commit them.
+
+## SEO
+
+The site URL, social handles, and brand accent live in `lib/site-config.ts`
+(`SITE`). Every SEO surface imports from there — never hardcode `https://sonnymonti.com`
+or social URLs in components or pages.
+
+| Concern | File |
+| --- | --- |
+| Site config (URL, name, social, accent) | `lib/site-config.ts` |
+| JSON-LD builders (Person, WebSite, ProfilePage) | `lib/seo/jsonld.ts` |
+| Per-locale metadata (title, description, OG, hreflang, canonical, robots) | `app/[locale]/layout.tsx` (`generateMetadata` + `viewport`) |
+| Translated title/description/og-tagline | `messages/<locale>.json` → `seo.*` namespace |
+| Sitemap (`/sitemap.xml`) | `app/sitemap.ts` |
+| Robots (`/robots.txt`) | `app/robots.ts` |
+| PWA manifest (`/manifest.webmanifest`) | `app/manifest.ts` |
+| Favicons (`/icon`, `/apple-icon`) | `app/icon.tsx`, `app/apple-icon.tsx` |
+| Open Graph / Twitter images | `app/[locale]/opengraph-image.tsx`, `app/[locale]/twitter-image.tsx` |
+
+Conventions:
+
+- All metadata flows through `next-intl` translations — no hardcoded copy in
+  `generateMetadata`.
+- JSON-LD uses `@id` references inside `@graph` to dedupe shared nodes
+  (e.g. `ProfilePage.mainEntity` references `Person` by `@id` instead of
+  duplicating the object).
+- Production URL override at build time: `NEXT_PUBLIC_SITE_URL`.
+- Google Search Console verification: `GOOGLE_SITE_VERIFICATION` (no-op when unset).
+- Favicons are code-generated via `ImageResponse` — do not commit binary
+  `favicon.ico` / PNG icon files unless overriding the route on purpose.
+- When adding a new public route, add it to `app/sitemap.ts` and ensure the
+  layout's `alternates.languages` covers all locales.
+- Use the `seo-audit` skill against the deployed preview before merging
+  SEO-relevant changes; target Health Index ≥ 80 (Good).
 
 ## Testing Rules
 
