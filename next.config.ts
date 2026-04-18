@@ -34,6 +34,10 @@ const nextConfig: NextConfig = {
 	experimental: {
 		optimizePackageImports: ["lucide-react", "react-icons", "framer-motion", "@base-ui/react"],
 	},
+	images: {
+		formats: ["image/avif", "image/webp"],
+		remotePatterns: [],
+	},
 	async headers() {
 		if (isDev) return [];
 		return [
