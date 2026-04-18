@@ -2,6 +2,9 @@
 
 Hello there, my name is Sonny Monti and this project is the placeholder for my personal website.  
 
+Built with Next.js 16, React 19, Tailwind CSS v4, TypeScript 6, and `next-intl`
+for English / Italian / German / French. Deployed on Vercel.
+
 The websites will explain who I am, be my online resume, and serve as sandbox for my experiments such as ML, AI or
  other software projects worth to operationalize behind an API.
 

@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import { HeroSection } from "@/components/hero-section";
 import { locales } from "@/lib/i18n";
+import { profilePageSchema } from "@/lib/seo/jsonld";
 
 const AuthorNote = dynamic(() =>
 	import("@/components/author-note").then((m) => ({ default: m.AuthorNote })),
@@ -31,9 +32,20 @@ export function generateStaticParams() {
 	return locales.map((locale) => ({ locale }));
 }
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+	const { locale } = await params;
+	const profileLd = {
+		"@context": "https://schema.org",
+		...(await profilePageSchema(locale)),
+	};
+
 	return (
 		<main>
+			<script
+				type="application/ld+json"
+				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires inline script
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(profileLd) }}
+			/>
 			<HeroSection />
 			<AuthorNote />
 			<AboutSection />

@@ -1,4 +1,9 @@
 {
+	"seo": {
+		"title": "Sonny Monti — ML Tech Lead & Solution Architect",
+		"description": "ML Tech Lead at Swiss Post. Portfolio showcasing AI/ML engineering, MLOps, and platform architecture.",
+		"ogTagline": "ML Tech Lead. Engineer hands. Architect brain."
+	},
 	"hero": {
 		"title": "Ciao, I'm Sonny",
 		"intro": "Tech Lead job, Engineer hands, Architect brain, and continuous learner soul"

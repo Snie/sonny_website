@@ -52,7 +52,8 @@ export function HeroSection() {
 				className="h-50 w-full overflow-hidden"
 				style={{ filter: "drop-shadow(0 1.2px 1.2px var(--hero-glow))" }}
 			>
-				<VideoText key={resolvedTheme} src={videoSrc} fontSize={10}>
+				{/* fontSize uses clamp() — values are provisional pending visual inspection. */}
+				<VideoText key={resolvedTheme} src={videoSrc} as="h1" fontSize="clamp(2.5rem, 11vw, 9rem)">
 					{t("title")}
 				</VideoText>
 			</div>
