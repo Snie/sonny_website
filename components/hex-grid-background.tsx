@@ -397,10 +397,22 @@ export function HexGridBackground() {
 			animationFrameId = requestAnimationFrame(animate);
 		};
 
-		animate();
+		let idleHandle: number | undefined;
+		let timeoutHandle: number | undefined;
+		if (typeof window.requestIdleCallback === "function") {
+			idleHandle = window.requestIdleCallback(animate, { timeout: 500 });
+		} else {
+			timeoutHandle = window.setTimeout(animate, 0);
+		}
 
 		return () => {
 			window.removeEventListener("resize", buildGrid);
+			if (idleHandle !== undefined && typeof window.cancelIdleCallback === "function") {
+				window.cancelIdleCallback(idleHandle);
+			}
+			if (timeoutHandle !== undefined) {
+				window.clearTimeout(timeoutHandle);
+			}
 			if (animationFrameId) {
 				cancelAnimationFrame(animationFrameId);
 			}

@@ -1,12 +1,12 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ThemeProvider } from "@wrksz/themes/next";
-import { domAnimation, LazyMotion } from "framer-motion";
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { LazyMotionProvider } from "@/components/lazy-motion-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { personSchema, websiteSchema } from "@/lib/seo/jsonld";
 import { SITE } from "@/lib/site-config";
@@ -120,7 +120,7 @@ export default async function RootLayout({
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 				/>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<LazyMotion features={domAnimation} strict>
+					<LazyMotionProvider>
 						<NextIntlClientProvider messages={messages}>
 							<header className="fixed top-4 right-4 z-50 flex items-center gap-1 rounded-full border border-border/50 bg-background/80 backdrop-blur-md shadow-sm px-2 py-1">
 								<nav aria-label="Site navigation" className="flex items-center gap-1">
@@ -162,7 +162,7 @@ export default async function RootLayout({
 								</div>
 							</footer>
 						</NextIntlClientProvider>
-					</LazyMotion>
+					</LazyMotionProvider>
 				</ThemeProvider>
 			</body>
 		</html>

@@ -49,3 +49,4 @@ docs/resume
 
 # Claude Code worktrees (agent isolation sandboxes)
 .claude/worktrees
+.claude/agent-memory
