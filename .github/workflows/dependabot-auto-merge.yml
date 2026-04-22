@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Fetch Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@c7340540f40d23a23c2159ba04a75319dff18ece
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Auto-merge patch and minor updates
