@@ -8,7 +8,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { LazyMotionProvider } from "@/components/lazy-motion-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { personSchema, websiteSchema } from "@/lib/seo/jsonld";
+import { personSchema, serializeJsonLd, websiteSchema } from "@/lib/seo/jsonld";
 import { SITE } from "@/lib/site-config";
 import "../globals.css";
 
@@ -117,7 +117,7 @@ export default async function RootLayout({
 				<script
 					type="application/ld+json"
 					// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires inline script
-					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+					dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
 				/>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<LazyMotionProvider>

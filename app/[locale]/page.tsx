@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { HeroSection } from "@/components/hero-section";
 import { locales } from "@/lib/i18n";
-import { profilePageSchema } from "@/lib/seo/jsonld";
+import { profilePageSchema, serializeJsonLd } from "@/lib/seo/jsonld";
 
 const AuthorNote = dynamic(() =>
 	import("@/components/author-note").then((m) => ({ default: m.AuthorNote })),
@@ -44,7 +44,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
 			<script
 				type="application/ld+json"
 				// biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires inline script
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(profileLd) }}
+				dangerouslySetInnerHTML={{ __html: serializeJsonLd(profileLd) }}
 			/>
 			<HeroSection />
 			<AuthorNote />

@@ -3,6 +3,31 @@ import { SITE } from "@/lib/site-config";
 
 const PORTRAIT_PATH = "/sonny_frontpage.webp";
 
+// JS line separators that are valid in JSON but terminate strings inside an
+// inline <script>. Built from char codes so the raw characters never appear in
+// source (a literal one breaks the regex parser).
+const LINE_SEPARATOR = String.fromCharCode(0x2028);
+const PARAGRAPH_SEPARATOR = String.fromCharCode(0x2029);
+
+/**
+ * Serialize a JSON-LD object for embedding in an inline `<script>` tag.
+ *
+ * Escapes the characters that could otherwise break out of the script context
+ * (`<`, `>`, `&`) plus U+2028/U+2029. All current inputs are trusted (site
+ * config + own translations), so this is defense-in-depth that keeps the sink
+ * safe if untrusted data is ever added.
+ */
+export function serializeJsonLd(data: unknown): string {
+	return JSON.stringify(data)
+		.replace(/</g, "\\u003c")
+		.replace(/>/g, "\\u003e")
+		.replace(/&/g, "\\u0026")
+		.split(LINE_SEPARATOR)
+		.join("\\u2028")
+		.split(PARAGRAPH_SEPARATOR)
+		.join("\\u2029");
+}
+
 export async function personSchema(locale: string) {
 	const t = await getTranslations({ locale, namespace: "seo" });
 	return {
@@ -12,7 +37,7 @@ export async function personSchema(locale: string) {
 		url: `${SITE.url}/${locale}`,
 		image: `${SITE.url}${PORTRAIT_PATH}`,
 		sameAs: [SITE.github, SITE.linkedin],
-		jobTitle: "ML Tech Lead & Solution Architect",
+		jobTitle: "AI Solution Architect",
 		worksFor: {
 			"@type": "Organization",
 			name: "Swiss Post",
