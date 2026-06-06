@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { locales } from "@/lib/i18n";
 import { SITE } from "@/lib/site-config";
 
-export const alt = "Sonny Monti — ML Tech Lead & Solution Architect";
+export const alt = "Sonny Monti — AI Solution Architect";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

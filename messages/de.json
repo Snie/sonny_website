@@ -1,25 +1,25 @@
 {
 	"seo": {
-		"title": "Sonny Monti — ML Tech Lead & Solution Architect",
-		"description": "ML Tech Lead bei der Schweizerischen Post. Portfolio mit KI/ML-Engineering, MLOps und Plattformarchitektur.",
-		"ogTagline": "ML Tech Lead. Ingenieurshände. Architektenhirn."
+		"title": "Sonny Monti — AI Solution Architect",
+		"description": "AI Solution Architect bei der Schweizerischen Post. Portfolio mit KI/ML-Engineering, MLOps und Plattformarchitektur.",
+		"ogTagline": "Architektenhirn. Ingenieurshände."
 	},
 	"hero": {
 		"title": "Ciao, ich bin Sonny",
-		"intro": "Tech Lead im Beruf, Ingenieur im Handwerk, Architekt im Denken und lebenslanger Lernender im Herzen"
+		"intro": "Architekt im Denken, Ingenieur im Handwerk und lebenslanger Lernender im Herzen"
 	},
 	"authorNote": {
-		"text": "Als ich diese Notiz 2026 schrieb (und glaubt mir oder nicht, das meiste davon habe ich tatsächlich selbst getippt), war mein Job ML Tech Lead bei der Schweizerischen Post, die agentenbasierte KI-Entwicklung erlebte ihre Blütezeit, ebenso die LLMs, und das Wort KI wurde häufiger benutzt als der Artikel *der*. Wenn ich diesen Absatz das nächste Mal lese, wird die KI AGI erreicht haben, Terminator-Niveau, die Menschen werden die Matrix des Architekten befeuern (ausser Neo natürlich), die Menschheit beherr.... ähm, ich werde Bauer sein und das beste Leben führen!\n\nSpass beiseite — ich wollte euch diese Geschichte erzählen, weil ich trotz der enormen Fortschritte durch Coding-Agenten überzeugt bin, dass gute Ingenieure mit fundiertem Architekturverständnis und Erfahrung im Design von Systemen und Schnittstellen noch eine ganze Weile gebraucht werden.\n\nKI komplette Anwendungsstacks vibecoden zu lassen, ohne deren Arbeit sorgfältig zu prüfen, ist das perfekte Rezept für Katastrophen — denn Agenten konsumieren Schnittstellen. Sie erfinden sie nie. Wenn ein Agent darüber entscheidet, wie ein API-Endpunkt aussieht, ist der Prozess bereits gescheitert.\n\nWie dem auch sei: willkommen bei meinem Website-Projekt und viel Spass beim Lesen."
+		"text": "Als ich diese Notiz 2026 schrieb (und glaubt mir oder nicht, das meiste davon habe ich tatsächlich selbst getippt), war mein Job AI Solution Architect bei der Schweizerischen Post, die agentenbasierte KI-Entwicklung erlebte ihre Blütezeit, ebenso die LLMs, und das Wort KI wurde häufiger benutzt als der Artikel *der*. Wenn ich diesen Absatz das nächste Mal lese, wird die KI AGI erreicht haben, Terminator-Niveau, die Menschen werden die Matrix des Architekten befeuern (ausser Neo natürlich), die Menschheit beherr.... ähm, ich werde Bauer sein und das beste Leben führen!\n\nSpass beiseite — ich wollte euch diese Geschichte erzählen, weil ich trotz der enormen Fortschritte durch Coding-Agenten überzeugt bin, dass gute Ingenieure mit fundiertem Architekturverständnis und Erfahrung im Design von Systemen und Schnittstellen noch eine ganze Weile gebraucht werden.\n\nKI komplette Anwendungsstacks vibecoden zu lassen, ohne deren Arbeit sorgfältig zu prüfen, ist das perfekte Rezept für Katastrophen — denn Agenten konsumieren Schnittstellen. Sie erfinden sie nie. Wenn ein Agent darüber entscheidet, wie ein API-Endpunkt aussieht, ist der Prozess bereits gescheitert.\n\nWie dem auch sei: willkommen bei meinem Website-Projekt und viel Spass beim Lesen."
 	},
 	"about": {
 		"heading": "Über mich",
-		"text": "Ich bin ML Tech Lead bei der Schweizerischen Post, wo ich die Konzeption und Operationalisierung grosser KI/ML-Systeme vorantreibe — von der Architektur bis in die Produktion.\n\n\n Meine Arbeit liegt an der Schnittstelle von Machine-Learning-Engineering, MLOps und Plattformdenken: Aufbau der Infrastruktur und Praktiken, die Data Science dazu befähigen, tatsächlich zu liefern. Konkret bedeutet das CI/CD-Pipelines, Model Lifecycle Management, Observability und die organisatorischen Muster, die Teams schnell machen, ohne fragil zu werden.\n\nIch bin spezialisiert auf Python-basiertes ML-Engineering und habe Jahre damit verbracht, Ad-hoc-Datenworkflows in skalierbare, steuerbare Systeme zu überführen — bei gleichbleibend hohem Engineering-Anspruch.\n\nÜber die Technik hinaus leite und begleite ich cross-funktionale Teams in Data Science, Engineering und Business — und übersetze dabei zwischen dem, was statistisch möglich ist, was architektonisch tragfähig ist und was wirklich etwas bewegt."
+		"text": "Ich bin AI Solution Architect bei der Schweizerischen Post, wo ich die Konzeption und Operationalisierung grosser KI/ML-Systeme vorantreibe — von der Architektur bis in die Produktion.\n\n\n Meine Arbeit liegt an der Schnittstelle von Machine-Learning-Engineering, MLOps und Plattformdenken: Aufbau der Infrastruktur und Praktiken, die Data Science dazu befähigen, tatsächlich zu liefern. Konkret bedeutet das CI/CD-Pipelines, Model Lifecycle Management, Observability und die organisatorischen Muster, die Teams schnell machen, ohne fragil zu werden.\n\nIch bin spezialisiert auf Python-basiertes ML-Engineering und habe Jahre damit verbracht, Ad-hoc-Datenworkflows in skalierbare, steuerbare Systeme zu überführen — bei gleichbleibend hohem Engineering-Anspruch.\n\nÜber die Technik hinaus leite und begleite ich cross-funktionale Teams in Data Science, Engineering und Business — und übersetze dabei zwischen dem, was statistisch möglich ist, was architektonisch tragfähig ist und was wirklich etwas bewegt."
 	},
 	"experience": {
 		"heading": "Berufserfahrung",
 		"entries": [
 			{
-				"role": "ML Tech Lead & Solution Architect",
+				"role": "AI Solution Architect",
 				"company": "Swiss Post",
 				"city": "Bern",
 				"period": "2026 – Heute",

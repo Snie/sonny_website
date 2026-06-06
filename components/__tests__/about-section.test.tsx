@@ -9,7 +9,7 @@ describe("AboutSection", () => {
 
 	it("contains about.text paragraphs", () => {
 		render(<AboutSection />);
-		expect(screen.getByText(/ML Tech Lead at Swiss Post/)).toBeInTheDocument();
+		expect(screen.getByText(/AI Solution Architect at Swiss Post/)).toBeInTheDocument();
 		expect(screen.getByText(/I specialize in Python-based ML engineering/)).toBeInTheDocument();
 	});
 });

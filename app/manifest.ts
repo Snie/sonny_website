@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
 	return {
 		name: SITE.name,
 		short_name: "Sonny",
-		description: "Portfolio of Sonny Monti — ML Tech Lead & Solution Architect",
+		description: "Portfolio of Sonny Monti — AI Solution Architect",
 		start_url: `/${SITE.defaultLocale}`,
 		display: "standalone",
 		background_color: "#ffffff",
