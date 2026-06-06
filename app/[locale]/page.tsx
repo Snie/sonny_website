@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import { setRequestLocale } from "next-intl/server";
 import { HeroSection } from "@/components/hero-section";
 import { locales } from "@/lib/i18n";
 import { profilePageSchema, serializeJsonLd } from "@/lib/seo/jsonld";
@@ -34,6 +35,7 @@ export function generateStaticParams() {
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
 	const { locale } = await params;
+	setRequestLocale(locale);
 	const profileLd = {
 		"@context": "https://schema.org",
 		...(await profilePageSchema(locale)),
