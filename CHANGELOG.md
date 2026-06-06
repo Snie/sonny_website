@@ -1,3 +1,17 @@
+## [1.5.0](https://github.com/Snie/sonny_website/compare/v1.4.1...v1.5.0) (2026-06-06)
+
+### Features
+
+* rename current role to AI Solution Architect ([253c317](https://github.com/Snie/sonny_website/commit/253c317cfcf40ca2a3497063fd3b9307db5868d2))
+
+### Bug Fixes
+
+* pin apexcharts to 5.10.6, move shadcn to devDeps, bump hono override ([1fd2dff](https://github.com/Snie/sonny_website/commit/1fd2dff6840a78982c457fedebe8fce69b8f1d00))
+
+### Security
+
+* escape JSON-LD output before inlining in script tags ([7efcd21](https://github.com/Snie/sonny_website/commit/7efcd218ce72fec6b8584ffc79192d18f3314c90))
+
 ## [1.4.1](https://github.com/Snie/sonny_website/compare/v1.4.0...v1.4.1) (2026-04-18)
 
 ## [1.4.0](https://github.com/Snie/sonny_website/compare/v1.3.7...v1.4.0) (2026-04-18)
