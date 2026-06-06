@@ -4,14 +4,7 @@ import { m, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { ContentSection } from "@/components/ui/content-section";
-
-interface TimelineEntry {
-	role: string;
-	company: string;
-	city: string;
-	period: string;
-	description: string;
-}
+import { getEntries, type TimelineEntry } from "@/lib/i18n-content";
 
 export function Timeline() {
 	const t = useTranslations("experience");
@@ -34,7 +27,7 @@ export function Timeline() {
 	const skipAnimation = !mounted || prefersReducedMotion;
 
 	// Get entries from translations
-	const entries: TimelineEntry[] = t.raw("entries") as TimelineEntry[];
+	const entries = getEntries<TimelineEntry>(t.raw("entries"), "experience.entries");
 
 	const containerVariants = {
 		hidden: { opacity: 0 },

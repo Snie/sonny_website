@@ -3,21 +3,12 @@
 import { useTranslations } from "next-intl";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContentSection } from "@/components/ui/content-section";
-
-interface EducationEntry {
-	degree: string;
-	institution: string;
-	city: string;
-	period: string;
-	grade: string;
-	specialisation: string;
-	thesis: string;
-}
+import { type EducationEntry, getEntries } from "@/lib/i18n-content";
 
 export function EducationSection() {
 	const t = useTranslations("education");
 
-	const entries: EducationEntry[] = t.raw("entries");
+	const entries = getEntries<EducationEntry>(t.raw("entries"), "education.entries");
 
 	return (
 		<ContentSection maxWidth="5xl" heading={t("heading")}>
