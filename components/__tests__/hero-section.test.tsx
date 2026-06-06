@@ -28,9 +28,7 @@ describe("HeroSection", () => {
 	it("renders intro text", () => {
 		render(<HeroSection />);
 		expect(
-			screen.getByText(
-				"Tech Lead job, Engineer hands, Architect brain, and continuous learner soul",
-			),
+			screen.getByText("Architect brain, Engineer hands, and continuous learner soul"),
 		).toBeInTheDocument();
 	});
 

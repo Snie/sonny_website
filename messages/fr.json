@@ -1,25 +1,25 @@
 {
 	"seo": {
-		"title": "Sonny Monti — ML Tech Lead & Solution Architect",
-		"description": "ML Tech Lead à la Poste Suisse. Portfolio présentant l'ingénierie IA/ML, MLOps et architecture de plateforme.",
-		"ogTagline": "ML Tech Lead. Mains d'ingénieur. Cerveau d'architecte."
+		"title": "Sonny Monti — AI Solution Architect",
+		"description": "AI Solution Architect à la Poste Suisse. Portfolio présentant l'ingénierie IA/ML, MLOps et architecture de plateforme.",
+		"ogTagline": "Cerveau d'architecte. Mains d'ingénieur."
 	},
 	"hero": {
 		"title": "Ciao, je suis Sonny",
-		"intro": "Tech Lead de métier, mains d'ingénieur, cerveau d'architecte et âme d'éternel apprenant"
+		"intro": "cerveau d'architecte, mains d'ingénieur et âme d'éternel apprenant"
 	},
 	"authorNote": {
-		"text": "Au moment où j'ai écrit cette note en 2026 (et croyez-le ou non, j'en ai rédigé la majeure partie à la main), j'étais ML Tech Lead à la Poste Suisse, le développement d'agents IA vivait son âge d'or, tout comme les LLM, et le mot IA était utilisé plus souvent que l'article *le*. Au moment où je relirai ce paragraphe, l'IA aura atteint l'AGI, le niveau Terminator, les humains alimenteront la matrice de l'Architecte (sauf Neo évidemment), domineront l'humanit.... euh, je serai agriculteur et vivrai la belle vie !\n\nTrêve de plaisanteries — je voulais vous raconter cette histoire parce que, malgré les progrès immenses réalisés par les agents de codage, je suis convaincu que de bons ingénieurs dotés de solides compétences architecturales et d'une expertise en conception de systèmes et d'interfaces resteront indispensables encore un bon moment.\n\nLaisser l'IA vibecoder des stacks applicatifs entiers sans examiner soigneusement son travail est la recette parfaite du désastre, car les agents consomment des interfaces. Ils ne les inventent jamais. Si un agent décide de la forme d'un endpoint API, le processus est déjà cassé.\n\nCela dit, bienvenue sur mon projet de site web et bonne lecture."
+		"text": "Au moment où j'ai écrit cette note en 2026 (et croyez-le ou non, j'en ai rédigé la majeure partie à la main), j'étais AI Solution Architect à la Poste Suisse, le développement d'agents IA vivait son âge d'or, tout comme les LLM, et le mot IA était utilisé plus souvent que l'article *le*. Au moment où je relirai ce paragraphe, l'IA aura atteint l'AGI, le niveau Terminator, les humains alimenteront la matrice de l'Architecte (sauf Neo évidemment), domineront l'humanit.... euh, je serai agriculteur et vivrai la belle vie !\n\nTrêve de plaisanteries — je voulais vous raconter cette histoire parce que, malgré les progrès immenses réalisés par les agents de codage, je suis convaincu que de bons ingénieurs dotés de solides compétences architecturales et d'une expertise en conception de systèmes et d'interfaces resteront indispensables encore un bon moment.\n\nLaisser l'IA vibecoder des stacks applicatifs entiers sans examiner soigneusement son travail est la recette parfaite du désastre, car les agents consomment des interfaces. Ils ne les inventent jamais. Si un agent décide de la forme d'un endpoint API, le processus est déjà cassé.\n\nCela dit, bienvenue sur mon projet de site web et bonne lecture."
 	},
 	"about": {
 		"heading": "À propos",
-		"text": "Je suis ML Tech Lead à la Poste Suisse, où je pilote la conception et la mise en production de systèmes IA/ML à grande échelle — de l'architecture au déploiement.\n\n\n Mon travail se situe au croisement du machine learning engineering, du MLOps et de la pensée plateforme : bâtir l'infrastructure et les pratiques qui permettent à la data science de livrer concrètement. Pipelines CI/CD, gestion du cycle de vie des modèles, observabilité et patterns organisationnels qui rendent les équipes rapides sans les rendre fragiles.\n\nJe suis spécialisé en ML engineering Python et j'ai passé des années à transformer des workflows de données ad hoc en systèmes scalables et gouvernés — tout en maintenant un niveau d'exigence technique à la hauteur des enjeux.\n\nAu-delà de la technique, je dirige et accompagne des équipes pluridisciplinaires en data science, engineering et business — en faisant le lien entre ce qui est statistiquement possible, architecturalement solide et réellement impactant."
+		"text": "Je suis AI Solution Architect à la Poste Suisse, où je pilote la conception et la mise en production de systèmes IA/ML à grande échelle — de l'architecture au déploiement.\n\n\n Mon travail se situe au croisement du machine learning engineering, du MLOps et de la pensée plateforme : bâtir l'infrastructure et les pratiques qui permettent à la data science de livrer concrètement. Pipelines CI/CD, gestion du cycle de vie des modèles, observabilité et patterns organisationnels qui rendent les équipes rapides sans les rendre fragiles.\n\nJe suis spécialisé en ML engineering Python et j'ai passé des années à transformer des workflows de données ad hoc en systèmes scalables et gouvernés — tout en maintenant un niveau d'exigence technique à la hauteur des enjeux.\n\nAu-delà de la technique, je dirige et accompagne des équipes pluridisciplinaires en data science, engineering et business — en faisant le lien entre ce qui est statistiquement possible, architecturalement solide et réellement impactant."
 	},
 	"experience": {
 		"heading": "Expérience professionnelle",
 		"entries": [
 			{
-				"role": "ML Tech Lead & Solution Architect",
+				"role": "AI Solution Architect",
 				"company": "Swiss Post",
 				"city": "Berne",
 				"period": "2026 – Présent",

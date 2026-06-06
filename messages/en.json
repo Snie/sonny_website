@@ -1,25 +1,25 @@
 {
 	"seo": {
-		"title": "Sonny Monti — ML Tech Lead & Solution Architect",
-		"description": "ML Tech Lead at Swiss Post. Portfolio showcasing AI/ML engineering, MLOps, and platform architecture.",
-		"ogTagline": "ML Tech Lead. Engineer hands. Architect brain."
+		"title": "Sonny Monti — AI Solution Architect",
+		"description": "AI Solution Architect at Swiss Post. Portfolio showcasing AI/ML engineering, MLOps, and platform architecture.",
+		"ogTagline": "Architect brain. Engineer hands."
 	},
 	"hero": {
 		"title": "Ciao, I'm Sonny",
-		"intro": "Tech Lead job, Engineer hands, Architect brain, and continuous learner soul"
+		"intro": "Architect brain, Engineer hands, and continuous learner soul"
 	},
 	"authorNote": {
-		"text": "At the time I wrote this note in 2026 (and believe me or not but I manually wrote most of it), my job was ML Tech Lead at the Swiss Post, AI agentic development was in its golden age, and so were LLMs, and the word AI was used more than the word *the*. At the time I will read this paragraph again AI will have reached AGI, the terminator level, humans will power the Architect's matrix (except for Neo ofc), rule humanit.... heeeam, I will be a farmer and live the best life!\n\nJokes aside, I wanted to tell you this story because, despite the immense advancements done by coding agents, I believe that good engineers with deep architectural skills, as well as expertise in designing systems and interfaces will be still needed for a while.\n\nLetting AI vibecode entire application stacks without carefully inspecting its work is the perfect recipe for disasters, because agents consume interfaces. They never invent them. If an agent is deciding what an API endpoint looks like, the process is already broken.\n\nThat said, welcome to my website project and have a good reading here."
+		"text": "At the time I wrote this note in 2026 (and believe me or not but I manually wrote most of it), my job was AI Solution Architect at the Swiss Post, AI agentic development was in its golden age, and so were LLMs, and the word AI was used more than the word *the*. At the time I will read this paragraph again AI will have reached AGI, the terminator level, humans will power the Architect's matrix (except for Neo ofc), rule humanit.... heeeam, I will be a farmer and live the best life!\n\nJokes aside, I wanted to tell you this story because, despite the immense advancements done by coding agents, I believe that good engineers with deep architectural skills, as well as expertise in designing systems and interfaces will be still needed for a while.\n\nLetting AI vibecode entire application stacks without carefully inspecting its work is the perfect recipe for disasters, because agents consume interfaces. They never invent them. If an agent is deciding what an API endpoint looks like, the process is already broken.\n\nThat said, welcome to my website project and have a good reading here."
 	},
 	"about": {
 		"heading": "About",
-		"text": "I'm an ML Tech Lead at Swiss Post, where I drive the design and operationalization of large-scale AI/ML systems — from architecture to production.\n\n\n My work sits at the intersection of machine learning engineering, MLOps, and platform thinking: building the infrastructure and practices that let data science actually ship. That means CI/CD pipelines, model lifecycle management, observability, and the organizational patterns that make teams fast without becoming fragile.\n\nI specialize in Python-based ML engineering and have spent years turning ad-hoc data workflows into scalable, governed systems — while keeping the engineering bar high enough to matter.\n\nBeyond the technical side, I lead and mentor cross-functional teams across data science, engineering, and business — translating between what's statistically possible, what's architecturally sound, and what actually moves the needle."
+		"text": "I'm an AI Solution Architect at Swiss Post, where I drive the design and operationalization of large-scale AI/ML systems — from architecture to production.\n\n\n My work sits at the intersection of machine learning engineering, MLOps, and platform thinking: building the infrastructure and practices that let data science actually ship. That means CI/CD pipelines, model lifecycle management, observability, and the organizational patterns that make teams fast without becoming fragile.\n\nI specialize in Python-based ML engineering and have spent years turning ad-hoc data workflows into scalable, governed systems — while keeping the engineering bar high enough to matter.\n\nBeyond the technical side, I lead and mentor cross-functional teams across data science, engineering, and business — translating between what's statistically possible, what's architecturally sound, and what actually moves the needle."
 	},
 	"experience": {
 		"heading": "Work Experience",
 		"entries": [
 			{
-				"role": "ML Tech Lead & Solution Architect",
+				"role": "AI Solution Architect",
 				"company": "Swiss Post",
 				"city": "Bern",
 				"period": "2026 – Present",

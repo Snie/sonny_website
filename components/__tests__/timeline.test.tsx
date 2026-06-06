@@ -11,7 +11,7 @@ describe("Timeline", () => {
 
 	it("renders all 5 entry roles", () => {
 		render(<Timeline />);
-		expect(screen.getByText("ML Tech Lead & Solution Architect")).toBeInTheDocument();
+		expect(screen.getByText("AI Solution Architect")).toBeInTheDocument();
 		expect(screen.getByText("Lead Data Scientist & ML Engineer")).toBeInTheDocument();
 		expect(screen.getByText("Data Scientist & ML Engineer")).toBeInTheDocument();
 		expect(screen.getByText("Data Engineer")).toBeInTheDocument();
