@@ -15,3 +15,9 @@ updates:
       - dependency-name: "*"
         update-types:
           - "version-update:semver-major"
+      # react and react-dom must move together (exact-matched versions);
+      # Dependabot's split PRs break the build, so bump them manually.
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+      # apexcharts pinned to 5.10.6 — 5.14 reveal animation crashes the radar chart.
+      - dependency-name: "apexcharts"
