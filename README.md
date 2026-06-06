@@ -55,7 +55,7 @@ The project can, and is developed manually. However, install the following to us
   ```
 
   Active bundles for this project: **Essentials**, **Web Wizard**, **Full-Stack Developer**,
-  **Security Engineer**. See [AGENTS.md](AGENTS.md) for the full skill list.
+  **Security Engineer**. See [docs/skill-bundles.md](docs/skill-bundles.md) for the full skill list.
 
   > **hint:** re-running the command above also updates all skills to the latest version.
 
@@ -66,7 +66,7 @@ The project can, and is developed manually. However, install the following to us
   ```
 
 > **Keep tooling fresh:** all external tools (Context7, antigravity skills, Spec Kit, Bun)
-> should be updated periodically. See [AGENTS.md](AGENTS.md) for the full update table.
+> should be updated periodically. See [docs/development.md](docs/development.md) for the full update table.
 
 ## Quick start
 
@@ -82,9 +82,8 @@ bun dev
 .
 ├── app/          # Next.js app router (pages, layouts, global styles)
 ├── components/   # React UI components
-├── docs/         # Developer documentation
+├── docs/         # Project documentation
 ├── public/       # Static assets
-├── types/        # Shared TypeScript types
 ├── lib/          # Utility functions and i18n configuration
 └── test/         # Test infrastructure, mocks, and E2E specs
 ```
@@ -94,13 +93,15 @@ bun dev
 The project uses [GitHub Spec Kit](https://github.com/github/spec-kit) for spec-driven development.
 Use conventional commits, feature branches (`feat/<name>`, `fix/<name>`), and never push directly to `main`.
 
-See [AGENTS.md](AGENTS.md) for the full SDD workflow, git conventions, and agent instructions.
+See [AGENTS.md](AGENTS.md) for the project map and git conventions, and
+[docs/sdd-workflow.md](docs/sdd-workflow.md) for the full SDD workflow and agent instructions.
 
 ## Documentation
 
 As a general outline, refer to this README.md to have an overview on the project and quick start guides.  
-Whereas AGENTS.md contains technical documentation and precise commands to operate on this repository,
-principally for agents but also for humans.  
+Whereas AGENTS.md is the top-down map of the repository (principally for agents but also for humans):
+it points to the depth that lives in `docs/` and the path-scoped conventions in `.claude/rules/`.
+See [docs/documentation.md](docs/documentation.md) for how the documentation is organized and maintained.  
 
 The repository comes with markdownlint-cli2, a powerful tool to lint markdowns, I know it may be fucking annoying but
 clean .md files are beautiful and llms can better work with them ;)

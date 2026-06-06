@@ -14,8 +14,8 @@ Conventions for unit, component, and E2E tests. Loaded automatically when workin
 
 - Co-locate test files in `__tests__/` directories next to source files.
 - Use real translations (`messages/en.json`) via the custom render wrapper in `test/utils.tsx`.
-- Mock external dependencies (framer-motion, react-icons, next/image, next/link) using mocks in
-  `test/mocks/`.
+- Mock external dependencies using the mocks in `test/mocks/`: `next/image`, `next/link`,
+  framer-motion, react-apexcharts, `@base-ui/react` menu, and `@wrksz/themes`.
 - No snapshot testing or visual regression testing.
 - Tests must be deterministic and fast (full suite under 60 seconds).
 

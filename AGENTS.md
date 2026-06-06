@@ -56,7 +56,6 @@ see drift; refresh cadence is in `docs/development.md`.
 │   └── resume/                   # LaTeX résumé sources
 ├── messages/                     # next-intl translation files (en/it/de/fr)
 ├── public/                       # Static assets served at /
-├── types/                        # Shared TypeScript type declarations
 ├── lib/                          # Utility functions
 │   ├── i18n.ts                   # Locale list + next-intl request config
 │   ├── site-config.ts            # SITE constants (URL, name, social, accent)
@@ -87,9 +86,11 @@ see drift; refresh cadence is in `docs/development.md`.
 Always-true rules. Topic-specific conventions (testing, SEO, markdown) live in `.claude/rules/`
 and load automatically when you touch matching files.
 
-- **Branching**: never work on `main`. Use `feat/<name>` for features, `fix/<name>` for bug fixes.
-- **Commits**: use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). Valid
-  types: `feat`, `fix`, `BREAKING CHANGE`, `chore`, `docs`, `refactor`, `test`.
+- **Branching**: never work on `main`. Branch from `dev` with `feat/<name>` or `fix/<name>`; PRs
+  target `dev`, which is promoted to `main`. See the README CI/CD section for the full flow.
+- **Commits**: use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). Types:
+  `feat`, `fix`, `sec` (security), `chore`, `docs`, `refactor`, `test`; breaking changes via
+  `feat!:` or a `BREAKING CHANGE:` footer. Only `feat`/`fix`/`sec` trigger a release.
 - **README vs AGENTS.md**: README is for humans; AGENTS.md is the agent/contributor map. Do not
   duplicate content between them. See `docs/documentation.md`.
 
