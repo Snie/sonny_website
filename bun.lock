@@ -18,7 +18,7 @@
         "next-intl": "^4.13.0",
         "next-themes": "^0.4.6",
         "react": "19.2.7",
-        "react-apexcharts": "^2.1.0",
+        "react-apexcharts": "^2.1.1",
         "react-dom": "19.2.7",
         "react-icons": "^5.6.0",
         "tailwind-merge": "^3.6.0",
@@ -1228,7 +1228,7 @@
 
     "react": ["react@19.2.7", "", {}, "sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ=="],
 
-    "react-apexcharts": ["react-apexcharts@2.1.0", "", { "dependencies": { "prop-types": "^15.8.1" }, "peerDependencies": { "apexcharts": ">=5.10.1", "react": ">=16.8.0" } }, "sha512-xrmeTKRKHh3cvvLc8SasqFjlOgIqGpyHc81qjnRtcjUM0Fu7qEjgVRWGPokGFjqhwRZVgEym8zmuEyYr5LMYIg=="],
+    "react-apexcharts": ["react-apexcharts@2.1.1", "", { "dependencies": { "prop-types": "^15.8.1" }, "peerDependencies": { "apexcharts": ">=5.10.1", "react": ">=16.8.0" } }, "sha512-aV25n+1ZdAzRG0KhODVC48K8WbhMKBAr3yWSeaaBqM1ySn22kSSKblsNCUvlwegsT+cdMLuOrK9xGZb+IK+OkQ=="],
 
     "react-dom": ["react-dom@19.2.7", "", { "dependencies": { "scheduler": "^0.27.0" }, "peerDependencies": { "react": "^19.2.7" } }, "sha512-t0BRVXvbiE/o20Hfw669rLbMCDWtYZLvmJigy2f0MxsXF+71pxhR3xOkspmsO8h3ZlNzyibAmtCa3l4lYKk6gQ=="],
 
