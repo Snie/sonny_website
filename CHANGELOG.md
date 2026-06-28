@@ -1,3 +1,9 @@
+## [1.5.1](https://github.com/Snie/sonny_website/compare/v1.5.0...v1.5.1) (2026-06-28)
+
+### Bug Fixes
+
+* bump react and react-dom to 19.2.7 together; ignore them in dependabot ([41024c3](https://github.com/Snie/sonny_website/commit/41024c36aa41b7e9b4a531708605f21e26110306)), closes [#89](https://github.com/Snie/sonny_website/issues/89) [#91](https://github.com/Snie/sonny_website/issues/91)
+
 ## [1.5.0](https://github.com/Snie/sonny_website/compare/v1.4.1...v1.5.0) (2026-06-06)
 
 ### Features
