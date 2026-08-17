@@ -8,16 +8,13 @@ describe("Button", () => {
 		expect(screen.getByRole("button", { name: "Click me" })).toBeInTheDocument();
 	});
 
-	it.each([
-		"outline",
-		"secondary",
-		"ghost",
-		"destructive",
-		"link",
-	] as const)("renders %s variant", (variant) => {
-		render(<Button variant={variant}>{variant}</Button>);
-		expect(screen.getByRole("button", { name: variant })).toBeInTheDocument();
-	});
+	it.each(["outline", "secondary", "ghost", "destructive", "link"] as const)(
+		"renders %s variant",
+		(variant) => {
+			render(<Button variant={variant}>{variant}</Button>);
+			expect(screen.getByRole("button", { name: variant })).toBeInTheDocument();
+		},
+	);
 
 	it.each(["default", "xs", "sm", "lg", "icon"] as const)("renders %s size", (size) => {
 		render(<Button size={size}>Btn</Button>);
