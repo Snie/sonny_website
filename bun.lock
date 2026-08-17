@@ -26,7 +26,7 @@
       },
       "devDependencies": {
         "@biomejs/biome": "^2.5.8",
-        "@next/bundle-analyzer": "^16.2.12",
+        "@next/bundle-analyzer": "^16.3.1",
         "@playwright/test": "^1.62.1",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/git": "^10.0.1",
@@ -270,7 +270,7 @@
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.1.4", "", { "dependencies": { "@tybys/wasm-util": "^0.10.1" }, "peerDependencies": { "@emnapi/core": "^1.7.1", "@emnapi/runtime": "^1.7.1" } }, "sha512-3NQNNgA1YSlJb/kMH1ildASP9HW7/7kYnRI2szWJaofaS1hWmbGI4H+d3+22aGzXXN9IJ+n+GiFVcGipJP18ow=="],
 
-    "@next/bundle-analyzer": ["@next/bundle-analyzer@16.2.12", "", { "dependencies": { "webpack-bundle-analyzer": "4.10.1" } }, "sha512-0dYhmCYsTMFYUFaoEUx+VKw/oYP6b3XiGgq47EujXTE2UGgwVWAaur2tbko2pxfUka3WRZ9YWxa3PlSv3luWNQ=="],
+    "@next/bundle-analyzer": ["@next/bundle-analyzer@16.3.1", "", { "dependencies": { "webpack-bundle-analyzer": "4.10.1" } }, "sha512-/6XQeYPHM6jF1gTeJ82Mu6yXOHQIFVxzAn3DkPtHDp5v6SDXoCicBMTHloN+2h4WKFCQujSLCgLZHItJ3jN1uw=="],
 
     "@next/env": ["@next/env@16.2.10", "", {}, "sha512-zLPxg9M0MEHmygpj5OuxjQ+vHMiy/K7cSp74G8ecYolmgUWw0RwN02tF56npup/+qaI8JB97hQgS/r2Hb6QwVA=="],
 
