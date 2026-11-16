@@ -1,3 +1,13 @@
+## [1.5.2](https://github.com/Snie/sonny_website/compare/v1.5.1...v1.5.2) (2026-11-16)
+
+### Bug Fixes
+
+* **release:** use conventionalcommits preset v9 for writer@8 compatibility ([865ae95](https://github.com/Snie/sonny_website/commit/865ae95244e6b9579854d63839e3e98e3d0cef15)), closes [#170](https://github.com/Snie/sonny_website/issues/170)
+
+### Security
+
+* **deps:** bump next to 16.4.5 and refresh dependencies ([930b8d8](https://github.com/Snie/sonny_website/commit/930b8d84f9bcf187d6515e594328a3db9f6eddb1))
+
 ## [1.5.1](https://github.com/Snie/sonny_website/compare/v1.5.0...v1.5.1) (2026-06-28)
 
 ### Bug Fixes
