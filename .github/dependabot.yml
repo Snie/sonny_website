@@ -6,11 +6,19 @@ updates:
     schedule:
       interval: "weekly"
     target-branch: "dev"
+    cooldown:
+      # Supply-chain guard: only propose versions published at least 15 days ago.
+      # Security updates are not delayed by cooldown.
+      default-days: 15
   - package-ecosystem: "bun"
     directory: "/"
     schedule:
       interval: "weekly"
     target-branch: "dev"
+    cooldown:
+      # Supply-chain guard: only propose versions published at least 15 days ago.
+      # Security updates are not delayed by cooldown.
+      default-days: 15
     ignore:
       - dependency-name: "*"
         update-types:
@@ -19,5 +27,6 @@ updates:
       # Dependabot's split PRs break the build, so bump them manually.
       - dependency-name: "react"
       - dependency-name: "react-dom"
-      # apexcharts pinned to 5.10.6 — 5.14 reveal animation crashes the radar chart.
+      # apexcharts: bump manually and check the languages radar chart in a browser
+      # (5.14 once crashed it; unit/E2E tests do not cover it).
       - dependency-name: "apexcharts"

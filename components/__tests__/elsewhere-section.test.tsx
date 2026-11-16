@@ -2,6 +2,7 @@ vi.mock("framer-motion", () => import("../../test/mocks/framer-motion"));
 vi.mock("next/image", () => import("../../test/mocks/next-image"));
 
 const { IconStub } = vi.hoisted(() => {
+	// biome-ignore lint/correctness/noComponentHookFactories: vi.hoisted runs once at module load; the stub is never recreated per render.
 	const IconStub = () => null;
 	return { IconStub };
 });
