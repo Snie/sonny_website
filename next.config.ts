@@ -31,6 +31,8 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+	// Don't let `next dev` inject its managed block into the hand-maintained AGENTS.md.
+	agentRules: false,
 	experimental: {
 		optimizePackageImports: ["lucide-react", "react-icons", "framer-motion", "@base-ui/react"],
 	},
