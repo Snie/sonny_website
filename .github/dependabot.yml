@@ -30,3 +30,9 @@ updates:
       # apexcharts: bump manually and check the languages radar chart in a browser
       # (5.14 once crashed it; unit/E2E tests do not cover it).
       - dependency-name: "apexcharts"
+      # conventional-changelog-conventionalcommits v10 needs conventional-changelog-writer@9,
+      # but @semantic-release/release-notes-generator 14 ships writer@8. Stay on v9 until
+      # release-notes-generator moves to writer@9 (v10.4.0 broke the release on 2026-11-16).
+      - dependency-name: "conventional-changelog-conventionalcommits"
+        update-types:
+          - "version-update:semver-major"
